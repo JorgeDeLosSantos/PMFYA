@@ -160,12 +160,13 @@ TSWLatexianTemp*
 
 
 ## ALL PDF Files
-
 *.pdf
-
 
 ## Watermark files
 *.xwm
 
 ## Private folders
 _*/
+
+## toPDF.py
+toPDF.py
