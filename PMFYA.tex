@@ -1,0 +1,130 @@
+\documentclass[12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\decimalpoint
+\let\cleardoublepage\clearpage
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{makeidx}
+\makeindex
+\usepackage{anysize}
+\usepackage{anyfontsize}
+\usepackage{pdfpages}
+\usepackage[x11names,table]{xcolor}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{array,ragged2e}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\setlength{\parindent}{0cm}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\newwatermark[allpages,color=gray!10,angle=45,scale=3,xpos=0,ypos=0]{Borrador}
+
+\tcbset{colback=green!5!white, colframe=gray!10!black, coltitle=green!20!black, 
+fonttitle=\bfseries, colbacktitle=white, coltext=gray!30!black}
+\addto\captionsspanish{
+  \renewcommand{\figurename}{{\bf Figura}}% 
+}
+\addto\captionsspanish{
+  \renewcommand{\chaptername}{{\bf}}% 
+}
+\usepackage{epigraph}
+
+\newtcolorbox{ejemplo}[2][]
+{
+  colframe = gray!25,
+  colback  = gray!25,
+  coltitle = gray!20!black,
+  title    = #2,
+}
+
+\newtcolorbox{informacion}[2][]
+{
+  colframe = blue!25,
+  colback  = blue!10,
+  coltitle = blue!20!black,
+  title    = #2,
+}
+
+\newtcolorbox{recomendacion}[2][]
+{
+  colframe = green!25,
+  colback  = green!10,
+  coltitle = green!20!black,
+  title    = #2,
+}
+
+
+% Colores
+\definecolor{verdep}{RGB}{166,206,58}
+\definecolor{ccap}{RGB}{50,100,50}
+\definecolor{csec}{RGB}{50,150,50}
+\definecolor{csubsec}{RGB}{50,200,50}
+\definecolor{header_table_color}{RGB}{200,255,180}
+
+% Nuevos comandos
+
+\usepackage{titlesec}%--
+% \newcommand{\hsp}{\hspace{5pt}}
+% \titleformat{\chapter}[hang]{\huge\bfseries\color{ccap}}
+% {\color{verdep}{\vrule height 2.5cm width 1mm}\hsp{\fontsize{100}{5}\selectfont\thechapter}\hsp%
+% {\vrule height 2.5cm width 1mm}\hsp{\fontsize{30}{5}\selectfont}}{5pt}{\huge\bfseries}
+
+\titleformat{\section}[hang]{\normalfont\color{csec}}%
+{\filright\large\enspace\thesection\enspace}%
+{8pt}{\Large\bfseries\filright}%
+
+\titleformat{\subsection}[hang]{\normalfont\color{csec}}%
+{\filright\large\enspace\thesubsection\enspace}%
+{8pt}{\large\bfseries\filright}%
+
+% Code
+
+\lstnewenvironment{matlab}{\lstset{frame=none,
+  language=Matlab,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}}{}
+
+\author{Pedro Jorge De Los Santos}
+\title{Programación en MATLAB, fundamentos y aplicaciones}
+
+\begin{document}
+\includepdf{src/portada}
+\maketitle
+\tableofcontents
+
+\input{src/cfg.tex}
+
+\input{src/ch0.tex}
+\input{src/ch1.tex}
+\input{src/ch2.tex}
+\input{src/ch3.tex}
+\input{src/ch4.tex}
+\input{src/ch5.tex}
+\input{src/ch6.tex}
+\input{src/ch7.tex}
+\input{src/ch8.tex}
+\input{src/ch9.tex}
+\input{src/ch10.tex}
+
+\printindex
+
+\end{document}

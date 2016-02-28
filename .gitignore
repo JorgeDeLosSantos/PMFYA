@@ -157,3 +157,15 @@ pythontex-files-*/
 
 # Latexian
 TSWLatexianTemp*
+
+
+## ALL PDF Files
+
+*.pdf
+
+
+## Watermark files
+*.xwm
+
+## Private folders
+_*/
