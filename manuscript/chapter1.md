@@ -12,60 +12,67 @@ simulación de modelos físicos y la visualización gráfica de procesos
 determinados. Entre los campos de uso de MATLAB se incluyen el
 procesamiento digital de señales, audio, imágenes y vídeo, sistemas de
 control, finanzas computacionales, biología computacional, redes
-neuronales, etc.\
+neuronales, etc.
+
 *Características del lenguaje:*
 
-begi
+* Interpretado: Esta característica le convierte en un lenguaje no muy
+apto para aplicaciones donde la rapidez de ejecución sea crítica,
+pero esto mismo facilita la depuración de errores y permite un
+tiempo de desarrollo reducido en comparación a los lenguajes
+compilados tradicionales como C/C++.
 
--   Interpretado: Esta característica le convierte en un lenguaje no muy
-    apto para aplicaciones donde la rapidez de ejecución sea crítica,
-    pero esto mismo facilita la depuración de errores y permite un
-    tiempo de desarrollo reducido en comparación a los lenguajes
-    compilados tradicionales como C/C++.
+* Tipado dinámico: No es necesario declarar el tipo de variable a
+utilizar, MATLAB reconoce de forma automática el tipo de dato con el
+que trabajará, aunque claro que es posible declarar un tipo de dato
+de forma explícita utilizando las funciones de conversión adecuadas.
 
--   Tipado dinámico: No es necesario declarar el tipo de variable a
-    utilizar, MATLAB reconoce de forma automática el tipo de dato con el
-    que trabajará, aunque claro que es posible declarar un tipo de dato
-    de forma explícita utilizando las funciones de conversión adecuadas.
+* Multiplataforma: MATLAB está disponible para las plataformas más
+comunes: Unix, Windows, GNU/Linux y Mac OS.
 
--   Multiplataforma: MATLAB está disponible para las plataformas más
-    comunes: Unix, Windows, GNU/Linux y Mac OS.
+* Multiparadigma: Soporta programación imperativa, funcional y
+orientada a objetos.
 
--   Multiparadigma: Soporta programación imperativa, funcional y
-    orientada a objetos.
+## Descripción del entorno de desarrollo
 
-Descripción del entorno de desarrollo
--------------------------------------
-
-El entorno de MATLAB mostrado en la figura \[f1\] pertenece a la versión
+El entorno de MATLAB mostrado en la figura [1](#f1) pertenece a la versión
 2012b, si dispone de otra versión quizá encontrará cambios
 significativos en la interfaz, pero los componentes más importantes
-permanecen invariables.\
-Como puede observarse en la figura \[f1\], se distinguen cuatro
-componentes en el escritorio del entorno MATLAB, los cuáles son:\
-**Command Window**\
+permanecen invariables.
+
+Como puede observarse en la figura [1](#f1), se distinguen cuatro
+componentes en el escritorio del entorno MATLAB, los cuáles son:
+
+**Command Window**
+
 Ventana de comandos interactiva en la cual deberán introducirse las
 instrucciones de MATLAB, el prompt `>>` le indica que está listo para
-recibir instrucciones.\
+recibir instrucciones.
 
 > En la jerga informática, se denomina prompt al símbolo o caracter que
 > aparece en una terminal o consola, cuando esta se encuentra en
 > disposición de aceptar un comando de entrada.
 
-**Current Folder**\
+**Current Folder**
+
 Carpeta en la que se está situado, y en la que MATLAB buscará y guardará
-(por defecto) los archivos generados durante la sesión.\
-**Workspace**\
+(por defecto) los archivos generados durante la sesión.
+
+**Workspace**
+
 Ventana que muestra las variables creadas por el usuario durante la
-sesión, indicando el nombre, valor y tipo de la misma.\
-**Command History**\
+sesión, indicando el nombre, valor y tipo de la misma.
+
+**Command History**
+
 Permite buscar comandos introducidos con anterioridad en la ventana de
-comandos y ejecutarlos nuevamente o copiarlos.\
+comandos y ejecutarlos nuevamente o copiarlos.
 
-![image](images/ch1/img_1_1.png) \[f1\]
+{#f1}
+![Pantalla principal de MATLAB (R2012b)](images/ch1/img_1_1.png)
 
-Comandos básicos y generalidades
---------------------------------
+
+## Comandos básicos y generalidades
 
 ### Consultar ayuda de MATLAB
 
