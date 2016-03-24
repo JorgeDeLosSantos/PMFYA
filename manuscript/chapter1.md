@@ -62,7 +62,7 @@ sesión, indicando el nombre, valor y tipo de la misma.\
 Permite buscar comandos introducidos con anterioridad en la ventana de
 comandos y ejecutarlos nuevamente o copiarlos.\
 
-![image](src/ch1/img_1_1.png) \[f1\]
+![image](images/ch1/img_1_1.png) \[f1\]
 
 Comandos básicos y generalidades
 --------------------------------

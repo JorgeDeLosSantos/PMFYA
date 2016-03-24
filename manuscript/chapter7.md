@@ -60,7 +60,7 @@ puede utilizar la función `imshow`. Véase el siguiente ejemplo:
         >> A=imread('imag.jpg');
         >> imshow(A);
 
-![image](src/ch7/holland_imshow.png)
+![image](images/ch7/holland_imshow.png)
 
 La función `imshow` abre una nueva ventana (figure) y muestra la imagen
 que ha sido guardada con anterioridad (ver figura 7.1). MATLAB dispone
@@ -89,9 +89,9 @@ del brillo en la imagen. Véase el ejemplo siguiente:
         A=A+k;
         imshow(A);
 
-![image](src/ch7/holland_original.png)
+![image](images/ch7/holland_original.png)
 
-![image](src/ch7/holland_mas50.png)
+![image](images/ch7/holland_mas50.png)
 
 La imagen 7.2 corresponde a la original y en la 7.3 se muestra lo que
 resulta de aumentar en 50 unidades cada uno de los pixeles que componen
@@ -108,7 +108,7 @@ matriz disminuye en un valor constante. Véase el ejemplo:
         A=A-k;
         imshow(A);
 
-![image](src/ch7/holland_menos50.png)
+![image](images/ch7/holland_menos50.png)
 
 ### Conversión a escala de grises
 
@@ -121,7 +121,7 @@ dada en el modelo de color RGB a una imagen en escala de grises.
     XG=rgb2gray(X);
     imshow(XG);
 
-![image](src/ch7/holland_gris.png)
+![image](images/ch7/holland_gris.png)
 
 ### Binarización de una imagen
 
