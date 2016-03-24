@@ -1,8 +1,6 @@
-Fundamentos del lenguaje
-========================
+# Fundamentos del lenguaje
 
-¿Qué es MATLAB?
----------------
+## ¿Qué es MATLAB?
 
 MATLAB es un lenguaje de programación de alto nivel y entorno de
 desarrollo interactivo, utilizado para numerosas aplicaciones de
@@ -49,9 +47,11 @@ Ventana de comandos interactiva en la cual deberán introducirse las
 instrucciones de MATLAB, el prompt `>>` le indica que está listo para
 recibir instrucciones.
 
-> En la jerga informática, se denomina prompt al símbolo o caracter que
-> aparece en una terminal o consola, cuando esta se encuentra en
-> disposición de aceptar un comando de entrada.
+I> ## ¿Qué es el prompt?
+I> 
+I> En la jerga informática, se denomina prompt al símbolo o caracter que
+I> aparece en una terminal o consola, cuando esta se encuentra en
+I> disposición de aceptar un comando de entrada.
 
 **Current Folder**
 
@@ -80,19 +80,22 @@ Uno de los puntos fuertes de MATLAB es la extensa documentación que
 viene adjunta al software, la cual contiene múltiples ejemplos y
 recomendaciones para la mayoría de las funciones. Puede acceder a la
 ayuda ubicando el ícono característico de ayuda, o bien tecleando la
-instrucción doc en la línea de comandos.\
+instrucción doc en la línea de comandos.
+
 Si requiere una referencia rápida acerca de un comando o función puede
 utilizar el comando `help` seguido por el nombre la función a consultar,
 lo anterior le mostrará en la ventana de comandos una descripción breve
 referente a la función consultada, por ejemplo la siguiente línea le
 permite consultar ayuda rápida acerca del comando `clc`:
 
-    >> help clc
-        clc    Clear command window.
-        clc clears the command window and homes the cursor.
-        See also home.
-        Reference page in Help browser
-        doc clc
+```
+>> help clc
+    clc    Clear command window.
+    clc clears the command window and homes the cursor.
+    See also home.
+    Reference page in Help browser
+    doc clc
+```
 
 ### Limpiar ventana de comandos y variables del workspace
 
@@ -111,16 +114,20 @@ símbolo de porcentaje %, todo aquello escrito después de este símbolo
 será ignorado por el intérprete y reconocido como comentario,
 asignándosele un color verde característico de forma automática.
 
-    % Esto es un comentario en MATLAB
+```matlab
+% Esto es un comentario en MATLAB
+```
 
 Para hacer bloques de comentarios MATLAB dispone de una sintaxis
 específica que se muestra enseguida:
 
-        %{
-        Esto es un comentario de múltiples
-        líneas en MATLAB, delimitado por 
-        llaves conjuntas con el signo % 
-        %}
+```matlab
+%{
+Esto es un comentario de múltiples
+líneas en MATLAB, delimitado por 
+llaves conjuntas con el signo % 
+%}
+```
 
 ### Valores especiales
 
