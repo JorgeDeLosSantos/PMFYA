@@ -1,0 +1,74 @@
+Introducción a las GUIs MATLAB
+==============================
+
+Una interfaz gráfica de usuario (GUI) es un elemento gráfico que
+contiene uno o más controles que están disponibles para interactuar con
+el usuario mediante un entorno visual sencillo, el cual permite la
+comunicación entre el usuario y el computador. Entre algunos de los
+componentes más comunes de una GUI creada en MATLAB se tienen menús,
+barras de herramientas, botones, menús desplegables, cajas de texto,
+entre otros.\
+En las interfaces gráficas creadas en MATLAB pueden aprovecharse todas
+las herramientas matemáticas y de ingeniería que proporciona MATLAB,
+permiten además la manipulación de archivos de datos, así como la
+interacción con otras GUIs y mostrar datos mediante tablas y gráficas de
+gran calidad.\
+Generalmente las GUIs son programadas para que respondan a la
+manipulación del usuario con una acción específica. Los controles
+gráficos que componen una GUI están relacionados con una rutina de
+programación, llamada callbacks en el entorno MATLAB, que se ejecuta
+cuando sucede un determinado evento, que puede ser la entrada de
+caracteres mediante el teclado, el clic de un botón del mouse, o
+situarse sobre un objeto.
+
+Elemento figure
+---------------
+
+En MATLAB cada interfaz gráfica está creada sobre un objeto figure, en
+este elemento se añaden todos los controles gráficos que componen la
+GUI. La forma más simple de definir un objeto figure se ejemplifica
+enseguida:
+
+        hFig = figure;
+
+Donde `hFig` es el handle del elemento figure.\
+Es muy común que al momento de definir o crear un objeto figure, se
+especifiquen algunas de sus propiedades con la sintaxis siguiente:
+
+        hFig = figure('Propiedad ', 'Valor ',...);
+
+A continuación se muestra un ejemplo característico:
+
+        hFig = figure('NumberTitle','off',...
+                      'MenuBar','None',...
+                      'Name','Figure Ejemplo',...
+                      'Position',[200 200 300 300]);
+
+Las propiedades más comunes de un elemento figure se muestran en la
+tabla siguiente:
+
+  --------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **Propiedad**   **Descripción**
+  `Color`         Establece el color de figure. El valor puede establecerse mediante un vector de tres elementos en formato RGB
+  `MenuBar`       Oculta o muestra la barra de menús estándar de MATLAB
+  `Name`          Título mostrado en la ventana de la figura. El valor especificado es una cadena de caracteres
+  `NumberTitle`   Determina si la numeración de los elementos figure creada automáticamente por MATLAB será visible. El valor por defecto es on, para ocultar deberá especificarse off.
+  `Position`      Especifica el tamaño de la GUI y la posición relativa a la esquina inferior izquierda de la pantalla. El valor se establece mediante un vector de cuatro elementos cuya estructura es la siguiente: \[Distancia de la izquierda, Distancia de la parte inferior, Ancho, Alto\];
+  `Resize`        Determina si puede modificarse el tamaño de la GUI utilizando el mouse. Los valores aceptados son: off y on, siendo este último el valor por defecto.
+  `Toolbar`       Muestra o borra el menú de herramientas del objeto figure.
+  `Units`         Unidad de medida que se utilizará para interpretar el vector de la propiedad position. Los valores disponibles son: centimeters, characters, inches, normalized, point y pixels. Siendo este último el valor por defecto.
+  `Visible`       Establece si la GUI es visible. Valores: on y off.
+  --------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  : Propiedades de `figure`
+
+Controles gráficos (uicontrol)
+------------------------------
+
+Los controles gráficos son creados mediante la función uicontrol, cuya
+estructura general se muestra:
+
+        hCont = uicontrol('Style', 'tipo de control',...
+                          'Propiedad', 'Valor');
+
+La propiedad `style` define el tipo de control gráfico
