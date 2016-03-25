@@ -576,12 +576,12 @@ elementos mediante una modificación que no afecta el valor de sus
 elementos. Para comenzar, suponga que se tiene un vector v definido como
 sigue:
 
-{$$} v=[ v_1 , v_2 , v_3,... , v_{n-1} ,v_n ] {/$$}
+{$$} v = [ v_1 , v_2 , v_3, \cdots , v_{n-1} ,v_n ] {/$$}
 
 Y sea vea v' el vector cuyas componentes son las mismas que v pero
 dispuestas en un orden inverso, es decir:
 
-{$$} v'= [v_n , v_{n-1} ,... , v_3 ,v_2 ,v_1 ] {/$$}
+{$$} v\prime = [v_n , v_{n-1} ,\cdots , v_3 ,v_2 ,v_1 ] {/$$}
 
 En MATLAB invertir el orden de los elementos de un vector resulta una
 tarea muy sencilla, esto puede lograrse indexando los elementos de la
