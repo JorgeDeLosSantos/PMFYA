@@ -1157,38 +1157,38 @@ la diferencia entre el valor actual y el anterior es inferior a la
 tolerancia numérica (eps) soportada por MATLAB y por ende pasan a
 considerarse como valores iguales.
 
-> Es común utilizar el ciclo while poniendo un valor verdadero como
-> condición, y usar la sentencia combinada `if-break` como punto de
-> parada, por ejemplo:
->
->     while true
->         a = randi(10);
->         if a>5
->             break;
->         end
->     end
+I> ### While-if-break, rompiendo ciclos.
+I>
+I> Es común utilizar el ciclo while poniendo un valor verdadero como
+I> condición, y usar la sentencia combinada `if-break` como punto de
+I> parada, por ejemplo:
+I>
+I>     while true
+I>         a = randi(10);
+I>         if a>5
+I>             break;
+I>         end
+I>     end
 
-Fecha y hora
-------------
+
+## Fecha y hora
 
 Primeramente es importante mencionar que MATLAB maneja tres formatos de
 fechas y hora, a saber:
 
--   Un vector de seis elementos los cuales son: \[año, mes, día, hora,
-    minuto, segundo\].
+* Un vector de seis elementos los cuales son: \[año, mes, día, hora, minuto, segundo\].
 
--   Un valor escalar de coma flotante (tipo double), en el cual la parte
-    entera representa la cantidad de días que han transcurrido desde el
-    año cero (calendario gregoriano) y la parte decimal representa la
-    fracción del día trascurrido.
+* Un valor escalar de coma flotante (tipo double), en el cual la parte entera representa 
+la cantidad de días que han transcurrido desde el año cero (calendario gregoriano) y 
+la parte decimal representa la fracción del día trascurrido.
 
--   Una cadena de texto con la forma `’dd-mmm-aaa HH:MM:SS’`.
+* Una cadena de texto con la forma `’dd-mmm-aaa HH:MM:SS’`.
 
 Para obtener la fecha actual MATLAB proporciona el comando now:
 
-        >> now
-        ans =
-           7.3575e+05
+>> now
+ans =
+   7.3575e+05
 
 Lo anterior podría resultar útil para efectos de cálculo pero no es tan
 significativo para el usuario que está acostumbrado a visualizar la
@@ -1197,15 +1197,16 @@ valor numérico anterior a una cadena de texto que nos proporcione mayor
 información a primer vista, para ello se utiliza la función datestr como
 sigue:
 
-        >> datestr(now)
-        ans =
-        03-Jun-2014 17:09:36
+  >> datestr(now)
+  ans =
+  03-Jun-2014 17:09:36
 
 Además de las anteriores MATLAB dispone de las funciones datevec y
 clock, la primera convierte una determinada fecha pasada como argumento
 en formato string o numérico a un vector de seis elementos como se
 describió anteriormente, y clock devuelve la fecha y hora actual tal
 como la hace now pero como un vector de seis elementos.
+
 
 X> El número de Reynolds es un parámetro adimensional utilizado en
 X> mecánica de fluidos para caracterizar el movimiento de un fluido,
@@ -1214,7 +1215,7 @@ X>
 X> {$$}Re=\frac{vD}{\nu}{/$$}
 X>
 X> Donde v es la velocidad del fluido, D el diámetro de la tubería a
-X> través de la cual circula el fluido y $\nu$ la viscosidad cinemática.
+X> través de la cual circula el fluido y {$$}\nu{/$$} la viscosidad cinemática.
 X> La teoría subyacente del número de Reynolds se establece conforme a
 X> varias características propias y externas al fluido, pero en este caso
 X> vamos a limitarlo al flujo interno en tuberías circulares; siendo así,
@@ -1223,9 +1224,9 @@ X> turbulento dependiendo de ciertos intervalos establecidos de manera
 X> experimental, enseguida se muestran los intervalos de valores y el
 X> tipo de flujo en cada caso:
 X> 
-X> Re {$$}<{/$$} 2100 *Flujo turbulento*
-X> 2100 {$$}\leq{/$$} Re {$$}\leq{/$$} 3000 *Flujo transitorio*
-X> Re {$$}>{/$$} 3000 *Flujo turbulento*
+X> * Re {$$}<{/$$} 2100 *Flujo turbulento*
+X> * 2100 {$$}\leq{/$$} Re {$$}\leq{/$$} 3000 *Flujo transitorio*
+X> * Re {$$}>{/$$} 3000 *Flujo turbulento*
 X>
 X> Basado en lo anterior, escriba un programa cuyos valores de entrada
 X> sean la velocidad del fluido, el diámetro de la tubería y la
@@ -1237,30 +1238,31 @@ X> de flujo.
 **1.1** ¿Qué tipo de dato devuelve cada una de las siguientes
 instrucciones? (Puede verificar utilizando la función class).
 
-        >> 3;
-        >> true;
-        >> 3==2;
-        >> {1,2,3}; 
+  >> 3;
+  >> true;
+  >> 3==2;
+  >> {1,2,3}; 
 
 **1.2** ¿Es posible realizar las siguientes operaciones?
 
-        >> 3+int8(2);
-        >> true+5;
-        >> int8(10)+int16(5);
-        >> {1,2,3}+{0,1,0};
-        >> [5,1,-2]+[2 3 0];
+  >> 3+int8(2);
+  >> true+5;
+  >> int8(10)+int16(5);
+  >> {1,2,3}+{0,1,0};
+  >> [5,1,-2]+[2 3 0];
 
 **1.3** Desarrolle un script que le solicite su nombre (utilice la
 función input) y que devuelva un saludo más el nombre ingresado, por
-ejemplo: Hola Jorge, bienvenido.\
+ejemplo: Hola Jorge, bienvenido.
+
 **1.4** Identifique el error en las siguientes líneas de código:
 
-        edad=input('Introduzca su edad: ','s');
-        if edad >= 18
-            disp('Mayor de edad');
-        else
-            disp('Menor de edad');
-        end
+  edad=input('Introduzca su edad: ','s');
+  if edad >= 18
+      disp('Mayor de edad');
+  else
+      disp('Menor de edad');
+  end
 
 **1.5** Utilizando la escala de calificación del 0 a 10 y siendo 6 la
 calificación mínima aprobatoria, cree un programa en el cual ingrese una
