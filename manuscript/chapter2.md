@@ -509,14 +509,16 @@ siendo 1 para las filas (equivalente a vertcat), 2 para las columnas
 Considere las matrices **M** y **N** definidas como:
 
 {$$}
-\textbf{M}=\begin{matrix}
-1 & 3 \\
--2 & 1 \\
+\textbf{M}=
+\begin{matrix}
+    1 & 3 \\
+    -2 & 1 
 \end{matrix}
 \,\,\,\,
-\textbf{N}=\begin{matrix}
-3 & 7 \\
-0 & 2 \\
+\textbf{N}=
+\begin{matrix}
+    3 & 7 \\
+    0 & 2
 \end{matrix}
 {/$$}
 
