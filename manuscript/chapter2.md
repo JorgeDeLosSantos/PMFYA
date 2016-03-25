@@ -10,12 +10,12 @@ el subíndice correspondiente a una fila y n el de columna, una matriz se
 representa como sigue:
 
 {$$}
-\begin{pmatrix}
+\begin{matrix}
 a\_{11} & a\_{12} & \cdots & a\_{1n} \\
 a\_{21} & a\_{22} & \cdots & a\_{2n} \\
 & \vdots & \vdots & \ddots & \vdots \\
 a\_{m1} & a\_{m2} & \cdots & a\_{mn} \\
-end{pmatrix}
+end{matrix}
 {/$$}
 
 Un vector es un caso particular de matriz que sólo contiene una fila o
@@ -32,11 +32,11 @@ fila.
 **Ejemplo**. Defina la matriz **A** utilizando MATLAB
 
 {$$}
-A = \begin{bmatrix}
+A = \begin{matrix}
 -1 & 2 & 1 \\
 0 & 7 & -3 \\
 1 & -1 & -2 \\
-\end{bmatrix}
+\end{matrix}
 {/$$}
 
 Enseguida se muestran dos formas equivalentes realizar lo que se pide:
@@ -245,27 +245,27 @@ elemento. Si se tienen dos matrices **A** y **B** de 3x3 definidas como
 sigue:
 
 {$$}
-\textbf{A}=\begin{pmatrix}
+\textbf{A}=\begin{matrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33} \\
-\end{pmatrix}
+\end{matrix}
 \,\,\,\,
-\textbf{B}=\begin{pmatrix}
+\textbf{B}=\begin{matrix}
 b_{11} & b_{12} & b_{13} \\
 b_{21} & b_{22} & b_{23} \\
 b_{31} & b_{32} & b_{33} \\
-\end{pmatrix}
+\end{matrix}
 {/$$}
 
 La suma viene dada por:
 
 {$$}
-\textbf{A+B} = \begin{pmatrix}
+\textbf{A+B} = \begin{matrix}
 a_{11}+b_{11} & a_{12}+b_{12} & a_{13}+b_{13} \\
 a_{21}+b_{21} & a_{22}+b_{22} & a_{23}+b_{23} \\
 a_{31}+b_{31} & a_{32}+b_{32} & a_{33}+b_{33} \\
-\end{pmatrix}
+\end{matrix}
 {/$$}
 
 En MATLAB sumar y restar matrices o vectores resulta muy sencillo, véase
@@ -527,15 +527,15 @@ siendo 1 para las filas (equivalente a vertcat), 2 para las columnas
 Considere las matrices **M** y **N** definidas como:
 
 {$$}
-\textbf{M}=\begin{pmatrix}
+\textbf{M}=\begin{matrix}
 1 & 3 \\
 -2 & 1 \\
-\end{pmatrix}
+\end{matrix}
 \,\,\,\,
-\textbf{N}=\begin{pmatrix}
+\textbf{N}=\begin{matrix}
 3 & 7 \\
 0 & 2 \\
-\end{pmatrix}
+\end{matrix}
 {/$$}
 
 Observe los resultados que se producen utilizando la función `cat` para
