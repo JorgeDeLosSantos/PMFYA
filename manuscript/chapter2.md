@@ -16,13 +16,11 @@ A_{m,n} =
   a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
   \vdots  & \vdots  & \ddots & \vdots  \\
   a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
-\end{pmatrix}
+ \end{pmatrix}
 {/$$}
 
 Un vector es un caso particular de matriz que sólo contiene una fila o
 una columna.
-
-
 
 ### Insertando valores manuales
 
@@ -35,11 +33,12 @@ fila.
 **Ejemplo**. Defina la matriz **A** utilizando MATLAB
 
 {$$}
-A = \begin{matrix}
--1 & 2 & 1 \\
-0 & 7 & -3 \\
-1 & -1 & -2
-\end{matrix}
+A = 
+\begin{pmatrix}
+    -1 & 2 & 1 \\
+    0 & 7 & -3 \\
+    1 & -1 & -2
+\end{pmatrix}
 {/$$}
 
 Enseguida se muestran dos formas equivalentes realizar lo que se pide:
@@ -247,29 +246,9 @@ dimensiones dado que son operaciones que se realizan elemento a
 elemento. Si se tienen dos matrices **A** y **B** de 3x3 definidas como
 sigue:
 
-{$$}
-\textbf{A}=\begin{matrix}
-a_{11} & a_{12} & a_{13} \\
-a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\
-\end{matrix}
-\,\,\,\,
-\textbf{B}=\begin{matrix}
-b_{11} & b_{12} & b_{13} \\
-b_{21} & b_{22} & b_{23} \\
-b_{31} & b_{32} & b_{33} \\
-\end{matrix}
-{/$$}
 
-La suma viene dada por:
 
-{$$}
-\textbf{A+B} = \begin{matrix}
-a_{11}+b_{11} & a_{12}+b_{12} & a_{13}+b_{13} \\
-a_{21}+b_{21} & a_{22}+b_{22} & a_{23}+b_{23} \\
-a_{31}+b_{31} & a_{32}+b_{32} & a_{33}+b_{33} \\
-\end{matrix}
-{/$$}
+
 
 En MATLAB sumar y restar matrices o vectores resulta muy sencillo, véase
 el ejemplo siguiente:
