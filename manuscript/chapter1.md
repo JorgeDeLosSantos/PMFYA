@@ -250,7 +250,8 @@ utilidad en la programación en MATLAB.
 ### Referencias de función (function handle)
 
 Las function handle son referencias asociadas a una función nativa de
-MATLAB o bien a una función anónima creada por el usuario.\
+MATLAB o bien a una función anónima creada por el usuario.
+
 El siguiente ejemplo muestra la creación de una función anónima y su
 posterior uso mediante su referencia:
 
@@ -321,7 +322,6 @@ solo habrá que especificar el tipo de dato al cual se convertirá, siendo
 permitidos los especificados en la tabla siguiente:
 
 |**Tipo de dato** | **Sintaxis de conversión** | **Rango**|
-|---------------------------------------------------------|
 |Precisión doble | double(num) | 2.2251e-308 a 1.7977e+308|
 |Precisión simple | single(num) | 1.1755e-38 a 3.4028e+38|
 |Entero de 8 bits | int8(num) | -128 a 127|
@@ -389,14 +389,13 @@ En la siguiente tabla se resumen los operadores más importantes en
 MATLAB.
 
 |**Operador**| **Descripción**|
-|-----------------------------|
 |+ | Operador suma|
 |- | Operador resta|
 |\* | Operador multiplicación (escalares)|
 |/ | Operador división|
 |./ | División elemento a elemento (matrices)|
 |.\* | Multiplicación elemento a elemento (matrices)|                                      
-|& | Operador lógico and|
+| & | Operador lógico and|
 |{$$}|{/$$} | Operador lógico or|
 |{$$}\sim{/$$} | Operador lógico not|                        
 |== | Igual a|
@@ -647,7 +646,6 @@ identificadores de un mismo tipo o combinados que se muestran en la
 siguiente tabla:
 
 |**Identificador** | **Formato de salida**|
-|-----------------------------------------|
 |`%d` | Tipo entero|
 |`%f` | Tipo coma flotante|
 |`%g` | Tipo coma flotante compacta|

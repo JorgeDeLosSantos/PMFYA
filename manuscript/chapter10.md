@@ -42,7 +42,7 @@ herramientas que facilitan esta tarea, simplemente seleccionando el
 código y presionando Ctrl + I para un *indentado inteligente*. Note las
 diferencias entre los códigos siguientes:
 
-{linenos=off}
+
 	k = 1;
 	while true
 	if rem(k,2)==0
