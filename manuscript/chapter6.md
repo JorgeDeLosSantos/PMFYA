@@ -434,7 +434,8 @@ Y se resuelve integrando primeramente la función {$$}f(x,y){/$$} respecto {$$}y
 evaluada en los límites {$$}c{/$$} y {$$}d{/$$}, y enseguida el valor resultante se
 integra respecto a {$$}x{/$$} evaluando en el intervalo {$$}[a,\, b]{/$$}, es decir:
 
-{$$} I=\int_a^b \int_c^d f(x,y) dy \, dx$$ $$I=\int_a^b  F_1  dx {/$$}
+{$$} I=\int_a^b \int_c^d f(x,y) dy \, dx {/$$} 
+{$$} I=\int_a^b  F_1  dx {/$$}
 {$$} I=F_2(b) - F_2(a) {/$$}
 
 Donde:
@@ -449,10 +450,9 @@ Por ejemplo, si se requiere resolver la integral doble:
 
 Entonces:
 
-{$$} \int_0^1 \int_2^3 \left( 6x+6y^2 \right) dx \, dy = 
-\int_0^1 \left(3x^2+6y^2x\right)\bigg|_2^3 dy {/$$}
-{$$} = \int_0^1 \left(15+6y^2\right) dy = 
-\left( 15y + 2y^3\right) \bigg|_0^1 = 15 + 2 = 17 {/$$}
+{$$} \int_0^1 \int_2^3 \left( 6x+6y^2 \right) dx \, dy = \int_0^1 \left(3x^2+6y^2x\right)\bigg|_2^3 dy {/$$}
+
+{$$} = \int_0^1 \left(15+6y^2\right) dy = \left( 15y + 2y^3\right) \bigg|_0^1 = 15 + 2 = 17 {/$$}
 
 Para calcular la integral anterior en MATLAB debe definir la función:
 
@@ -481,7 +481,7 @@ Claro que lo anterior puede reducirse a una linea haciendo:
 Para calcular una integral triple el procedimiento en MATLAB es muy
 similar al caso anterior, por ejemplo suponga que se requiere calcular:
 
-{$$} \int_0^2 \int_0^x \int_0^{x+y} e^{x}\left(y+2z\right) dz \, dy \, dx {$$}
+{$$} \int_0^2 \int_0^x \int_0^{x+y} e^{x}\left(y+2z\right) dz \, dy \, dx {/$$}
 
 Entonces:
 
