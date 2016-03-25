@@ -1131,7 +1131,6 @@ I> Es común utilizar el ciclo while poniendo un valor verdadero como
 I> condición, y usar la sentencia combinada `if-break` como punto de
 I> parada, por ejemplo:
 I> 
-I> {line-numbers=off}
 I>     while true
 I>         a = randi(10);
 I>         if a>5
@@ -1207,7 +1206,6 @@ X> de flujo.
 **1.1** ¿Qué tipo de dato devuelve cada una de las siguientes
 instrucciones? (Puede verificar utilizando la función class).
 
-{line-numbers=off}
     >> 3;
     >> true;
     >> 3==2;

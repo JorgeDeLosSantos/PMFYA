@@ -54,7 +54,6 @@ diferencias entre los códigos siguientes:
 	end
 
 
-{line-numbers=off}
 	k = 1;
 	while true
 	    if rem(k,2)==0
