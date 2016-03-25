@@ -134,23 +134,18 @@ llaves conjuntas con el signo %
 En la siguiente tabla se resumen algunos valores especiales devueltos
 por funciones predefinidas en MATLAB:
 
-  ----------------------------------------------------------------------------------------------------------------- --
-  **Función & **Descripción\                                                                                        
-  `ans` & Guarda el ultimo valor no asignado a una variable\                                                        
-  `eps` & Tolerancia que MATLAB soporta en los cálculos\                                                            
-  `intmax` & Máximo valor entero que puede utilizarse\                                                              
-  `intmin` & Mínimo valor entero que puede utilizarse\                                                              
-  `realmax` & Valor de coma flotante máximo que puede representarse\                                                
-  `realmin` & Valor de coma flotante mínimo que puede representarse\                                                
-  `pi` & Constante matemática (3.14159265…)\                                                                        
-  `inf` & Valor asignado a un número demasiado grande respecto a la capacidad de cálculo del software.\             
-  `NaN` & Iniciales de “Not a Number”, tal cual traducción literal hace referencia a un valor numérico inválido.\   
-  `computer` & Devuelve el tipo de computadora que se está utilizando\                                              
-  `version` & Devuelve la versión de MATLAB\                                                                        
-  ****                                                                                                              
-  ----------------------------------------------------------------------------------------------------------------- --
-
-  : Valores especiales
+|**Función  | **Descripción**|                                                                                
+|`ans`| Guarda el ultimo valor no asignado a una variable|
+|`eps`| Tolerancia que MATLAB soporta en los cálculos|
+|`intmax`| Máximo valor entero que puede utilizarse|
+|`intmin`| Mínimo valor entero que puede utilizarse|
+|`realmax`| Valor de coma flotante máximo que puede representarse|
+|`realmin`| Valor de coma flotante mínimo que puede representarse|
+|`pi`| Constante matemática (3.14159265…)|
+|`inf`| Valor asignado a un número demasiado grande respecto a la capacidad de cálculo del software.|
+|`NaN`| Iniciales de “Not a Number”, tal cual traducción literal hace referencia a un valor numérico inválido.|
+|`computer`| Devuelve el tipo de computadora que se está utilizando|
+|`version`| Devuelve la versión de MATLAB|
 
 Tipos de datos y operadores
 ---------------------------
@@ -1238,18 +1233,18 @@ X> de flujo.
 **1.1** ¿Qué tipo de dato devuelve cada una de las siguientes
 instrucciones? (Puede verificar utilizando la función class).
 
-  >> 3;
-  >> true;
-  >> 3==2;
-  >> {1,2,3}; 
+    >> 3;
+    >> true;
+    >> 3==2;
+    >> {1,2,3}; 
 
 **1.2** ¿Es posible realizar las siguientes operaciones?
 
-  >> 3+int8(2);
-  >> true+5;
-  >> int8(10)+int16(5);
-  >> {1,2,3}+{0,1,0};
-  >> [5,1,-2]+[2 3 0];
+    >> 3+int8(2);
+    >> true+5;
+    >> int8(10)+int16(5);
+    >> {1,2,3}+{0,1,0};
+    >> [5,1,-2]+[2 3 0];
 
 **1.3** Desarrolle un script que le solicite su nombre (utilice la
 función input) y que devuelva un saludo más el nombre ingresado, por
@@ -1257,12 +1252,12 @@ ejemplo: Hola Jorge, bienvenido.
 
 **1.4** Identifique el error en las siguientes líneas de código:
 
-  edad=input('Introduzca su edad: ','s');
-  if edad >= 18
-      disp('Mayor de edad');
-  else
-      disp('Menor de edad');
-  end
+    edad=input('Introduzca su edad: ','s');
+    if edad >= 18
+        disp('Mayor de edad');
+    else
+        disp('Menor de edad');
+    end
 
 **1.5** Utilizando la escala de calificación del 0 a 10 y siendo 6 la
 calificación mínima aprobatoria, cree un programa en el cual ingrese una
