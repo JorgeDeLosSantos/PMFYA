@@ -486,3 +486,63 @@ La función size también puede utilizarse con la sintaxis siguiente:
 Donde k puede adquirir valores de 1 o 2, siendo k=1 se puede determinar
 el número de filas y con k=2 se calcula el número de columnas.
 
+## Concatenar, rotar y redimensionar una matriz
+
+### Concatenación de matrices
+
+La concatenación de matrices es en términos prácticos la unión de dos o
+más matrices en una nueva, sin afectar la distribución original de los
+elementos. Observe el siguiente ejemplo:
+
+    >> M=[ones(3) zeros(3)]
+    M =
+         1     1     1     0     0     0
+         1     1     1     0     0     0
+         1     1     1     0     0     0
+
+La matriz M resulta de la concatenación de dos matrices de ceros y unos
+de 3x3 de forma horizontal. Para la concatenación de forma vertical debe
+separar cada matriz utilizando el operador punto y coma, como se muestra
+a continuación:
+
+    >> M=[ones(3);zeros(3)]
+    M =
+         1     1     1
+         1     1     1
+         1     1     1
+         0     0     0
+         0     0     0
+         0     0     0
+
+Si quiere evitar el uso de operadores puede recurrir a las funciones
+horzcat y vertcat de MATLAB que prácticamente devuelven resultados
+similares a los anteriores. Puede verificar lo anterior con las
+instrucciones siguientes:
+
+    >> M=horzcat(ones(3),zeros(3));
+    >> M=vertcat(ones(3),zeros(3));
+
+Más aun, MATLAB proporciona la función cat para realizar concatenaciones
+en cualquiera de las dimensiones de una matriz. La sintaxis es:
+
+    cat(dim,A,B);
+
+Donde dim es la dimensión en la cual se concatenarán las matrices A y B,
+siendo 1 para las filas (equivalente a vertcat), 2 para las columnas
+(equivalente a horzcat) y 3 para la concatenación en una hipermatriz.
+
+Considere las matrices **M** y **N** definidas como:
+
+{$$}
+\textbf{M}=
+\begin{pmatrix}
+    1 & 3 \\
+    -2 & 1 
+\end{pmatrix}
+\,\,\,\,
+\textbf{N}=
+\begin{pmatrix}
+    3 & 7 \\
+    0 & 2
+\end{pmatrix}
+{/$$}
