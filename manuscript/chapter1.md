@@ -1207,31 +1207,32 @@ en formato string o numérico a un vector de seis elementos como se
 describió anteriormente, y clock devuelve la fecha y hora actual tal
 como la hace now pero como un vector de seis elementos.
 
-> El número de Reynolds es un parámetro adimensional utilizado en
-> mecánica de fluidos para caracterizar el movimiento de un fluido,
-> usualmente se define como:
->
-> $$Re=\frac{vD}{\nu}$$
->
-> Donde v es la velocidad del fluido, D el diámetro de la tubería a
-> través de la cual circula el fluido y $\nu$ la viscosidad cinemática.
-> La teoría subyacente del número de Reynolds se establece conforme a
-> varias características propias y externas al fluido, pero en este caso
-> vamos a limitarlo al flujo interno en tuberías circulares; siendo así,
-> el número de Reynolds permite caracterizar si un flujo es laminar o
-> turbulento dependiendo de ciertos intervalos establecidos de manera
-> experimental, enseguida se muestran los intervalos de valores y el
-> tipo de flujo en cada caso:\
-> Re $<$ 2100 *Flujo turbulento*\
-> 2100 $\leq$ Re $\leq$ 3000 *Flujo transitorio*\
-> Re $>$ 3000 *Flujo turbulento*\
-> Basado en lo anterior, escriba un programa cuyos valores de entrada
-> sean la velocidad del fluido, el diámetro de la tubería y la
-> viscosidad cinemática, y que devuelva como variable de salida el tipo
-> de flujo.
+X> El número de Reynolds es un parámetro adimensional utilizado en
+X> mecánica de fluidos para caracterizar el movimiento de un fluido,
+X> usualmente se define como:
+X>
+X> {$$}Re=\frac{vD}{\nu}{/$$}
+X>
+X> Donde v es la velocidad del fluido, D el diámetro de la tubería a
+X> través de la cual circula el fluido y $\nu$ la viscosidad cinemática.
+X> La teoría subyacente del número de Reynolds se establece conforme a
+X> varias características propias y externas al fluido, pero en este caso
+X> vamos a limitarlo al flujo interno en tuberías circulares; siendo así,
+X> el número de Reynolds permite caracterizar si un flujo es laminar o
+X> turbulento dependiendo de ciertos intervalos establecidos de manera
+X> experimental, enseguida se muestran los intervalos de valores y el
+X> tipo de flujo en cada caso:
+X> 
+X> Re {$$}<{/$$} 2100 *Flujo turbulento*
+X> 2100 {$$}\leq{/$$} Re {$$}\leq{/$$} 3000 *Flujo transitorio*
+X> Re {$$}>{/$$} 3000 *Flujo turbulento*
+X>
+X> Basado en lo anterior, escriba un programa cuyos valores de entrada
+X> sean la velocidad del fluido, el diámetro de la tubería y la
+X> viscosidad cinemática, y que devuelva como variable de salida el tipo
+X> de flujo.
 
-Problemas {#problemas .unnumbered}
----------
+## Problemas
 
 **1.1** ¿Qué tipo de dato devuelve cada una de las siguientes
 instrucciones? (Puede verificar utilizando la función class).
