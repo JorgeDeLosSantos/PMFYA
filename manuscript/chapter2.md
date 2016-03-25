@@ -667,3 +667,127 @@ unitario. Véanse los ejemplos a continuación:
         13     1    14
          1    19     8
         10     9    10
+
+
+### Redimensionar matrices
+
+Para efectos de esta sección, entiéndase redimensionar como la acción de
+transformar la disposición de los elementos de una matriz sin afectar
+sus valores ni el número total de elementos, pero si sus posiciones y/o
+número de filas o columnas. Por ejemplo, sea A una matriz de m x n, y
+sea B una matriz de p x q resultante de redimensionar la matriz A, es
+entonces estrictamente necesario que se cumpla la condición
+(m)(n)=(p)(q) para que estemos tratando con un *redimensionamiento*.
+
+MATLAB cuenta con la función `reshape` para el redimensionamiento de
+matrices, la sintaxis es:
+
+    >> X=reshape(A, m, n);
+
+Siendo A la matriz original de dimensiones diferentes de m x n (o al
+menos eso se espera), m y n son el número de filas y columnas,
+respectivamente, que tendrá la nueva matriz X. Véanse los ejemplos
+siguientes:
+
+    >> V=1:10;
+    >> X=reshape(V,5,2)
+    X =
+         1     6
+         2     7
+         3     8
+         4     9
+         5    10
+    >> Y=reshape(ones(4),2,8)
+    Y =
+         1     1     1     1     1     1     1     1
+         1     1     1     1     1     1     1     1
+
+## Ordenar matrices
+
+El ordenamiento de datos es una tarea muy común dentro del mundo de la
+informática y en la programación científica. Se ordenan datos para
+realizar análisis cualitativos, para la visualización gráfica o
+cualquier otro procedimiento que requiera datos organizados. Los datos
+se pueden organizar por criterios diversos, pero en esta sección veremos
+simplemente como ordenarlos de acuerdo a su valor numérico, en orden
+ascendente o descendente.
+
+Generalmente los algoritmos de ordenamiento forman parte de los cursos
+básicos de programación y algorítmica, dada su importancia mencionada
+con anterioridad. Se estudian por lo general métodos tradicionales como:
+el método de ordenamiento por selección, ordenamiento por inserción y
+ordenamiento por combinación.
+
+Ahora, enseguida sólo veremos cómo implementar el método de ordenamiento
+por selección, puesto que resulta muy didáctico y fácil de programar, y
+como no estamos en disposición de *reinventar* la rueda, entonces, para
+el ordenamiento de las matrices y/o vectores utilizaremos la función
+`sort` incluida en el núcleo de MATLAB, y el resto de métodos de
+ordenamiento tradicionales se propondrán como ejercicios al final de
+este capítulo.
+
+Así pues, puede revisar el siguiente código:
+
+    X=input('Inserte un vector: ');
+    for i=1:length(X)
+        [menor,k]=min(X(i:end));
+        X((i-1)+k)=X(i);
+        X(i)=menor;
+    end
+    disp(X); % Vector ordenado
+
+El programa anterior tiene como punto de entrada un vector introducido
+por el usuario de forma interactiva y que puede contener valores
+numéricos cualesquiera. Una vez se ha introducido el vector, se utiliza
+un bucle for cuyo recorrido está determinado por la longitud del vector,
+y en cada iteración se busca el elemento de menor valor ubicado en el
+sub-arreglo {$$}X(i,i+1,...,n-1,n){/$$} donde i es el i-ésimo elemento dado por
+el número de iteración actual, y n el último elemento del arreglo, la
+función min de MATLAB devuelve dos resultados: el valor y la posición
+del mínimo encontrado, con ello se procede a intercambiar el valor
+mínimo encontrado con aquel ubicado en la i-ésima posición del arreglo.
+Y así, cuando se hayan ejecutado tantas iteraciones como elementos tenga
+el vector, se habrán ordenado en forma ascendente dichos valores. Si por
+el contrario necesita ordenar un vector en forma descendente,
+simplemente habrá de sustituir la función `min` por `max`, es decir, buscar
+un valor máximo en lugar del mínimo en cada iteración, o bien,
+reutilizar el mismo algoritmo y audazmente rotar el vector resultante
+mediante la función `fliplr`.
+
+Como se mencionó, en MATLAB todo lo anterior puede reemplazarse
+utilizando la función `sort`, cuya sintaxis más general es:
+
+    >> sort(X, dim, mod);
+
+Donde X es la matriz o vector a ordenar, dim es un escalar que puede ser
+1 (columnas) o 2 (filas) y que representa la dimensión de referencia
+sobre la cual se ordenará, y mod es el modo de ordenamiento, que puede
+ser `’ascend’` (menor a mayor) o `’descend’` (mayor a menor), por
+defecto las matrices o vectores se ordenan en forma ascendente. Véanse
+los ejemplos siguientes:
+
+    >> X=[10 2 8 17 20 1 4 8 9];
+    >> sort(X)
+    ans =
+         1     2     4     8     8     9    10    17    20
+    >> M=randi(10,5)
+    M =
+         3    10     3     2     8
+         8     7     2    10     6
+         9     4     9     5     5
+         1    10     8     3    10
+         4     8     4     5     6
+    >> sort(M,1) % Ordenada por columnas
+    ans =
+         1     4     2     2     5
+         3     7     3     3     6
+         4     8     4     5     6
+         8    10     8     5     8
+         9    10     9    10    10
+    >> sort(M,2) % Ordenada por filas
+    ans =
+         2     3     3     8    10
+         2     6     7     8    10
+         4     5     5     9     9
+         1     3     8    10    10
+         4     4     5     6     8
