@@ -955,7 +955,7 @@ simple, podríamos modificarlo de tal manera que envíe también un mensaje
     end
 
 Ahora imagine que para los ejemplos anteriores se necesita especificar
-si a=b, si a{$$}\gt{/$$}b o bien si a{$$}\lt{/$$}b, lo cual implicaría tener una
+si a=b, si a {$$}\gt{/$$} b o bien si a {$$}\lt{/$$} b, lo cual implicaría tener una
 sentencia de selección múltiple `if-elseif-else` que permite escoger entre
 varias opciones, evaluándose en orden descendente, por ejemplo refiérase
 a la siguiente estructura:
@@ -974,20 +974,4 @@ a la siguiente estructura:
     else
         % Instrucciones
     end
-
-MATLAB evalúa primeramente la condición 1 contenida en la sentencia `if` 
-(cond1) y en el caso de no cumplirse evalúa la siguiente condición de
-forma sucesiva (cond2, cond3, …); finalmente y en el caso de que ninguna
-de las opciones evaluadas se cumpla, se ejecuta la instrucción contenida
-en la sentencia else. A continuación se muestra el ejemplo de una
-bifurcación múltiple para la situación descrita al principio:
-
-    if a==b
-        disp('a es igual que b');
-    elseif a>b
-        disp('a es mayor que b');
-    elseif a<b
-        disp('a es menor que b');
-    end
-
 
