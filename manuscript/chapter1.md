@@ -689,3 +689,240 @@ dos decimales del número {$$}\pi{/$$}:
     >> fprintf('%.2f\n',pi);
     3.14
 
+
+## Funciones
+
+### Funciones, una introducción
+
+Las funciones son porciones de código que por lo general aceptan
+argumentos o valores de entrada y devuelven un valor de salida. Una
+función es una herramienta muy útil en la programación, dado que permite
+la reutilización de código para procedimientos que así lo requieran, así
+como una facilidad significativa para mantener el código, lo cual se
+traduce en una mayor productividad. MATLAB, de hecho, está compuesto por
+una multitud de funciones agrupadas en toolboxs, cada una de ellas
+pensada para resolver una situación concreta.
+
+La estructura básica de una función contiene los siguientes elementos:
+
+* La palabra reservada function
+* Los valores de salida
+* El nombre de la función
+* Los argumentos de entrada
+* Cuerpo de la función
+
+Para una mejor comprensión de cada uno de esos elementos, refiérase a
+las siguientes líneas de código:
+
+    function res = suma(a,b)
+    res = a+b;
+    end
+
+La función anterior llamada suma, recibe como argumentos de entrada dos
+valores numéricos a y b, y devuelve un resultado guardado en res que
+equivale a la suma aritmética de las variables de entrada. Si ejecutamos
+la función en la ventana de comandos obtenemos algo similar a esto:
+
+    >> s=suma(3,2)
+    s =
+         5
+
+Si no hace una asignación el resultado devuelto se guarda en la variable
+`ans`.
+
+### Verificar argumentos de entrada y salida
+
+Cuando se crea una función es recomendable verificar si la cantidad de
+argumentos de entrada corresponden a los soportados, o bien, si el tipo
+de dato que se ha introducido es el adecuado para proceder con el resto
+de la programación; MATLAB proporciona los comandos `nargin` y `nargout`
+que sirven para *contar* el número de argumentos de entrada y salida
+respectivamente.
+
+Utilizando como ejemplo la función suma creada con anterioridad, podemos
+verificar que el número de argumentos sean exactamente dos para poder
+proceder y en caso contrario enviar al usuario un mensaje de error en la
+ventana de comandos, el código implicado sería similar al siguiente:
+
+    function res = suma(a,b)
+    if nargin==2
+        res=a+b;
+    else
+        error('Introduzca dos argumentos de entrada');
+    end
+    end
+
+Si ejecutamos la función pasándole solamente un argumento de entrada nos
+devolverá un mensaje de error:
+
+    >> s=suma(7)
+    Error using suma (line 5)
+    Introduzca dos argumentos de entrada
+
+### Sub-funciones
+
+Las sub-funciones son funciones definidas dentro del espacio de otra
+función principal. Se utilizan como funciones auxiliares con la
+finalidad de hacer más legible el código y facilitar la depuración de
+errores. Enseguida se muestra el ejemplo de una sub-función:
+
+    function r=isfibo(num)
+    % Determina  si un  número  entero  forma  parte
+    % de la sucesión de Fibonacci, devuelve un valor
+    % de tipo lógico.
+    ff=fibonacci(num);
+    if any(ff==num)
+        r=true;
+    else
+        r=false;
+    end
+        function F=fibonacci(n)
+            F(1:2)=1;
+            i=3;
+            while 1
+                F=[F F(i-1)+F(i-2)];
+                if F(end) >= n,break,end;
+                i=i+1;
+            end
+        end
+    end
+
+La función anterior isfibo determina si el entero pasado como argumento
+de entrada pertenece a la sucesión de Fibonacci, para ello utiliza como
+una función auxiliar a la sub-función fibonacci que se encarga de
+generar la sucesión de Fibonacci en un intervalo dado y guardarlo en un
+vector de salida. Una sub-función puede ser llamada solamente por la
+función principal que la contiene.
+
+### Argumentos variables
+
+En la introducción a las funciones se ha mencionado que estas por lo
+general tienen un número específico de argumentos de entrada y salida,
+no obstante se presentan situaciones en donde los argumentos de entrada
+o salida de una función no son fijos o bien los argumentos pueden ser
+demasiados de tal modo que resulte incómodo definirlos en la línea
+correspondiente. Para solucionar lo anterior MATLAB permite el uso de
+varargin y varargout como argumentos de entrada y salida
+respectivamente. Para tener una idea más práctica de lo anterior véase
+el ejemplo siguiente:
+
+    function m=max2(varargin)
+    if nargin==1
+        v=varargin{1};
+        m=v(1);
+        for i=2:length(v)
+            if v(i)>m
+                m=v(i);
+            end
+        end 
+    elseif nargin==2
+        a=varargin{1};
+        b=varargin{2};
+        if a>b
+            m=a;
+        else
+            m=b;
+        end
+    end
+    end
+
+La función anterior max2 emula a la función nativa max, puede recibir
+como argumento de entrada un vector o bien dos valores escalares. Si
+observa el código anterior notará que varargin es un cell array que
+guarda todos los argumentos de entrada pasados a la función, como se
+verá en el capítulo 3 la manera de acceder a los elementos de un cell
+array es utilizando la sintaxis: `var{k}`, donde `var` es la
+variable en la que está almacenada el cell array y `k` es el k-ésimo
+elemento contenido en el cell array.
+
+### Ayuda de una función
+
+Como parte de las buenas prácticas de programación es recomendable
+incluir comentarios dentro de una función que indiquen el propósito de
+esta, así como una descripción breve de los argumentos de entrada y
+salida e incluso un ejemplo concreto de la misma.
+
+Por convención estos comentarios deben colocarse justamente después de
+la definición de la función y antes de todo el código restante, además
+de que esto servirá como referencia al resto de usuarios también le
+permitirá a MATLAB interpretarlo como las líneas de ayuda cuando se le
+solicite expresamente mediante la función help. Véase el siguiente
+ejemplo:
+
+    function [x1,x2]=ecuad(a,b,c)
+    % Resuelve una ecuación cuadrática de la forma:
+    % a*x^2+b*x+c=0
+    %
+    % Argumentos de entrada:
+    %          a  -  Coeficiente cuadrático
+    %          b  -  Coeficiente lineal
+    %          c  -  Coeficiente constante
+    %
+    % Argumentos de salida:
+    %          x1,x2  - Raíces de la ecuación cuadrática 
+    %
+    % Ejemplo:
+    %         >> [r1,r2]=ecuad(-1,2,1);
+    %
+     
+    x1=(1/(2*a))*(-b+sqrt(b^2-4*a*c));
+    x2=(1/(2*a))*(-b-sqrt(b^2-4*a*c));
+    end
+
+Podemos teclear help ecuad en la ventana de comandos y verificar lo que
+MATLAB nos devuelve como ayuda de la función:
+
+    >> help ecuad
+      Resuelve una ecuación cuadrática de la forma:
+      a*x^2+b*x+c=0
+      Argumentos de entrada:
+               a  -  Coeficiente cuadrático
+               b  -  Coeficiente lineal
+               c  -  Coeficiente constante
+      Argumentos de salida:
+               x1,x2  - Raíces de la ecuación cuadrática 
+      Ejemplo:
+              >> [r1,r2]=ecuad(-1,2,1);
+
+Es común agregar a la ayuda de una función algunas referencias hacia
+otras funciones similares, para ello en los comentarios debe agregar una
+línea que comience con las palabras “SEE ALSO” (Ver también), seguidas
+de las funciones similares separadas por comas, véase el ejemplo a
+continuación:
+
+    function [x1,x2]=ecuad(a,b,c)
+    % Resuelve una ecuación cuadrática de la forma:
+    % a*x^2+b*x+c=0
+    %
+    % Argumentos de entrada:
+    %          a  -  Coeficiente cuadrático
+    %          b  -  Coeficiente lineal
+    %          c  -  Coeficiente constante
+    %
+    % Argumentos de salida:
+    %          x1,x2  - Raíces de la ecuación cuadrática 
+    %
+    % Ejemplo:
+    %         >> [r1,r2]=ecuad(-1,2,1);
+    %
+    % SEE ALSO roots,solve,fzero
+    %
+     
+    x1=(1/(2*a))*(-b+sqrt(b^2-4*a*c));
+    x2=(1/(2*a))*(-b-sqrt(b^2-4*a*c));
+    end
+
+    >> help ecuad
+      Resuelve una ecuación cuadrática de la forma:
+      a*x^2+b*x+c=0 
+      Argumentos de entrada:
+               a  -  Coeficiente cuadrático
+               b  -  Coeficiente lineal
+               c  -  Coeficiente constante
+      Argumentos de salida:
+               x1,x2  - Raíces de la ecuación cuadrática 
+      Ejemplo:
+              >> [r1,r2]=ecuad(-1,2,1);
+
+      SEE ALSO roots,solve,fzero
+
