@@ -383,3 +383,252 @@ descritas.
       a         1x1                 8  double              
       b         1x1                 8  double     
 
+
+### Operadores aritméticos, relacionales y lógicos
+
+En la siguiente tabla se resumen los operadores más importantes en
+MATLAB.
+
+|**Operador**| **Descripción**|
+|+ | Operador suma|
+|- | Operador resta|
+|\* | Operador multiplicación (escalares)|
+|/ | Operador división|
+|./ | División elemento a elemento (matrices)|
+|.\* | Multiplicación elemento a elemento (matrices)|                                      
+| & | Operador lógico and|
+|{$$}|{/$$} | Operador lógico or|
+|{$$}\sim{/$$} | Operador lógico not|                        
+|== | Igual a|
+|{$$}<{/$$}| Menor que|
+|{$$}>{/$$} | Mayor que|
+|{$$}<={/$$} | Menor o igual que|
+|{$$}>={/$$} | Mayor o igual que|
+|{$$}\sim = {/$$} | Diferente de|
+
+## Un mini tutorial de introducción
+
+Una vez conocidos los tipos de datos y los operadores, podemos comenzar
+con una breve introducción al uso de MATLAB como una poderosa
+calculadora muy fácil de utilizar.
+
+Como se ha descrito en secciones anteriores, el command window o ventana
+de comandos es la parte del entorno MATLAB que nos permite interactuar
+de forma dinámica, si tecleamos una instrucción automáticamente nos
+devolverá un resultado y se crearán variables en las cuales se almacenen
+los diversos valores de salida. Por ejemplo, vamos a teclear una simple
+suma aritmética:
+
+    >> 3+2
+    ans =
+         5
+
+Puede verificar que en el workspace ahora aparece una variable llamada
+`ans` con valor de 5, en `ans` se guarda por defecto el último resultado
+no asignado a una variable, podríamos asignar el resultado de la suma a
+una variable específica:
+
+    >> suma=3+2
+    suma =
+         5
+
+Podemos también asignar valores a determinadas variables y enseguida
+utilizarlas para ejecutar alguna operación, por ejemplo:
+
+    >> a=5;
+    >> b=7;
+    >> a*b
+    ans =
+        35
+    >> a-b
+    ans =
+        -2
+    >> a/b
+    ans =
+        0.7143
+
+Note que el colocar un punto y coma (;) al final de una instrucción
+evita que se muestre un resultado de salida, lo cual no afecta en el
+almacenamiento de los valores correspondientes, pero podría resultar de
+mucha ayuda al momento de seleccionar los valores que se quieren mostrar
+en la ventana de comandos.
+
+MATLAB también tiene disponible diversas funciones matemáticas
+predefinidas, que pueden ser aplicadas sobre un número o sobre una
+matriz o arreglo de números. Algunas funciones trigonométricas:
+
+    >> sin(pi/2)
+    ans =
+         1
+    >> cos(pi/4)
+    ans =
+        0.7071
+    >> tan(pi/3)
+    ans =
+        1.7321
+
+Note que el valor de la constante {$$}\pi{/$$} está predefinida en MATLAB
+mediante la cadena `pi`:
+
+    >> pi
+    ans =
+        3.1416
+
+MATLAB devuelve un valor de 3.1416, lo cual es un valor *redondeado* de
+{$$}\pi{/$$}, pero esto es cuestión solamente de la representación, normalmente
+se utiliza el formato short (4 dígitos después del punto decimal) para
+la representación de valores numéricos, internamente MATLAB utiliza más
+digitos para *manejar* y operar con el valor de {$$}\pi{/$$}. Si queremos
+obtener más digitos en la salida por consola podemos cambiar el formato
+de salida:
+
+    >> format long
+    >> pi
+    ans =
+       3.141592653589793
+
+El formato largo permite representar una cantidad con 16 decimales.
+Incluso es posible *forzar* a que se muestre una representación en forma
+racional:
+
+    >> format rat
+    >> pi
+    ans =
+         355/113   
+    >> 0.1+0.123
+    ans =
+         223/1000  
+    >> 0.125
+    ans =
+           1/8
+
+Se puede crear una lista o arreglo de valores numéricos encerrando estos
+entre corchetes, y separando cada elemento por comas o espacios.
+
+    >> A=[5,8,10,2,7]
+    A =
+         5     8    10     2     7
+    >> B=[3 7 1 0 -2]
+    B =
+         3     7     1     0    -2
+
+Se puede obtener el valor máximo y mínimo de un arreglo numérico
+utilizando las funciones `max` y `min` respectivamente.
+
+    >> max(A)
+    ans =
+        10
+    >> min(A)
+    ans =
+         2
+
+También podemos calcular el promedio de los valores utilizando la
+función `mean`:
+
+    >> mean(A)
+    ans =
+        6.4000
+
+Obtener la cantidad de elementos que componen lista con `length` o
+`numel`:
+
+    >> length(A)
+    ans =
+         5
+    >> numel(A)
+    ans =
+         5
+
+## Ficheros de comandos
+
+Los ficheros de comandos, conocidos también como *scripts*, son archivos
+de texto sin formato (ASCII) con la extensión característica de los
+archivos de MATLAB (\*.m), se utilizan para almacenar una serie de
+comandos o instrucciones que se ejecutan sucesivamente y que habrán de
+realizar una tarea específica. Los scripts de MATLAB pueden editarse
+utilizando cualquier editor de texto sin formato (Bloc de Notas,
+Notepad++, Sublime Text, etc…), aunque es más recomendable utilizar el
+editor de MATLAB, puesto que proporciona herramientas que facilitan la
+corrección de errores, el control sobre la ejecución del código y la
+capacidad de autocompletado y sugerencias cuando se utilizan funciones
+nativas de MATLAB.
+
+Para crear un nuevo script puede pulsar la combinación **Ctrl + N**
+(bajo SO Windows), o buscar en la interfaz de MATLAB la opción New y
+enseguida seleccionar Script; si prefiere hacerlo desde la ventana de
+comandos puede introducir el comando edit que le abrirá un nuevo
+script.
+
+Para guardar un fichero de comandos utilice la opción **Save** de la
+barra de herramientas o bien mediante la combinación de teclas **Ctrl +S** 
+en Windows. Debe tomarse en cuenta que al guardar un script se le
+proporcione un nombre que no entre en conflicto con las funciones
+nativas de MATLAB o las palabras reservadas del lenguaje. Algunas
+recomendaciones que deben seguirse para nombrar un script son:
+
+* El nombre deberá contener sólo letras, números o guiones bajos.
+
+* No deberá comenzar con un carácter diferente a una letra (Por
+  ejemplo: `102metodo.m`, es un nombre inválido dado que comienza con
+  un número).
+
+* Evite utilizar nombres de funciones nativas de MATLAB o palabras
+  reservadas del lenguaje que podrían ocasionar conflictos.
+
+## Entradas y salidas en el Command Window
+
+En la sección 1.2 se describió al Command Window (ventana de comandos) y
+se hizo referencia a este como la parte del escritorio de MATLAB que
+permite interactuar tecleando instrucciones y devolviendo al instante un
+resultado. En esta sección veremos cómo utilizar funciones que permitan
+introducir y mostrar ciertos valores de manera controlada por el
+usuario.
+
+### La función input
+
+La función input permite *pedir* un valor al usuario utilizando una
+cadena de caracteres como prompt, la sintaxis es muy sencilla:
+
+    var=input('Introduzca un valor: ');
+
+En la variable var se guarda el valor que el usuario introduzca, los
+valores aceptados por la función input pueden ser de tipo numérico, cell
+arrays, e inclusive tipo char. Aunque para introducir cadenas de texto
+la función input dispone de un modificador que hará que la entrada se
+evalúe como una variable tipo char o cadena de texto, la sintaxis para
+esto es la siguiente:
+
+    var=input('Introduzca una cadena de texto: ', 's');
+
+La letra s entre comillas simples le indica a MATLAB que deberá evaluar
+la entrada como tipo string.
+
+### Salida sin formato: la función disp
+
+La función disp muestra en pantalla el valor de una determinada variable
+que se pasa como argumento, por ejemplo:
+
+    >> a=3;
+    >> disp(a)
+         3
+
+Para el caso anterior se pasa como argumento la variable a que ha sido
+declarada previamente y simplemente se muestra el valor correspondiente
+a esta. Las variables a mostrar pueden ser de cualquier tipo, incluyendo
+cadenas de texto, matrices, cell arrays y estructuras, véanse los
+siguientes ejemplos:
+
+    >> disp(magic(3))
+         8     1     6
+         3     5     7
+         4     9     2
+    >> disp({1,0,2,-2})
+        [1]    [0]    [2]    [-2]
+    >> disp('Hola Mundo')
+    Hola Mundo
+
+Con disp también es posible mostrar enlaces a un sitio web, utilizando
+la sintaxis HTML para un enlace dentro de la función disp, por ejemplo:
+
+    >> disp('<a href="http://matlab-typ.blogspot.mx">MATLAB TYP</a>');
+    MATLAB TYP
