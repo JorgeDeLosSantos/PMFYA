@@ -955,8 +955,291 @@ simple, podríamos modificarlo de tal manera que envíe también un mensaje
     end
 
 Ahora imagine que para los ejemplos anteriores se necesita especificar
-si a=b, si a {$$}\gt{/$$} b o bien si a {$$}\lt{/$$} b, lo cual implicaría tener una
+si a=b, si a {$$}>{/$$} b o bien si a {$$}<{/$$} b, lo cual implicaría tener una
 sentencia de selección múltiple `if-elseif-else` que permite escoger entre
 varias opciones, evaluándose en orden descendente, por ejemplo refiérase
 a la siguiente estructura:
 
+
+
+
+    if cond1
+        % Instrucciones
+    elseif cond2 
+        % Instrucciones
+    elseif cond3
+        % Instrucciones
+        .
+        .
+        .
+    elseif condN
+        % Instrucciones
+    else
+        % Instrucciones
+    end
+
+
+
+MATLAB evalúa primeramente la condición 1 contenida en la sentencia `if` 
+(cond1) y en el caso de no cumplirse evalúa la siguiente condición de
+forma sucesiva (cond2, cond3, …); finalmente y en el caso de que ninguna
+de las opciones evaluadas se cumpla, se ejecuta la instrucción contenida
+en la sentencia else. A continuación se muestra el ejemplo de una
+bifurcación múltiple para la situación descrita al principio:
+
+    if a==b
+        disp('a es igual que b');
+    elseif a>b
+        disp('a es mayor que b');
+    elseif a<b
+        disp('a es menor que b');
+    end
+
+### Sentencia switch
+
+La sentencia switch es una bifurcación múltiple que permite seleccionar
+entre varias opciones o casos la acción a ejecutar. La sintaxis general
+es:
+
+    switch var
+       case opc1
+          % Instrucciones
+       case opc2
+          % Instrucciones
+        .
+        .
+        .
+       otherwise
+          % Intrucciones
+    end
+
+Siendo var la variable que servirá como criterio de selección. Después
+de la palabra reservada case, se coloca el valor de var para el cual se
+ejecutarán esas instrucciones, y en otherwise se insertan las
+instrucciones que MATLAB deberá ejecutar por defecto en caso de no
+cumplirse ninguno de los casos especificados.
+
+Enseguida se muestran dos ejemplos correspondientes a la sentencia de
+selección switch:
+
+    X=input('Inserte 0 o 1: ');
+    switch X
+        case 0
+            disp('Insertó cero');
+        case 1
+            disp('Insertó uno');
+        otherwise
+            warning('Valor incorrecto, verifique');     
+    end
+
+
+    letra=input('Inserte una letra: ','s');
+    switch letra
+        case {'a','e','i','o','u'}
+            disp('Es una vocal');
+        otherwise
+            disp('Es una consonante');
+    end
+
+### Bucle for
+
+La sintaxis general de un bucle for se muestra enseguida:
+
+    for i=inicio:incremento:fin
+        % Instrucciones...
+    end
+
+El valor inicio es a partir del cual se ejecutará el ciclo, el
+incremento es la cantidad que varía en cada paso de ejecución, y el
+valor de final establece el último valor que tomará el ciclo.
+
+El siguiente código muestra un ciclo for muy básico, el cual simplemente
+muestra en consola el valor actual adquirido por la variable.
+
+    for i=1:10
+        fprintf('Valor actual: %g \n',i);
+    end
+
+Cuando no se especifica el incremento, como el caso anterior, MATLAB
+asume que es unitario.
+
+Es posible utilizar ciclos for anidados, por ejemplo para cuando se
+requiere recorrer una matriz en sus dos dimensiones y ejecutar
+operaciones elemento por elemento. Véase el siguiente ejemplo:
+
+    A=round(rand(5)*10);
+    for i=1:5
+        for j=1:5
+            disp(A(i,j));
+        end
+    end
+
+### Bucle while
+
+El bucle while se utiliza, por lo general, cuando no se tiene un rango
+definido sobre el cual se realice la ejecución del ciclo o bien cuando
+la terminación del mismo viene dada por una condición. La sintaxis más
+común es:
+
+    while cond
+        % Instrucciones
+        % ...
+        % ...
+        % ...
+    end
+
+Donde `cond` es la condición que determina la finalización de
+ejecución.
+
+Enseguida se muestra un ejemplo muy básico que muestra en pantalla el
+valor de una variable utilizada como referencia:
+
+    k=1;
+    while k<10
+        disp(k);
+        k=k+1;
+    end
+
+Lo anterior muestra en consola el valor de k mientras esta sea menor a
+10, es decir muestra todos los valores enteros en el intervalo {$$}[1, 9]{/$$},
+es importante notar que la variable k debe incrementarse en cada ciclo
+para que en un momento determinado la condición de finalización se
+cumpla, de lo contrario se convertiría en un bucle infinito.
+
+Ahora, veamos un ejemplo más práctico. La aproximación de una raíz
+cuadrada por el método babilónico implica realizar n iteraciones
+mediante la siguiente expresión:
+
+{$$} r_n(x) = \frac{1}{2}(\frac{x}{r_{n-1}}+r_{n-1}) {/$$}
+
+Donde x es el número del cual se calcula la raíz cuadrada. A
+continuación se muestra el código implementado en MATLAB utilizando un
+bucle `while`:
+
+    x=input('Introduzca un número positivo: ');
+    r=x;
+    ra=0;
+    while ra~=r
+        ra=r;
+        r=(1/2)*(x/r+r);
+    end
+    fprintf('\nRaíz cuadrada de %g = %g\n\n',x,r);
+
+Como se observa, en la variable ra se guarda la raíz aproximada
+calculada en una iteración anterior, de manera que esta sirva como
+comparación respecto a la nueva raíz calculada, el bucle termina cuando
+la diferencia entre el valor actual y el anterior es inferior a la
+tolerancia numérica (`eps`) soportada por MATLAB y por ende pasan a
+considerarse como valores iguales.
+
+I> ## While-if-break, rompiendo ciclos.
+I>
+I> Es común utilizar el ciclo while poniendo un valor verdadero como
+I> condición, y usar la sentencia combinada `if-break` como punto de
+I> parada, por ejemplo:
+I> 
+I>     while true
+I>         a = randi(10);
+I>         if a>5
+I>             break;
+I>         end
+I>     end
+
+
+## Fecha y hora
+
+Primeramente es importante mencionar que MATLAB maneja tres formatos de
+fechas y hora, a saber:
+
+* Un vector de seis elementos los cuales son: [año, mes, día, hora, minuto, segundo].
+
+* Un valor escalar de coma flotante (tipo double), en el cual la parte entera representa 
+la cantidad de días que han transcurrido desde el año cero (calendario gregoriano) y 
+la parte decimal representa la fracción del día trascurrido.
+
+* Una cadena de texto con la forma `’dd-mmm-aaa HH:MM:SS’`.
+
+Para obtener la fecha actual MATLAB proporciona el comando now:
+
+    >> now
+    ans =
+       7.3575e+05
+
+Lo anterior podría resultar útil para efectos de cálculo pero no es tan
+significativo para el usuario que está acostumbrado a visualizar la
+fecha y hora mediante los formatos convencionales; podemos convertir el
+valor numérico anterior a una cadena de texto que nos proporcione mayor
+información a primer vista, para ello se utiliza la función datestr como
+sigue:
+
+    >> datestr(now)
+    ans =
+    03-Jun-2014 17:09:36
+
+Además de las anteriores MATLAB dispone de las funciones datevec y
+clock, la primera convierte una determinada fecha pasada como argumento
+en formato string o numérico a un vector de seis elementos como se
+describió anteriormente, y clock devuelve la fecha y hora actual tal
+como la hace now pero como un vector de seis elementos.
+
+
+X> El número de Reynolds es un parámetro adimensional utilizado en
+X> mecánica de fluidos para caracterizar el movimiento de un fluido,
+X> usualmente se define como:
+X>
+X> {$$}Re=\frac{vD}{\nu}{/$$}
+X>
+X> Donde v es la velocidad del fluido, D el diámetro de la tubería a
+X> través de la cual circula el fluido y {$$}\nu{/$$} la viscosidad cinemática.
+X> La teoría subyacente del número de Reynolds se establece conforme a
+X> varias características propias y externas al fluido, pero en este caso
+X> vamos a limitarlo al flujo interno en tuberías circulares; siendo así,
+X> el número de Reynolds permite caracterizar si un flujo es laminar o
+X> turbulento dependiendo de ciertos intervalos establecidos de manera
+X> experimental, enseguida se muestran los intervalos de valores y el
+X> tipo de flujo en cada caso:
+X> 
+X> * Re {$$}<{/$$} 2100 *Flujo turbulento*
+X> * 2100 {$$}\leq{/$$} Re {$$}\leq{/$$} 3000 *Flujo transitorio*
+X> * Re {$$}>{/$$} 3000 *Flujo turbulento*
+X>
+X> Basado en lo anterior, escriba un programa cuyos valores de entrada
+X> sean la velocidad del fluido, el diámetro de la tubería y la
+X> viscosidad cinemática, y que devuelva como variable de salida el tipo
+X> de flujo.
+
+## Problemas
+
+**1.1** ¿Qué tipo de dato devuelve cada una de las siguientes
+instrucciones? (Puede verificar utilizando la función class).
+
+    >> 3;
+    >> true;
+    >> 3==2;
+    >> {1,2,3}; 
+
+**1.2** ¿Es posible realizar las siguientes operaciones?
+
+    >> 3+int8(2);
+    >> true+5;
+    >> int8(10)+int16(5);
+    >> {1,2,3}+{0,1,0};
+    >> [5,1,-2]+[2 3 0];
+
+**1.3** Desarrolle un script que le solicite su nombre (utilice la
+función input) y que devuelva un saludo más el nombre ingresado, por
+ejemplo: Hola Jorge, bienvenido.
+
+**1.4** Identifique el error en las siguientes líneas de código:
+
+    edad=input('Introduzca su edad: ','s');
+    if edad >= 18
+        disp('Mayor de edad');
+    else
+        disp('Menor de edad');
+    end
+
+**1.5** Utilizando la escala de calificación del 0 a 10 y siendo 6 la
+calificación mínima aprobatoria, cree un programa en el cual ingrese una
+calificación y este le devuelva un mensaje de APROBADO o NO APROBADO en
+el caso que corresponda.
