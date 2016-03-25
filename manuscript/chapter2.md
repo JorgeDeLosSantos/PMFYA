@@ -268,7 +268,7 @@ La suma viene dada por:
 \textbf{A+B} = \begin{pmatrix}
     a_{11}+b_{11} & a_{12}+b_{12} & a_{13}+b_{13} \\
     a_{21}+b_{21} & a_{22}+b_{22} & a_{23}+b_{23} \\
-    a_{31}+b_{31} & a_{32}+b_{32} & a_{33}+b_{33} \\
+    a_{31}+b_{31} & a_{32}+b_{32} & a_{33}+b_{33}
 \end{pmatrix}
 {/$$}
 
@@ -308,7 +308,7 @@ el ejemplo siguiente:
 
 Para efectuar la multiplicación de matrices es necesario que estas
 cumplan algunas características. Suponga que se tienen dos matrices
-**A** y **B**, y quiere calcular el producto matricial **A\*B**,
+**A** y **B**, y quiere calcular el producto matricial **A*B**,
 entonces, la matriz **A** debe tener tantas columnas como número de
 filas tenga **B**. En términos más amables: si **A** es una matriz de
 dimensiones mxn entonces la matriz **B** debe ser de dimensión nxp,
@@ -335,7 +335,7 @@ crearemos dos matrices **A** y **B** de forma aleatoria:
         30    36    36    22    42    37
         32    37    23    23    28    32
 
-Si se intenta realizar la multiplicación **B\*A**, MATLAB devolverá un
+Si se intenta realizar la multiplicación **B*A**, MATLAB devolverá un
 error dado que el número de columnas de **B** (6) es diferente de la
 cantidad de filas de **A** (3).
 
@@ -535,16 +535,16 @@ Considere las matrices **M** y **N** definidas como:
 
 {$$}
 \textbf{M}=
-\begin{matrix}
+\begin{pmatrix}
     1 & 3 \\
     -2 & 1 
-\end{matrix}
+\end{pmatrix}
 \,\,\,\,
 \textbf{N}=
-\begin{matrix}
+\begin{pmatrix}
     3 & 7 \\
     0 & 2
-\end{matrix}
+\end{pmatrix}
 {/$$}
 
 Observe los resultados que se producen utilizando la función `cat` para
