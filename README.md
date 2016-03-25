@@ -1,6 +1,6 @@
 ## Programación en MATLAB, fundamentos y aplicaciones
 
-<img src="src/portada.png" width="150" height="210">
+<iframe width="160" height="400" src="https://leanpub.com/programacionmatlab/embed" frameborder="0" allowtransparency="true"></iframe>
 
 ### Contenido
 
@@ -14,10 +14,6 @@
 * Capítulo 8. Introducción a las GUIs
 * Capítulo 9. Programación orientada a objetos
 * Capítulo 10. Recomendaciones generales
-
-### Descargar PDF
-
-[Versión actual (0.1) (En desarrollo)](https://goo.gl/st1S0x)
 
 
 ### Contribuciones / Más información

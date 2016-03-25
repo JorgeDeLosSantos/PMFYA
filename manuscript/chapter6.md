@@ -434,8 +434,10 @@ Y se resuelve integrando primeramente la función {$$}f(x,y){/$$} respecto {$$}y
 evaluada en los límites {$$}c{/$$} y {$$}d{/$$}, y enseguida el valor resultante se
 integra respecto a {$$}x{/$$} evaluando en el intervalo {$$}[a,\, b]{/$$}, es decir:
 
-{$$} I=\int_a^b \int_c^d f(x,y) dy \, dx {/$$} 
+{$$} I=\int_a^b \int_c^d f(x,y) dy \, dx {/$$}
+
 {$$} I=\int_a^b  F_1  dx {/$$}
+
 {$$} I=F_2(b) - F_2(a) {/$$}
 
 Donde:
