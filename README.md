@@ -1,6 +1,9 @@
 ## Programación en MATLAB, fundamentos y aplicaciones
 
-<iframe width="160" height="400" src="https://leanpub.com/programacionmatlab/embed" frameborder="0" allowtransparency="true"></iframe>
+<a href="https://leanpub.com/programacionmatlab/">
+	<img src="https://s3.amazonaws.com/titlepages.leanpub.com/programacionmatlab/hero?1458941044" width="170px" height="220px">
+</a>
+
 
 ### Contenido
 
