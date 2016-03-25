@@ -10,13 +10,11 @@ el subíndice correspondiente a una fila y n el de columna, una matriz se
 representa como sigue:
 
 {$$}
-\begin{matrix}
-a_{11} & a_{12} & \cdots & a_{1n} \\
-a_{21} & a_{22} & \cdots & a_{2n} \\
-\vdots & \vdots & \ddots & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{matrix}
+A_{m,n} = 
+ \begin{pmatrix}
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+\end{pmatrix}
 {/$$}
-
-Un vector es un caso particular de matriz que sólo contiene una fila o
-una columna.
