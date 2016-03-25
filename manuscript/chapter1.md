@@ -388,22 +388,7 @@ descritas.
 En la siguiente tabla se resumen los operadores más importantes en
 MATLAB.
 
-|**Operador**| **Descripción**|
-|+ | Operador suma|
-|- | Operador resta|
-|\* | Operador multiplicación (escalares)|
-|/ | Operador división|
-|./ | División elemento a elemento (matrices)|
-|.\* | Multiplicación elemento a elemento (matrices)|                                      
-| & | Operador lógico and|
-|{$$}|{/$$} | Operador lógico or|
-|{$$}\sim{/$$} | Operador lógico not|                        
-|== | Igual a|
-|{$$}<{/$$}| Menor que|
-|{$$}>{/$$} | Mayor que|
-|{$$}<={/$$} | Menor o igual que|
-|{$$}>={/$$} | Mayor o igual que|
-|{$$}\sim = {/$$} | Diferente de|
+
 
 ## Un mini tutorial de introducción
 
