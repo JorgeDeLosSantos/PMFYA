@@ -953,3 +953,10 @@ simple, podríamos modificarlo de tal manera que envíe también un mensaje
     else
         disp('a es diferente de b');
     end
+
+Ahora imagine que para los ejemplos anteriores se necesita especificar
+si a=b, si a {$$}\gt{/$$} b o bien si a {$$}\lt{/$$} b, lo cual implicaría tener una
+sentencia de selección múltiple `if-elseif-else` que permite escoger entre
+varias opciones, evaluándose en orden descendente, por ejemplo refiérase
+a la siguiente estructura:
+
