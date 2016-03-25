@@ -5,7 +5,7 @@
 La legibilidad cuenta, claro que sí. Una frase de Abelson y Sussman, en
 el libro Estructura e interpretación de Programas de Computadora, lo
 resume de forma notable: *Los programas deben escribirse para que los
-lean las personas y solo de forma circunstancial para que los ejecuten
+lean las personas y sólo de forma circunstancial para que los ejecuten
 las máquinas.*
 
 De modo que cuando se escribe código, en cualquier lenguaje de
@@ -24,19 +24,15 @@ autodescriptivos, aún cuando estos resulten un poco extensos. La
 ganancia en legibilidad lo compensa todo, por ejemplo, es preferible
 tener:
 
-```matlab
-fuerza = 10;
-area = 20;
-presion = fuerza/area;
-```
+	fuerza = 10;
+	area = 20;
+	presion = fuerza/area;
 
 a simplemente colocar:
 
-```matlab
-f = 10;
-a = 20;
-p = f/a;
-```
+	f = 10;
+	a = 20;
+	p = f/a;
 
 ### Indentación del código
 
@@ -46,29 +42,28 @@ herramientas que facilitan esta tarea, simplemente seleccionando el
 código y presionando Ctrl + I para un *indentado inteligente*. Note las
 diferencias entre los códigos siguientes:
 
-```
-k = 1;
-while true
-if rem(k,2)==0
-disp('Par');
-else
-disp('Impar');
-end
-k = k + 1;
-end
-```
 
-```
-k = 1;
-while true
-    if rem(k,2)==0
-        disp('Par');
-    else
-        disp('Impar');
-    end
-    k = k + 1;
-end
-```
+	k = 1;
+	while true
+	if rem(k,2)==0
+	disp('Par');
+	else
+	disp('Impar');
+	end
+	k = k + 1;
+	end
+
+
+{line-numbers=off}
+	k = 1;
+	while true
+	    if rem(k,2)==0
+	        disp('Par');
+	    else
+	        disp('Impar');
+	    end
+	    k = k + 1;
+	end
 
 ### Documentación del código
 
