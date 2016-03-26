@@ -143,7 +143,7 @@ por funciones predefinidas en MATLAB:
 
 ## Tipos de datos y operadores
 
-Los tipos de datos más comunes en MATLAB son los siguientes:
+El siguiente listado resume los tipos de datos más comunes en MATLAB:
 
 * logical (tipo booleano o lógico)
 * char (cadenas de caracteres)
@@ -249,10 +249,10 @@ utilidad en la programación en MATLAB.
 
 ### Referencias de función (function handle)
 
-Las function handle son referencias asociadas a una función nativa de
+Las *function handle* son referencias asociadas a una función nativa de
 MATLAB o bien a una función anónima creada por el usuario.
 
-El siguiente ejemplo muestra la creación de una función anónima y su
+El siguiente ejemplo muestra la definición de una función anónima y su
 posterior uso mediante su referencia:
 
     >> f=@(x) x+cos(x)
@@ -271,7 +271,7 @@ posterior uso mediante su referencia:
 ### Identificar tipos de datos
 
 Para identificar tipos de datos en MATLAB se cuentan con diversos
-comandos que nos facilitan esta tarea. El comando whos nos proporciona
+comandos que nos facilitan esta tarea. El comando `whos` nos proporciona
 información acerca de las variables existentes en el workspace, tales
 como el nombre, tamaño y tipo. A manera de ejemplo crearemos las
 siguientes variables e introducimos la instrucción whos para verificar
@@ -310,7 +310,7 @@ evitar errores en la ejecución.
 #### Entre tipos numéricos
 
 Cuando se crea una variable de tipo numérico en MATLAB por defecto será
-de tipo double, por ejemplo, creamos una variable llamada num:
+de tipo `double`, por ejemplo, creamos una variable llamada num:
 
     >> num=2;
     >> class(num)
@@ -325,9 +325,9 @@ permitidos los especificados en la tabla siguiente:
 |Precisión doble | double(num) | 2.2251e-308 a 1.7977e+308|
 |Precisión simple | single(num) | 1.1755e-38 a 3.4028e+38|
 |Entero de 8 bits | int8(num) | -128 a 127|
-|Entero de 16 bits | int16(num) | -32768 a 32767|
-|Entero de 32 bits | int32(num) | -231 a 231-1|
-|Entero de 64 bits | int64(num) | -263 a 263-1|
+|Entero de 16 bits | int16(num) | {$$}-32768 a 32767{/$$}|
+|Entero de 32 bits | int32(num) | {$$}-2^31 a 2^31-1{/$$}|
+|Entero de 64 bits | int64(num) | {$$}-2^63 a 2^63-1{/$$}|
 |Entero sin signo de 8 bits | uint8(num) | 0 a 255|
 |Entero sin signo de 16 bits | uint16(num) | 0 a 65535|
 |Entero sin signo de 32 bits | uint32(num) | 0 a 4294967295|
@@ -397,7 +397,7 @@ MATLAB.
 |./ | División elemento a elemento (matrices)|
 |.\* | Multiplicación elemento a elemento (matrices)|                                      
 | & | Operador lógico and|
-|{$$}|{/$$} | Operador lógico or|
+|{$$}\mid{/$$} | Operador lógico or|
 |{$$}\sim{/$$} | Operador lógico not|                        
 |== | Igual a|
 |{$$}<{/$$}| Menor que|
@@ -539,7 +539,7 @@ Obtener la cantidad de elementos que componen lista con `length` o
     ans =
          5
 
-## Ficheros de comandos
+## Ficheros de comandos (scripts)
 
 Los ficheros de comandos, conocidos también como *scripts*, son archivos
 de texto sin formato (ASCII) con la extensión característica de los
@@ -574,6 +574,60 @@ recomendaciones que deben seguirse para nombrar un script son:
 
 * Evite utilizar nombres de funciones nativas de MATLAB o palabras
   reservadas del lenguaje que podrían ocasionar conflictos.
+
+### Ejecutando scripts
+
+La utilidad de los scripts radica en la posibilidad de almacenar comandos 
+de manera estructurada y poderlos ejecutar posteriormente, para hacerlo 
+puede ir a la opción **Run** de la interfaz principal de MATLAB y entonces 
+se ejecutarán todas las intrucciones que conforman el script.  
+
+Otra forma es ubicarse en la carpeta del script y teclear el nombre 
+del fichero en el Command Window. Claro que si el fichero no 
+se encuentra en el *Current Folder* este no se ejecutará, exceptuando 
+aquellos que sean agreados al *Path* de MATLAB.
+
+
+W> ### De los ficheros de funciones...
+W> 
+W> Para ejecutar los ficheros que contienen definiciones de funciones no se 
+W> procede como se ha descrito anteriormente, puesto que, normalmente, estos 
+W> necesitan *información extra* o argumentos de entrada que deben pasarse 
+W> utilizando la sintaxis de *llamada de funciones*, misma que será objeto 
+W> de estudio en secciones posteriores.
+
+### Modificando el Path de MATLAB
+
+Primero, ¿qué es el path de MATLAB?, en resumen son directorios en los cuales 
+MATLAB *busca* las funciones, clases y/o ficheros en general que el usuario demanda 
+durante una sesión. 
+
+Si teclea el comando `path`, este imprimirá en pantalla una lista de directorios, 
+ordenados de manera jerárquica, en los cuales MATLAB busca las sentencias introducidas.
+
+Por ejemplo, vamos a suponer que en nuestro directorio actual tenemos un fichero llamado 
+`principal.m` y que tenemos también una carpeta `utils` en la cual tenemos algunos códigos 
+necesarios (``codigo1.m` y `codigo2.m`) para que nuestro código principal funcione:
+
+
+    |
+    └─── principal.m
+    └─── utils
+            └─── codigo1.m
+            └─── codigo2.m
+
+Una solución evidente (pero muy *tosca*) es colocar los ficheros `codigo1.m` y `codigo2.m` en 
+el mismo directorio, pero claro, eso implicaría tener muchos ficheros en una misma carpeta, 
+lo cual no suele ser buena idea.
+
+Y la otra solución consiste en agregar la carpeta `utils` al path de MATLAB, lo cual es 
+tan sencillo como ejcutar:
+
+    >> path(path, 'utils');
+
+Con esto podrá llamar los ficheros `codigo1.m` y `codigo2.m` desde `principal.m` sin 
+necesidad de colocarlos en la misma carpeta.
+
 
 ## Entradas y salidas en el Command Window
 
@@ -1182,7 +1236,8 @@ en formato string o numérico a un vector de seis elementos como se
 describió anteriormente, y clock devuelve la fecha y hora actual tal
 como la hace now pero como un vector de seis elementos.
 
-
+X > ### Ejemplo 1.1 Clasificando flujos
+X >
 X> El número de Reynolds es un parámetro adimensional utilizado en
 X> mecánica de fluidos para caracterizar el movimiento de un fluido,
 X> usualmente se define como:
@@ -1207,11 +1262,37 @@ X> Basado en lo anterior, escriba un programa cuyos valores de entrada
 X> sean la velocidad del fluido, el diámetro de la tubería y la
 X> viscosidad cinemática, y que devuelva como variable de salida el tipo
 X> de flujo.
+X> 
+X> Solución:
+X> 
+X> Vamos a implementar una solución utilizando la estructura de control 
+X> `ìf-elseif-else`, en la cual nuestra variable o dato de comprobación 
+X> será el número Reynolds.
+X> 
+X>     velocidad = input('Velocidad: ');
+X>     diametro = input('Diámetro: ');
+X>     viscosidad = input('Viscosidad: ');
+X> 
+X>     Re = (velocidad*diametro)/(viscosidad);
+X> 
+X>     if Re<2100
+X>         disp('Flujo Turbulento');
+X>     elseif Re >= 2100 && Re <= 3000
+X>         disp('Flujo transitorio');
+X>     else
+X>         disp('Flujo turbulento');
+X> 
+X> 
+X>  ¿Parece lo anterior una buena solución?.
+
+
+
+
 
 ## Problemas
 
 **1.1** ¿Qué tipo de dato devuelve cada una de las siguientes
-instrucciones? (Puede verificar utilizando la función class).
+instrucciones? (Puede verificar utilizando la función `class`).
 
     >> 3;
     >> true;
