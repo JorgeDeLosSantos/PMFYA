@@ -12,7 +12,7 @@ sirva al amable lector como una breve introducción y sobre todo, en
 medida de lo posible, motivarle para adentrarse en tan maravilloso
 mundo.
 
-# Conceptos iniciales del procesamiento de imágenes
+## Conceptos iniciales del procesamiento de imágenes
 
 ### ¿Qué es el procesamiento de imágenes?
 
@@ -58,8 +58,9 @@ puede utilizar la función `imshow`. Véase el siguiente ejemplo:
     >> A=imread('imag.jpg');
     >> imshow(A);
 
-{#f7.1}
+
 {width=60%}
+{#f7.1}
 ![](images/ch7/holland_imshow.png)
 
 La función `imshow` abre una nueva ventana (figure) y muestra la imagen
@@ -88,12 +89,14 @@ del brillo en la imagen. Véase el ejemplo siguiente:
     A=A+k;
     imshow(A);
 
-{#f7.2}
+
 {width=60%}
+{#f7.2}
 ![7.2 Imagen Original](images/ch7/holland_original.png)
 
-{#f7.3}
+
 {width=60%}
+{#f7.3}
 ![7.3 Imagen modificada (I + 50)](images/ch7/holland_mas50.png)
 
 La imagen [7.2](#f7.2) corresponde a la original y en la [7.3](#f7.3) se muestra lo que

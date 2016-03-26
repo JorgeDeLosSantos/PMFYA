@@ -1,3 +1,18 @@
+# Archivo muestra
+
+Este es un archivo de muestra para el libro **Programación en MATLAB, fundamentos y aplicaciones**.
+
+Actualmente el libro se encuentra en fase de desarrollo, agradeceríamos cualquier tipo de sugerencia o 
+comentario respecto al contenido o estructura del mismo.
+
+Contacta al autor en:
+
+```
+E-mail: delossantosmfq@gmail.com
+Twitter: @pjdlsl
+Facebook: https://www.facebook.com/lab2dls
+```
+
 # 1. Fundamentos del lenguaje
 
 ## ¿Qué es MATLAB?

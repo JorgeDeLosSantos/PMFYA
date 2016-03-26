@@ -1,13 +1,1 @@
-﻿# Archivo muestra
-
-Este es un archivo de muestra para el libro **Programación en MATLAB, fundamentos y aplicaciones**, 
-agradecemos cualquier tipo de comentario al respecto.
-
-Contacta al autor en:
-
-```
-E-mail: delossantosmfq@gmail.com
-Twitter: @pjdlsl
-```
-
-muestra.md
+﻿muestra.md
