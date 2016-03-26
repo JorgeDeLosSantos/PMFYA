@@ -59,7 +59,7 @@ puede utilizar la función `imshow`. Véase el siguiente ejemplo:
     >> imshow(A);
 
 {#f7.1}
-{width=75%}
+{width=60%}
 ![](images/ch7/holland_imshow.png)
 
 La función `imshow` abre una nueva ventana (figure) y muestra la imagen
@@ -89,11 +89,11 @@ del brillo en la imagen. Véase el ejemplo siguiente:
     imshow(A);
 
 {#f7.2}
-{width=75%}
+{width=60%}
 ![7.2 Imagen Original](images/ch7/holland_original.png)
 
 {#f7.3}
-{width=75%}
+{width=60%}
 ![7.3 Imagen modificada (I + 50)](images/ch7/holland_mas50.png)
 
 La imagen [7.2](#f7.2) corresponde a la original y en la [7.3](#f7.3) se muestra lo que
@@ -111,7 +111,7 @@ matriz disminuye en un valor constante. Véase el ejemplo:
     A=A-k;
     imshow(A);
 
-{width=75%}
+{width=60%}
 ![](images/ch7/holland_menos50.png)
 
 ### Conversión a escala de grises
