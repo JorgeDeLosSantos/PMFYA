@@ -1236,8 +1236,8 @@ en formato string o numérico a un vector de seis elementos como se
 describió anteriormente, y clock devuelve la fecha y hora actual tal
 como la hace now pero como un vector de seis elementos.
 
-X > ### Ejemplo 1.1 Clasificando flujos
-X >
+X> ### Ejemplo 1.1 Clasificando flujos
+X>
 X> El número de Reynolds es un parámetro adimensional utilizado en
 X> mecánica de fluidos para caracterizar el movimiento de un fluido,
 X> usualmente se define como:
