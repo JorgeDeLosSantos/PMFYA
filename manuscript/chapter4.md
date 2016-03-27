@@ -112,7 +112,7 @@ Para modificar el color de una gráfica basta con añadir como tercer
 argumento de la función plot uno de los modificadores de color que se
 indican en la siguiente tabla:
 
-|-----------------------------|
+
 |**Color** | **Modificador**|
 |Rojo       |`'r'`|
 |verde      |`'g'`|
@@ -122,7 +122,7 @@ indican en la siguiente tabla:
 |Amarillo   |`'y'`|
 |Negro      |`'k'`|
 |Blanco     |`'w'`|
-|-----------------------------|
+
 
 La sintaxis de la función plot para una línea color verde sería:
 
@@ -176,12 +176,12 @@ mediante modificadores que configuran los ejes y su apariencia de forma
 predeterminada. Los más comunes se enlistan y describen en la tabla
 siguiente.
 
-|-----------------------------|
+
 | **SINTAXIS** | **DESCRIPCIÓN** |
 |`axis(’equal’)` |    Ajusta el escalado de los ejes de tal modo que sean iguales en cada dirección.|
 |`axis(’square’)`|   Configura y ajusta la visualización de los ejes a un cuadrado o cubo (3D)|
 |`axis(’tight’)` |    Ajusta los ejes al rango de datos disponibles.|
-|-----------------------------|
+
 
 #### Añadir anotaciones
 

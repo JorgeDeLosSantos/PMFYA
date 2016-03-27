@@ -130,7 +130,6 @@ por funciones predefinidas en MATLAB:
 
 
 |**Función** | **Descripción**|
-|-----------------------------|
 |`ans`| Guarda el ultimo valor no asignado a una variable|
 |`eps`| Tolerancia que MATLAB soporta en los cálculos|
 |`intmax`| Máximo valor entero que puede utilizarse|
@@ -142,7 +141,7 @@ por funciones predefinidas en MATLAB:
 |`NaN`| Iniciales de “Not a Number”, tal cual traducción literal hace referencia a un valor numérico inválido.|
 |`computer`| Devuelve el tipo de computadora que se está utilizando|
 |`version`| Devuelve la versión de MATLAB|
-|-----------------------------|
+
 
 ## Tipos de datos y operadores
 
@@ -324,7 +323,7 @@ Las conversiones entre tipos numéricos son de sintaxis muy sencilla,
 solo habrá que especificar el tipo de dato al cual se convertirá, siendo
 permitidos los especificados en la tabla siguiente:
 
-|-----------------------------|
+
 |**Tipo de dato** | **Sintaxis de conversión** | **Rango**|
 |Precisión doble | `double(num)` | 2.2251e-308 a 1.7977e+308|
 |Precisión simple | `single(num)` | 1.1755e-38 a 3.4028e+38|
@@ -336,7 +335,7 @@ permitidos los especificados en la tabla siguiente:
 |Entero sin signo de 16 bits | `uint16(num)` | 0 a 65535|
 |Entero sin signo de 32 bits | `uint32(num)` | 0 a 4294967295|
 |Entero sin signo de 64 bits | `uint64(num)` | 0 a 18446744073709551615|
-|-----------------------------|
+
 
 Así, podemos convertir la variable num, creada con anterioridad, a otro
 tipo de dato numérico, por ejemplo a un entero de 8 bits:
@@ -394,7 +393,7 @@ descritas.
 En la siguiente tabla se resumen los operadores más importantes en
 MATLAB.
 
-|-----------------------------|
+
 |**Operador**| **Descripción**|
 |+ | Operador suma|
 |- | Operador resta|
@@ -411,7 +410,7 @@ MATLAB.
 |{$$}<={/$$} | Menor o igual que|
 |{$$}>={/$$} | Mayor o igual que|
 |{$$}\sim = {/$$} | Diferente de|
-|-----------------------------|
+
 
 ## Un mini tutorial de introducción
 
@@ -708,7 +707,7 @@ Donde las especificaciones de formato incluyen uno o más de los
 identificadores de un mismo tipo o combinados que se muestran en la
 siguiente tabla:
 
-|-----------------------------|
+
 |**Identificador** | **Formato de salida**|
 |`%d` | Tipo entero|
 |`%f` | Tipo coma flotante|
@@ -717,7 +716,7 @@ siguiente tabla:
 |`%e` | Tipo coma flotante, notación exponencial|
 |`%s` | Tipo char, cadena de texto|
 |`%c` | Tipo char, carácter a carácter|
-|-----------------------------|
+
 
 Véase el siguiente ejemplo:
 
