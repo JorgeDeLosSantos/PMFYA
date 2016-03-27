@@ -1186,7 +1186,7 @@ la diferencia entre el valor actual y el anterior es inferior a la
 tolerancia numérica (`eps`) soportada por MATLAB y por ende pasan a
 considerarse como valores iguales.
 
-I> ## While-if-break, rompiendo ciclos.
+I> ### While-if-break, rompiendo ciclos.
 I>
 I> Es común utilizar el ciclo while poniendo un valor verdadero como
 I> condición, y usar la sentencia combinada `if-break` como punto de
@@ -1281,11 +1281,9 @@ X>     elseif Re >= 2100 && Re <= 3000
 X>         disp('Flujo transitorio');
 X>     else
 X>         disp('Flujo turbulento');
+X>     end
 X> 
-X> 
-X>  ¿Parece lo anterior una buena solución?.
-
-
+X> ¿Parece lo anterior una buena solución?.
 
 
 
