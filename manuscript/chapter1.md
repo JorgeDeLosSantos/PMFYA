@@ -322,16 +322,16 @@ solo habrá que especificar el tipo de dato al cual se convertirá, siendo
 permitidos los especificados en la tabla siguiente:
 
 |**Tipo de dato** | **Sintaxis de conversión** | **Rango**|
-|Precisión doble | double(num) | 2.2251e-308 a 1.7977e+308|
-|Precisión simple | single(num) | 1.1755e-38 a 3.4028e+38|
-|Entero de 8 bits | int8(num) | -128 a 127|
-|Entero de 16 bits | int16(num) | {$$}-32768 a 32767{/$$}|
-|Entero de 32 bits | int32(num) | {$$}-2^31 a 2^31-1{/$$}|
-|Entero de 64 bits | int64(num) | {$$}-2^63 a 2^63-1{/$$}|
-|Entero sin signo de 8 bits | uint8(num) | 0 a 255|
-|Entero sin signo de 16 bits | uint16(num) | 0 a 65535|
-|Entero sin signo de 32 bits | uint32(num) | 0 a 4294967295|
-|Entero sin signo de 64 bits | uint64(num) | 0 a 18446744073709551615|
+|Precisión doble | `double(num)` | 2.2251e-308 a 1.7977e+308|
+|Precisión simple | `single(num)` | 1.1755e-38 a 3.4028e+38|
+|Entero de 8 bits | `int8(num)` | -128 a 127|
+|Entero de 16 bits | `int16(num)` | -32768 a 32767|
+|Entero de 32 bits | `int32(num)` | {$$}-2^{31}{/$$} a {$$}2^{31}-1{/$$}|
+|Entero de 64 bits | `int64(num)` | {$$}-2^{63}{/$$} a {$$}2^{63}-1{/$$}|
+|Entero sin signo de 8 bits | `uint8(num)` | 0 a 255|
+|Entero sin signo de 16 bits | `uint16(num)` | 0 a 65535|
+|Entero sin signo de 32 bits | `uint32(num)` | 0 a 4294967295|
+|Entero sin signo de 64 bits | `uint64(num)` | 0 a 18446744073709551615|
 
 Así, podemos convertir la variable num, creada con anterioridad, a otro
 tipo de dato numérico, por ejemplo a un entero de 8 bits:
@@ -1269,6 +1269,7 @@ X> Vamos a implementar una solución utilizando la estructura de control
 X> `ìf-elseif-else`, en la cual nuestra variable o dato de comprobación 
 X> será el número Reynolds.
 X> 
+X> {linenos=off}
 X>     velocidad = input('Velocidad: ');
 X>     diametro = input('Diámetro: ');
 X>     viscosidad = input('Viscosidad: ');
