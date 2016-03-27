@@ -28,6 +28,7 @@ crear la gráfica antes mencionada y el resultado de salida:
     y=sin(x);
     plot(x,y);
 
+{width=60%}
 ![](images/ch4/img_4_1.png)
 
 #### Graficar más de una función
@@ -45,6 +46,7 @@ las gráficas sin borrar las ya existentes, por ejemplo:
     plot(x,y2);
     plot(x,y3);
 
+{width=60%}
 ![](images/ch4/img_4_2.png)
 
 Lo anterior funciona incluso para cuando se tienen intervalos
@@ -60,6 +62,7 @@ anterioridad:
     y3=cos(x+pi/3);
     plot(x,[y1;y2;y3]);
 
+{width=60%}
 ![](images/ch4/img_4_3.png)
 
 En lugar de utilizar hold on puede configurar la propiedad NextPlot del
@@ -94,6 +97,7 @@ parte superior con la función `title`:
     title('Gráfica función seno');
     legend('f(x)=sin(x)');
 
+{width=60%}
 ![image](images/ch4/img_4_4.png)
 
 Las gráficas anteriores se han trazado utilizando el estilo por defecto
@@ -160,6 +164,7 @@ código producen la imagen adjunta:
     plot(x,y);
     axis off
 
+{width=60%}
 ![](images/ch4/img_4_5.png)
 
 *Escalado de ejes*
@@ -198,6 +203,7 @@ Ejemplo. Grafique la ecuación (espiral)
     r=theta;
     polar(theta,r);
 
+{width=60%}
 ![](images/ch4/img_4_6.png)
 
 Pese a que MATLAB cuenta con la función polar para facilitar el trazado
@@ -236,6 +242,7 @@ ejemplo mostrado a continuación:
     end
     surf(Z);
 
+{width=60%}
 ![](images/ch4/img_4_7.png)
 
 La función `surf` en el ejemplo anterior recibe como argumento de
@@ -275,6 +282,7 @@ función {$$}f(x,y)=cos(x) sin(y){/$$}:
     Z=cos(X).*sin(Y);
     surf(X,Y,Z);
 
+{width=60%}
 ![](images/ch4/img_4_8.png)
 
 Note que las operaciones de multiplicación o división deben estar
@@ -314,6 +322,7 @@ colorear” la superficie está definida mediante un mapa de color por
 defecto, generalmente jet. Aparte de jet MATLAB cuenta con otros mapas
 de colores predefinidos que se muestran a continuación:
 
+{width=60%}
 ![](images/ch4/img_4_9.png)
 
 Si teclea en MATLAB el nombre de cualquiera de los mapas de colores
@@ -335,6 +344,7 @@ cambiar o configurar el mapa de color actual puede utilizar la función
     surf(X,Y,Z);
     colormap(hot);
 
+{width=60%}
 ![](images/ch4/img_4_10.png)
 
 Interesante, sobre todo para quienes deseen darle a sus gráficos una
@@ -354,6 +364,7 @@ ejemplo en el cual se define un mapa de color mediante cierta secuencia:
     cmap=[v flipud(v) flipud(v)];
     colormap(cmap);
 
+{width=60%}
 ![](images/ch4/img_4_11.png)
 
 El resultado es una interesante variación de tonalidades ¿azul? a rojo.
@@ -449,4 +460,5 @@ que pueden hacerse dependen de la imaginación, creatividad o de la
 necesidad de cada usuario. En la siguiente imagen se muestra la
 secuencia correspondiente a la animación.
 
+{width=60%}
 ![](images/ch4/img_4_12.png)
