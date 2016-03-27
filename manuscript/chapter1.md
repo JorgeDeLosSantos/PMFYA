@@ -128,8 +128,9 @@ específica que se muestra enseguida:
 En la siguiente tabla se resumen algunos valores especiales devueltos
 por funciones predefinidas en MATLAB:
 
-|-----------------------------|
+
 |**Función** | **Descripción**|
+|-----------------------------|
 |`ans`| Guarda el ultimo valor no asignado a una variable|
 |`eps`| Tolerancia que MATLAB soporta en los cálculos|
 |`intmax`| Máximo valor entero que puede utilizarse|
