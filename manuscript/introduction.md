@@ -1,5 +1,3 @@
-{frontmatter}
-
 # Introducción
 
 ## El libro...
