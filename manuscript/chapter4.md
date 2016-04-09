@@ -324,7 +324,6 @@ colorear” la superficie está definida mediante un mapa de color por
 defecto, generalmente jet. Aparte de jet MATLAB cuenta con otros mapas
 de colores predefinidos que se muestran a continuación:
 
-{width=70%}
 ![](images/ch4/img_4_9.png)
 
 Si teclea en MATLAB el nombre de cualquiera de los mapas de colores
