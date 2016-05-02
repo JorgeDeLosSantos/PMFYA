@@ -1,10 +1,6 @@
 # Introducción
 
-## El libro...
-
-**Programación en MATLAB, fundamentos y aplicaciones** forma parte del
-proyecto LAB DLS, cuyo objetivo es proporcionar herramientas a los
-usuarios hispanohablantes de MATLAB. El libro consta, por ahora, de 10
+**Programación en MATLAB, fundamentos y aplicaciones** consta, por ahora, de 10
 capítulos en los cuales se abordan los temas básicos de la programación
 en MATLAB y algunas de sus aplicaciones. Los capítulos son:
 
@@ -50,10 +46,6 @@ procesamiento digital de imágenes, respectivamente.
 
 El capítulo 8 es una introducción al desarrollo de interfaces gráficas
 de usuario en MATLAB, y por tanto se abarcan las cuestiones esenciales.
-Si necesita una mayor referencia en este tema, puede consultar el blog
-del proyecto MATLAB TYP, se está trabajando en un texto orientado a este
-aspecto (Título: Desarrollo de GUIs en MATLAB) y se espera que a finales
-de 2015 esté disponible una versión inicial.
 
 El capítulo 9 aborda un tema que generalmente se omite en la mayoría de
 los libros de esta especie: la programación orientada a objetos (POO).
@@ -65,18 +57,4 @@ El capítulo 10 incluye una serie de recomendaciones que le permitirán al
 programador en MATLAB el desarrollo de aplicaciones mejor documentadas,
 legibles y optimizadas.
 
-## La licencia...
 
-Este texto se distribuye bajo licencia Creative Commons BY-NC-ND 2.5
-MX.
-
-En resumen: usted es libre de copiar, compartir y/o distribuir este
-contenido, siempre y cuando se atribuyan los créditos correspondientes
-al autor del mismo y que no se haga uso de este con fines comerciales.
-
-Para una descripción más detallada de la licencia puede visitar:
-<http://creativecommons.org/licenses/by-nc-nd/2.5/mx/>
-
-## El autor...
- 
-Nothing to write here... at least for me.
