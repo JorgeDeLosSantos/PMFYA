@@ -1326,3 +1326,9 @@ ejemplo: Hola Jorge, bienvenido.
 calificación mínima aprobatoria, cree un programa en el cual ingrese una
 calificación y este le devuelva un mensaje de APROBADO o NO APROBADO en
 el caso que corresponda.
+
+**1.6** El siguiente es un problema clásico en los cursos básicos de 
+programación: escriba un programa que determine si un número ingresado 
+es par o impar.
+
+**1.7** 
