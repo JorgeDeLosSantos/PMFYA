@@ -1281,7 +1281,7 @@ X>
 X>     Re = (velocidad*diametro)/(viscosidad);
 X> 
 X>     if Re<2100
-X>         disp('Flujo Turbulento');
+X>         disp('Flujo turbulento');
 X>     elseif Re >= 2100 && Re <= 3000
 X>         disp('Flujo transitorio');
 X>     else
@@ -1289,8 +1289,33 @@ X>         disp('Flujo turbulento');
 X>     end
 X> 
 X> ¿Parece lo anterior una buena solución?.
-
-
+X>
+X> Es una solución aceptable, claro está, pero podríamos mejorarla un poquito:
+X>
+X> {linenos=off}
+X>     velocidad = input('Velocidad: ');
+X>     diametro = input('Diámetro: ');
+X>     viscosidad = input('Viscosidad: ');
+X> 
+X>     Re = (velocidad*diametro)/(viscosidad);
+X> 
+X>     if Re >= 2100 && Re <= 3000
+X>         disp('Flujo transitorio');
+X>     else
+X>         disp('Flujo turbulento');
+X>     end
+X>
+X> Un poco mejor, ¿verdad?, menos comparaciones y se obtienen evidentemente los mismos 
+X> resultados.
+X> 
+X> Todo lo anterior está muy bien, pero, y si alguien tiene la brillante idea de colocar 
+X> cantidades negativas; el programa nunca se "quejará", pero desde luego estaremos 
+X> entrando en una situación un tanto extraña, seguramente el programa nos mandará que 
+X> estamos en el caso de un flujo turbulento, aún cuando los datos ingresados sean incorrectos.
+X> Luego, lo que se quiere mostrar es que necesitamos trabajar más aún sobre ese código, 
+X> asegurarnos que los datos ingresados sean los adecuados para realizar el cálculo. 
+X> Claro está que en un código que necesitemos para nuestros deberes académicos pueda 
+X> sonar un poco absurdo, pero en el mundo real estás cosas nunca, nunca están de más.
 
 ## Problemas
 
@@ -1332,4 +1357,6 @@ el caso que corresponda.
 programación: escriba un programa que determine si un número ingresado 
 es par o impar.
 
-**1.7** 
+**1.7** Escriba una función llamada `sfibonacci`, que reciba como argumento un 
+entero positivo n, y que devuelva un vector con los primeros n términos de la 
+sucesión de Fibonacci.
