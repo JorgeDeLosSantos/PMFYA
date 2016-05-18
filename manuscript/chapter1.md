@@ -1291,6 +1291,7 @@ X>
 X> ¿Parece lo anterior una buena solución?.
 X>
 X> Es una solución aceptable, claro está, pero podríamos mejorarla un poquito:
+
 X>
 X> {linenos=off}
 X>     velocidad = input('Velocidad: ');
