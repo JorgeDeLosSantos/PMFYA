@@ -1,3 +1,5 @@
+{mainmatter}
+
 # Fundamentos del lenguaje
 
 ## ¿Qué es MATLAB?
@@ -70,7 +72,6 @@ comandos y ejecutarlos nuevamente o copiarlos.
 
 {#f1}
 ![Pantalla principal de MATLAB (R2012b)](images/ch1/img_1_1.png)
-
 
 ## Comandos básicos y generalidades
 
