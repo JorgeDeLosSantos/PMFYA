@@ -300,3 +300,9 @@ case-insensitive, hablamos de strcmpi:
          1
 
 ### Expresiones regulares
+
+Las expresiones regulares son patrones utilizados para encontrar una determinada 
+combinación de caracteres dentro de una cadena de texto. [^mozdev]
+
+[^mozdev]: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+
