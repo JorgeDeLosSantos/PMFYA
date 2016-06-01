@@ -281,7 +281,7 @@ ejemplos:
 
 Del último ejemplo puede deducir que la función strcmp es case-sensitive
 y aun cuando las cadenas sean iguales y difieran únicamente por el uso
-de mayúsculas o minúsculas, MATLAB devolverá un valor false. Para
+de mayúsculas o minúsculas, MATLAB devolverá un valor `false`. Para
 ignorar o evitar que se tome en cuenta el uso de mayúsculas o minúsculas
 puede emplear previamente una conversión a cualquiera de los casos, por
 ejemplo:
