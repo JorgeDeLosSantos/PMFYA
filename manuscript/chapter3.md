@@ -328,5 +328,5 @@ las expresiones regulares para búsqueda de patrones.
 
 #### Buscando números
 
-Vamos a comenzar con un caso muy sencillo: buscar números dentro de un string.
+Vamos a comenzar con un caso muy sencillo: buscar números dentro de un string. 
 
