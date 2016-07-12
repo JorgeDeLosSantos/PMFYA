@@ -1327,3 +1327,20 @@ ejemplo: Hola Jorge, bienvenido.
 calificación mínima aprobatoria, cree un programa en el cual ingrese una
 calificación y este le devuelva un mensaje de APROBADO o NO APROBADO en
 el caso que corresponda.
+
+
+**1.6** Desarrolle una función llamada `bucle_test`, que reciba como argumento de 
+entrada un número entero N. Esta función debe recorrer todos los valores enteros 
+en el rango de 1 a N mostrando "n es divisible por 2", "n es divisible por 3", 
+"n es divisible por 2 y 3" o "n no es divisible por 2 o 3" (donde n será el 
+valor actual). Use un bucle for para recorrer los valores, la función `rem` para 
+verificar la divisibilidad y `num2str` para convertir cada número en un string 
+y mostrarlo en pantalla. Para verificar cada caso puede utilizar una bifurcación 
+múltiple `if-elseif-else`. [^mit_course]
+
+
+
+
+
+
+[^mit_course]: Danilo Šćepanović. 6.094 Introduction to MATLAB, January IAP 2010. (Massachusetts Institute of Technology: MIT OpenCourseWare), http://ocw.mit.edu (Accessed).
