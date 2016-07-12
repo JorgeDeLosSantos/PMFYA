@@ -8,6 +8,6 @@ comentario respecto al contenido o estructura del mismo.
 
 Contacta al autor en:
 
-I> **E-mail:** delossantosmfq@gmail.com
-I> 
-I> **Twitter:** @pjdlsl
+**E-mail:** delossantosmfq@gmail.com
+
+**Twitter:** @pjdlsl

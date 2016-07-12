@@ -1,5 +1,7 @@
 # Introducción
 
+**Del contenido**
+
 **Programación en MATLAB, fundamentos y aplicaciones** consta, por ahora, de 10
 capítulos en los cuales se abordan los temas básicos de la programación
 en MATLAB y algunas de sus aplicaciones. Los capítulos son:
@@ -45,7 +47,7 @@ solución de problemas comunes en matemáticas universitarias y
 procesamiento digital de imágenes, respectivamente.
 
 El capítulo 8 es una introducción al desarrollo de interfaces gráficas
-de usuario en MATLAB, y por tanto se abarcan las cuestiones esenciales.
+de usuario en MATLAB, y por tanto se abarcan las cuestiones elementales.
 
 El capítulo 9 aborda un tema que generalmente se omite en la mayoría de
 los libros de esta especie: la programación orientada a objetos (POO).
@@ -57,4 +59,24 @@ El capítulo 10 incluye una serie de recomendaciones que le permitirán al
 programador en MATLAB el desarrollo de aplicaciones mejor documentadas,
 legibles y optimizadas.
 
+**El por qué...**
+
+¿O por qué no?. Este texto ha nacido con la finalidad de proporcionar un valioso material 
+didáctico para aquellos que se inician en la aventura de aprender este nuevo lenguaje.
+El propósito principal es que el lector conozca y aprenda la sintaxis y las posibilidades 
+de MATLAB, sería genial que tuviera conocimientos básicos de programación y desarrollo de 
+algoritmos, lo cual facilitaría enormemente la asimilación de conceptos.
+
+
+**Del autor...**
+
+Egresado como ingeniero mecánico y actualmente estudiante de posgrado, programa en MATLAB desde hace 
+poco más de cinco años. Escribe en dos blogs sobre MATLAB: [MATLAB TYP](http://matlab-typ.blogspot.mx) 
+y [MATLAB Avanzado](http://matlab-avanzado.blogspot.mx). 
+
+
+
+*P.J. De Los Santos*
+
+*Celaya, Guanajuato, México.*
 

@@ -4,7 +4,7 @@
 
 Un *cell array* o arreglo de celdas es un arreglo multidimensional que
 puede contener diversos tipos de datos e incluso otro cell array. Suelen
-utilizarse como agrupadores de datos de diversos tipos.
+utilizarse como agrupadores de datos heterogéneos.
 
 ### Crear un arreglo de celdas
 
@@ -51,6 +51,11 @@ cada posición del mismo, por ejemplo:
         [1]    [0]    'T'
 
 ### Indexado de un cell array
+
+La parte de indexación de un cell array es una cuestión que en ocasiones 
+puede tornarse media *dolorosa* para el usuario principiante, pero claro, 
+la clave está en conocer que nos devuelve cada vez.
+
 
 ## Estructuras
 
@@ -281,7 +286,7 @@ ejemplos:
 
 Del último ejemplo puede deducir que la función strcmp es case-sensitive
 y aun cuando las cadenas sean iguales y difieran únicamente por el uso
-de mayúsculas o minúsculas, MATLAB devolverá un valor false. Para
+de mayúsculas o minúsculas, MATLAB devolverá un valor `false`. Para
 ignorar o evitar que se tome en cuenta el uso de mayúsculas o minúsculas
 puede emplear previamente una conversión a cualquiera de los casos, por
 ejemplo:
@@ -300,3 +305,28 @@ case-insensitive, hablamos de strcmpi:
          1
 
 ### Expresiones regulares
+
+Las expresiones regulares son patrones utilizados para encontrar una determinada 
+combinación de caracteres dentro de una cadena de texto. [^mozdev]
+
+[^mozdev]: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+
+La utilidad de las expresiones regulares se vuelve evidente cuando debemos 
+utilizar patrones de búsqueda en lugar de expresiones concretas.
+
+Por ejemplo, vamos a suponer que tenemos un texto o string que contiene 
+palabras varias, y del mismo queremos extraer todas las fechas con formato 
+DD/MM/AAAA. Con una búsqueda ordinaria (`findstr` o `strfind`) tendríamos que 
+definir cada string exacto que vamos a buscar o bien iterar para buscar todas 
+las combinaciones posibles. Sí, suena bastante tardado, y quizá para un millar 
+de líneas empezaríamos a buscar otras alternativas. No obstante, utilizando 
+expresiones regulares podemos implementar una búsqueda  mediante 
+patrones, con un sencillez considerable.
+
+En las siguientes subsecciones veremos algunos ejemplos de cómo utilizar 
+las expresiones regulares para búsqueda de patrones.
+
+#### Buscando números
+
+Vamos a comenzar con un caso muy sencillo: buscar números dentro de un string. 
+
