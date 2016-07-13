@@ -791,3 +791,18 @@ los ejemplos siguientes:
          4     5     5     9     9
          1     3     8    10    10
          4     4     5     6     8
+
+
+
+
+## Problemas 
+
+**2.1** Escriba una función que tome un vector como entrada y devuelva 1 si todos sus 
+elementos son positivos, -1 si todos son negativos y 0 en cualquier otro caso. [^andrew]
+
+**2.2** Otra misma referencia [^andrew]
+
+
+[^andrew]: Knight, Andrew (2000). *Basics of MATLAB and beyond*. Chapman & Hall / CRC
+
+

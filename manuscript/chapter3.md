@@ -330,3 +330,10 @@ las expresiones regulares para búsqueda de patrones.
 
 Vamos a comenzar con un caso muy sencillo: buscar números dentro de un string. 
 
+
+
+
+## Problemas
+
+
+

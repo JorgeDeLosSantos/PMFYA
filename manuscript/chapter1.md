@@ -1374,6 +1374,4 @@ y mostrarlo en pantalla. Para verificar cada caso puede utilizar una bifurcació
 múltiple `if-elseif-else`. [^mit_course]
 
 
-
-
 [^mit_course]: Danilo Šćepanović. 6.094 Introduction to MATLAB, January IAP 2010. (Massachusetts Institute of Technology: MIT OpenCourseWare), http://ocw.mit.edu (Accessed).
