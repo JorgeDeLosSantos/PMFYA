@@ -800,7 +800,23 @@ los ejemplos siguientes:
 **2.1** Escriba una función que tome un vector como entrada y devuelva 1 si todos sus 
 elementos son positivos, -1 si todos son negativos y 0 en cualquier otro caso. [^andrew]
 
-**2.2** Otra misma referencia [^andrew]
+**2.2** MATLAB utiliza la función `max` para determinar el máximo valor de un
+vector, escriba un programa que lleve a cabo la misma tarea, evitando
+hacer uso de la función `max`.
+
+**2.3** La función eye crea una matriz identidad; programe una función llamada
+idmat que reciba como argumento la dimensión de la matriz (cuadrada) y
+devuelva una matriz identidad.
+
+**2.4** Escriba un programa que determine el número de elementos diferentes en
+un vector.
+
+**2.5** Desarrolle una función que reciba como parámetro de entrada una matriz
+de 3x3 y que devuelva como salida la adjunta de dicha matriz.
+
+**2.6** Desarrolle una función llamada `inversa22` que calcule la inversa de
+una matriz de 2x2. Evite usar la función `inv` de MATLAB.
+
 
 
 [^andrew]: Knight, Andrew (2000). *Basics of MATLAB and beyond*. Chapman & Hall / CRC
