@@ -1373,5 +1373,11 @@ verificar la divisibilidad y `num2str` para convertir cada número en un string
 y mostrarlo en pantalla. Para verificar cada caso puede utilizar una bifurcación 
 múltiple `if-elseif-else`. [^mit_course]
 
+**1.9** Escriba una función que le permita determinar si un número entero
+pasado como argumento es primo, en caso de serlo devolverá un valor
+lógico true y un valor false en caso contrario. (La función `isprime` 
+de MATLAB realiza la misma operación).
+
+
 
 [^mit_course]: Danilo Šćepanović. 6.094 Introduction to MATLAB, January IAP 2010. (Massachusetts Institute of Technology: MIT OpenCourseWare), http://ocw.mit.edu (Accessed).
