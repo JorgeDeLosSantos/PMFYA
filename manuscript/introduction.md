@@ -61,7 +61,7 @@ legibles y optimizadas.
 
 **El por qué...**
 
-¿O por qué no?. Este texto ha nacido con la finalidad de proporcionar un valioso material 
+¿O por qué no?. Este texto ha nacido con la finalidad de proporcionar un material 
 didáctico para aquellos que se inician en la aventura de aprender este nuevo lenguaje.
 El propósito principal es que el lector conozca y aprenda la sintaxis y las posibilidades 
 de MATLAB, sería genial que tuviera conocimientos básicos de programación y desarrollo de 
@@ -70,13 +70,19 @@ algoritmos, lo cual facilitaría enormemente la asimilación de conceptos.
 
 **Del autor...**
 
-Egresado como ingeniero mecánico y actualmente estudiante de posgrado, programa en MATLAB desde hace 
-poco más de cinco años. Escribe en dos blogs sobre MATLAB: [MATLAB TYP](http://matlab-typ.blogspot.mx) 
-y [MATLAB Avanzado](http://matlab-avanzado.blogspot.mx). 
+Ingeniero Mecánico egresado del Tecnológico Nacional de México y actualmente estudiante de 
+posgrado, programa en MATLAB, Python, Java y VBA desde hace poco más de cinco años, sobre 
+todo aplicaciones de análisis numérico. Además, un *escritor aficionado* que tiene por 
+objetivo aprender a enseñar. Entre otras cosas escribe para blogs como 
+[MATLAB TYP](http://matlab-typ.blogspot.mx), [MATLAB Avanzado](http://matlab-avanzado.blogspot.mx), 
+y [Numython](http://numython.blogspot.mx), además de preparar algunos cursos en vídeo para 
+[LARYSA TECH](http://youtube.com/user/lab2dls).
+
+
 
 
 
 *P.J. De Los Santos*
 
-*Celaya, Guanajuato, México.*
+<!-- *Celaya, Guanajuato, México.* -->
 
