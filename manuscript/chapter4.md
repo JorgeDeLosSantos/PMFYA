@@ -409,7 +409,8 @@ también es válida:
 
 #### Iluminación
 
-## Animaciones
+
+<!-- ## Animaciones
 
 ### Mi primera animación, una introducción
 
@@ -463,3 +464,4 @@ secuencia correspondiente a la animación.
 
 {width=70%}
 ![](images/ch4/img_4_12.png)
+ -->
