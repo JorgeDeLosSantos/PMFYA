@@ -126,13 +126,13 @@ específica que se muestra enseguida:
 
 ### Valores especiales
 
-En la siguiente tabla se resumen algunos valores especiales devueltos
+En la siguiente tabla se resumen algunos valores especiales *devueltos*
 por funciones predefinidas en MATLAB:
 
 
 |**Función** | **Descripción**|
 |`ans`| Guarda el ultimo valor no asignado a una variable|
-|`eps`| Tolerancia que MATLAB soporta en los cálculos|
+|`eps`| Tolerancia numérica que MATLAB soporta en los cálculos|
 |`intmax`| Máximo valor entero que puede utilizarse|
 |`intmin`| Mínimo valor entero que puede utilizarse|
 |`realmax`| Valor de coma flotante máximo que puede representarse|
@@ -175,7 +175,7 @@ Otra manera que resulta en lo mismo es la siguiente:
          1
 
 Las líneas anteriores crean una variable `a` de tipo lógico con un valor
-true (1 lógico).
+`true` (1 lógico).
 
 ### Tipo char
 
@@ -545,6 +545,38 @@ Obtener la cantidad de elementos que componen lista con `length` o
     >> numel(A)
     ans =
          5
+
+Incluso podemos representar gráficamente cada uno de los elementos de 
+un vector mediante la función `plot`:
+
+    >> x=[1,2,1,3,4,2,0,1];
+    >> plot(x);
+
+
+{width=70%}
+![Utilizando `plot`](images/ch1/img_1_2.png)
+
+De manera similar puede evaluar una función matemática en un intervalo 
+determinado y trazar su gráfica:
+
+    >> x=0:0.01:10;
+    >> y=sin(x);
+    >> plot(x,y)
+
+En lo anterior, se crea un vector `x` en el intervalo [0,10], con incrementos 
+de 0.01, es decir, el vector contiene los puntos:
+
+{$$} x = [0, 0.01, 0.02, 0.03,..., 9.99, 10]{/$$}
+
+Luego, al aplicar la función `sin` sobre ese vector, MATLAB evalúa la función 
+seno en cada uno de los puntos o valores contenidos en el arreglo `x` y 
+los guarda en `y`. El capítulo 2 (Vectores y matrices) trata con mayor 
+profundidad la notación de dos puntos utilizada y el manejo correcto 
+de estructuras matriciales.
+
+{width=70%}
+![Graficando la función seno](images/ch1/img_1_2.png)
+
 
 ## Ficheros de comandos (scripts)
 
