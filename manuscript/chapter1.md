@@ -760,6 +760,44 @@ recomendaciones que deben seguirse para nombrar un script son:
 * Evite utilizar nombres de funciones nativas de MATLAB o palabras
   reservadas del lenguaje que podrían ocasionar conflictos.
 
+Para saber cuáles son las palabras reservadas del lenguaje puede 
+teclear `iskeyword` en la ventana de comandos y MATLAB le devolverá 
+un cell array de strings:
+
+    >> iskeyword
+    ans = 
+        'break'
+        'case'
+        'catch'
+        'classdef'
+        'continue'
+        'else'
+        'elseif'
+        'end'
+        'for'
+        'function'
+        'global'
+        'if'
+        'otherwise'
+        'parfor'
+        'persistent'
+        'return'
+        'spmd'
+        'switch'
+        'try'
+        'while'
+
+
+Además, puede verificar si el nombre de un fichero existe utilizando 
+la función `exist`:
+
+    >> exist('size')
+    ans =
+         5
+
+Si devuelve un resultado diferente de cero, entonces ese nombre está 
+siendo utilizado en una de las funciones/scripts incluidas en el path de MATLAB.
+
 ### Ejecutando scripts
 
 La utilidad de los scripts radica en la posibilidad de almacenar comandos 
