@@ -391,20 +391,95 @@ descritas.
 
 ### Operadores aritméticos, relacionales y lógicos
 
-En la siguiente tabla se resumen los operadores más importantes en
-MATLAB.
+Los operadores son símbolos especiales fundamentales en un lenguaje de programación, 
+se utilizan para *operar* sobre variables (operandos), se pueden clasificar en tres grupos:
+
+* Operadores aritméticos 
+* Operadores relacionales
+* Operadores lógicos
 
 #### Operadores aritméticos
+
+Los operadores aritméticos toman valores numéricos como entrada y devuelven un valor 
+resultante de aplicar la operación correspondiente sobre los operandos. Por ejemplo, 
+vea la siguiente expresión que corresponde a una suma de escalares:
+
+    >> 1+2
+    ans =
+         3
+
+En este caso `1` y `2` son los operandos o valores sobre los cuales se aplica el 
+operador `+`, y `3` es, evidentemente, el resultado de ejecutar la operación.
+
+En la siguiente tabla se listan los principales operadores aritméticos disponibles en 
+MATLAB.
 
 |**Operador**| **Descripción**|
 |+ | Operador suma|
 |- | Operador resta|
 |\* | Operador multiplicación (escalares)|
 |/ | Operador división|
+| ^ | Potenciación |
+| .^ | Potenciación elemento a elemento|
 |./ | División elemento a elemento (matrices)|
 |.\* | Multiplicación elemento a elemento (matrices)|                                      
 
+Note que además de los operadores correspondientes a las operaciones aritméticas básicas 
+(suma, resta, multiplicación, división, potenciación), se tiene operadores que realizan operaciones 
+elemento a elemento, que se utilizan para operar sobre arreglos matriciales. 
+
+Por ejemplo, sean `A` y `B` dos matrices de 3x3 definidas como
+
+{$$}
+A = \begin{matrix}
+1 & 2 \\
+3 & 4 \\
+\end{matrix}
+\,\,\,\,\,\,\,\,\,\,\,\,
+A = \begin{matrix}
+5 & 6 \\
+7 & 8 \\
+\end{matrix}
+{/$$}
+
+Si realizamos una suma o resta con estas matrices no habrá mayor complicación, dado 
+que tanto la suma y resta matricial se realizan elemento a elemento:
+
+    >> A=[1,2;3,4];
+    >> B=[5,6;7,8];
+    >> A+B
+    ans =
+         6     8
+        10    12
+    >> A-B
+    ans =
+        -4    -4
+        -4    -4
+
+Luego, note las diferencias de utilizar la multiplicación elemento a elemento (`.*`) 
+y la ordinaria (`*`):
+
+    >> A*B
+    ans =
+        19    22
+        43    50
+    >> A.*B
+    ans =
+         5    12
+        21    32
+
+
+Sí, efectivamente los resultados son completamente diferentes: en el primer 
+caso se realiza una [multiplicación matricial](https://es.wikipedia.org/wiki/Multiplicaci%C3%B3n_de_matrices), 
+siguiendo las reglas dictadas por el álgebra de matrices, en el segundo caso lo 
+que se hace es una multiplicación elemento a elemento, es decir, cada elemento 
+en la posición {$$}(i,j){/$$} de {$$}\bf{A}{/$$} se multiplica con el elemento 
+ubicado en la misma posición de {$$}\bf{B}{/$$}.
+
+
 #### Operadores relacionales
+
+Los operadores relacionales se utilizan para comparar dos valores
 
 |**Operador**| **Descripción**|
 |== | Igual a|
