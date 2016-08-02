@@ -601,10 +601,10 @@ esta tarea). Vea el siguiente ejemplo:
     >> imshow(255-img_mod)
 
 
-{width=70%}
-![Imagen original](images/ch1/lena_std.tif)
+{width=50%}
+![Imagen original](images/ch1/lena.png)
 
-{width=70%}
+{width=50%}
 ![Imagen modificada](images/ch1/lena_mod.png)
 
 
