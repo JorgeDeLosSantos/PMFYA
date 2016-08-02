@@ -394,6 +394,7 @@ descritas.
 En la siguiente tabla se resumen los operadores más importantes en
 MATLAB.
 
+#### Operadores aritméticos
 
 |**Operador**| **Descripción**|
 |+ | Operador suma|
@@ -402,9 +403,10 @@ MATLAB.
 |/ | Operador división|
 |./ | División elemento a elemento (matrices)|
 |.\* | Multiplicación elemento a elemento (matrices)|                                      
-| & | Operador lógico and|
-|{$$}\mid{/$$} | Operador lógico or|
-|{$$}\sim{/$$} | Operador lógico not|                        
+
+#### Operadores relacionales
+
+|**Operador**| **Descripción**|
 |== | Igual a|
 |{$$}<{/$$}| Menor que|
 |{$$}>{/$$} | Mayor que|
@@ -412,12 +414,22 @@ MATLAB.
 |{$$}>={/$$} | Mayor o igual que|
 |{$$}\sim = {/$$} | Diferente de|
 
+#### Operadores lógicos 
+
+|**Operador**| **Descripción**|
+| & | Operador lógico and|
+|{$$}\mid{/$$} | Operador lógico or|
+|{$$}\sim{/$$} | Operador lógico not|                        
+
 
 ## Un mini tutorial de introducción
 
 Una vez conocidos los tipos de datos y los operadores, podemos comenzar
 con una breve introducción al uso de MATLAB como una poderosa
-calculadora muy fácil de utilizar.
+calculadora muy fácil de utilizar, además vamos a ver algunas 
+características interesantes. Si hay algo en esta sección que te parece 
+díficil de asimilar, no debes preocuparte, lo subsiguiente se abordará en 
+capítulos posteriores de manera más *detenida*.
 
 Como se ha descrito en secciones anteriores, el command window o ventana
 de comandos es la parte del entorno MATLAB que nos permite interactuar
@@ -600,14 +612,11 @@ esta tarea). Vea el siguiente ejemplo:
     >> img_mod = imfilter(img, filtro);
     >> imshow(255-img_mod)
 
-
-{width=50%}
+{width=35%}
 ![Imagen original](images/ch1/lena.png)
 
-{width=50%}
+{width=35%}
 ![Imagen modificada](images/ch1/lena_mod.png)
-
-
 
 Todo esto muestra un poco de lo que puede hacer MATLAB, pero, lo cierto es 
 que es un entorno muy completo con una *infinidad* de opciones que facilitan 
@@ -675,7 +684,7 @@ W> de estudio en secciones posteriores.
 
 ### Modificando el Path de MATLAB
 
-Primero, ¿qué es el path de MATLAB?, en resumen son directorios en los cuales 
+Primero, ¿qué es el path de MATLAB?, en resumen, son directorios o carpetas en los cuales 
 MATLAB *busca* las funciones, clases y/o ficheros en general que el usuario demanda 
 durante una sesión. 
 
@@ -830,11 +839,15 @@ dos decimales del número {$$}\pi{/$$}:
 Las funciones son porciones de código que por lo general aceptan
 argumentos o valores de entrada y devuelven un valor de salida. Una
 función es una herramienta muy útil en la programación, dado que permite
-la reutilización de código para procedimientos que así lo requieran, así
+la reutilización de código para procedimientos que lo requieran, así
 como una facilidad significativa para mantener el código, lo cual se
 traduce en una mayor productividad. MATLAB, de hecho, está compuesto por
-una multitud de funciones agrupadas en toolboxs, cada una de ellas
+una multitud de funciones agrupadas en *toolboxs*, cada una de ellas
 pensada para resolver una situación concreta.
+
+Una función debe definirse en un fichero único, es decir, por cada 
+función creada debemos utilizar un archivo `*.m`, mismo que tendrá el nombre 
+dado a la función.
 
 La estructura básica de una función contiene los siguientes elementos:
 
@@ -851,17 +864,20 @@ las siguientes líneas de código:
     res = a+b;
     end
 
-La función anterior llamada suma, recibe como argumentos de entrada dos
+La función anterior llamada `suma`, recibe como argumentos de entrada dos
 valores numéricos a y b, y devuelve un resultado guardado en res que
-equivale a la suma aritmética de las variables de entrada. Si ejecutamos
-la función en la ventana de comandos obtenemos algo similar a esto:
+equivale a la suma aritmética de las variables de entrada. Note que el valor 
+de retorno debe asignarse a la variable indicada en la línea de definición.
+
+Si ejecutamos la función en la ventana de comandos obtenemos 
+algo similar a esto:
 
     >> s=suma(3,2)
     s =
          5
 
 Si no hace una asignación el resultado devuelto se guarda en la variable
-`ans`.
+`ans`. 
 
 ### Verificar argumentos de entrada y salida
 
