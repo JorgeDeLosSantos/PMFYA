@@ -590,6 +590,31 @@ superficies tridimensionales con unas cuantas líneas de código:
 ![Gráfica de una superficie {$$}f(x,y) = cos(x)+sen(y){/$$}](images/ch1/img_1_4.png)
 
 
+Lo mismo podemos leer una imagen y hacerle algunos cambios (restauración, segmentación, etc...) 
+utilizando el *Image Processing Toolbox* (que es una colección de códigos MATLAB que facilitan 
+esta tarea). Vea el siguiente ejemplo:
+
+    >> img = imread('lena_std.tif');
+    >> img = rgb2gray(img);
+    >> filtro = [1 1 1; 1 -8 1; 1 1 1];
+    >> img_mod = imfilter(img, filtro);
+    >> imshow(255-img_mod)
+
+
+{width=70%}
+![Imagen original](images/ch1/lena_std.tif)
+
+{width=70%}
+![Imagen modificada](images/ch1/lena_mod.png)
+
+
+
+Todo esto muestra un poco de lo que puede hacer MATLAB, pero, lo cierto es 
+que es un entorno muy completo con una *infinidad* de opciones que facilitan 
+el desarrollo de algoritmos para aplicaciones en múltiples disciplinas científicas.
+En los capítulos posteriores de este texto se abordan algunas características 
+y herramientas proporcionadas por MATLAB para algunos campos específicos.
+
 
 ## Ficheros de comandos (scripts)
 
