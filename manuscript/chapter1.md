@@ -479,7 +479,11 @@ ubicado en la misma posición de {$$}\bf{B}{/$$}.
 
 #### Operadores relacionales
 
-Los operadores relacionales se utilizan para comparar dos valores
+Los operadores relacionales se utilizan para comparar dos valores, devolviendo un 
+valor lógico. Normalmente se utilizan en conjunto con las estructuras de control 
+para la toma de decisiones sobre el procedimiento o flujo de un programa.
+
+La siguiente tabla resume los operadores relacionales: su notación y descripción. 
 
 |**Operador**| **Descripción**|
 |== | Igual a|
@@ -488,6 +492,26 @@ Los operadores relacionales se utilizan para comparar dos valores
 |{$$}<={/$$} | Menor o igual que|
 |{$$}>={/$$} | Mayor o igual que|
 |{$$}\sim = {/$$} | Diferente de|
+
+Puede ver que la notación difiere de la que ordinariamente utilizamos cuando 
+escribimos en papel, por ejemplo el símbolo del "menor o igual que" ({$$}\le{/$$}) 
+se escribe como {$$}<={/$$}. Es importante notar que la comparación "igual que" se 
+realiza con un doble signo igual (`==`), puesto que el uso de un único signo corresponde 
+a la asignación, a continuación se muestra lo que ocurre cuando intentamos hacer 
+comparaciones utilizando sólo un signo `=`:
+
+    >> 1==1
+    ans =
+         1
+    >> 1=1
+     1=1
+     |
+    Error: The expression to the left of the equals sign is not a valid target for an assignment.
+
+En el primer caso (doble signo) la comparación se hace devolviendo un `true`, pero, en el segundo 
+nos manda un error de sintaxis, indicando que el `1` ubicado a la izquierda del signo igual 
+no es un caracter válido para realizar una asignación.
+
 
 #### Operadores lógicos 
 
