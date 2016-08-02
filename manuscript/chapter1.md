@@ -575,7 +575,20 @@ profundidad la notación de dos puntos utilizada y el manejo correcto
 de estructuras matriciales.
 
 {width=70%}
-![Graficando la función seno](images/ch1/img_1_2.png)
+![Graficando la función seno](images/ch1/img_1_3.png)
+
+¿Bastante interesante, verdad?. Bueno, incluso es posible trazar gráficas de 
+superficies tridimensionales con unas cuantas líneas de código:
+
+
+    >> [X,Y]=meshgrid(0:0.1:10, 0:0.1:10);
+    >> Z = sin(X)+cos(Y);
+    >> surf(X,Y,Z)
+
+
+{width=70%}
+![Gráfica de una superficie {$$}f(x,y) = cos(x)+sen(y){/$$}](images/ch1/img_1_4.png)
+
 
 
 ## Ficheros de comandos (scripts)
