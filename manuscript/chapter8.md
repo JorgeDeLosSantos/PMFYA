@@ -84,7 +84,8 @@ control como pueden ser la posición, el color, el contenido o valor, o bien la 
 función que maneje el evento *disparado* cuando el usuario o la lógica del programa interaccionen 
 con este.
 
-
+| **Tipo** | **Control gráfico** |
+| `checkbox` | ![](images/ch8/checkbox.png) |
 
 
 ### 
