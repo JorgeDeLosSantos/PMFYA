@@ -88,6 +88,7 @@ posteriormente podemos acceder o modificar sus propiedades con las funciones `ge
 En la siguiente tabla se muestran los posibles tipos de control que pueden ser pasados en 
 la propiedad `style`.
 
+{title="Tipos de controles gráficos"}
 | **Tipo (`style`)** | **Control gráfico** |
 | `checkbox` | ![](images/ch8/checkbox.png) |
 | `edit` | ![](images/ch8/edit.png) |
@@ -99,10 +100,12 @@ la propiedad `style`.
 | `text` | ![](images/ch8/text.png) |
 | `togglebutton` | ![](images/ch8/togglebutton.png) |
 
-La siguiente tabla resume algunas de las *propiedades pareadas* que pueden pasarse como argumentos 
-a la función `uicontrol`:
+La siguiente tabla resume algunas de las *propiedades pareadas* más utilizadas,  que pueden pasarse 
+como argumentos a la función `uicontrol`:
 
 
+{title="Propiedades de `uicontrol`"}
+| **Propiedad** | ***Descripción** |
 | `BackgroundColor` | Establece el color del control. El valor puede establecerse mediante un vector de tres elementos en formato RGB |
 | `Callback` | Función que se ejecuta cuando el usuario interactúa con el control gráfico. El valor pasado puede ser la referencia a una función, por ej: `@mifuncion`|
 | `FontName` | Fuente a utilizar. Debe ser un string con el nombre de la fuente, la cual debería estar instalada.|
@@ -110,18 +113,47 @@ a la función `uicontrol`:
 | `FontUnits` | Unidad utilizada para interpretar el valor numérico de `FontSize` |
 | `FontWeight` | Aspecto de la fuente, puede ser `normal` o `bold` (negritas), por default es `normal` |
 | `ForegroundColor` | Color de la fuente utilizada en control gráfico |
+| `Parent` | Objeto gráfico padre. El valor debe ser un handle o referencia a un objeto gráfico de mayor jerarquía |
 | `Position` | Especifica el tamaño del control y la posición relativa a la esquina inferior del objeto padre. El valor se establece mediante un vector de cuatro elementos cuya estructura es la siguiente: `[Distancia de la izquierda, Distancia de la parte inferior, Ancho, Alto];` |
 | `String` | Cadena de texto que se muestra en el control. El valor pasado como argumento puede ser cualquier string.
 | `Units` | Unidad de medida que se utilizará para interpretar el vector de la propiedad `position`. Los valores disponibles son: centimeters, characters, inches, normalized, point y pixels. Siendo este último el valor por defecto. |
 | `Visible` | Establece si el control es visible. Valores: `on` y `off`. |
 
 
-
 #### Check Box
 
+El Check Box es un elemento gráfico que sirve como casilla de verificación, para indicar dos 
+posibles estados: activado/desactivado o falso/verdadero, como un tipo de check list. Vea 
+el siguiente código:
 
+{linenos=off}
+	function test_checkbox
+
+	figure('MenuBar','none',...
+	    'Position',[100 100 200 100]);
+
+	uicontrol('style','checkbox',...
+	    'string','Rojo',...
+	    'Position',[10 10 80 20],...
+	    'Callback',@cambia_color);
+
+	    function cambia_color(src, ~)
+	        if get(src,'Value') == true
+	            set(gcf,'Color','r');
+	        else
+	            set(gcf,'Color',0.8*ones(1,3));
+	        end
+	    end
+	end
+
+El código anterior crea una ventana de 200x100 pixeles que contiene un check box con el string `Rojo`. 
+Además, puede notar que a la propiedad `Callback` se la pasa como argumento una función `cambia_color` 
+que cada vez que es "llamada" cambia el color de fondo de la ventana: a rojo cuando se activa el check box 
+y al color por default cuando se desactiva.
 
 #### Edit Text
+
+
 
 #### List Box
 
@@ -139,4 +171,10 @@ a la función `uicontrol`:
 #### Toggle Button
 
 
-### 
+### Paneles
+
+
+### Axes
+
+
+### Tablas 
