@@ -80,9 +80,16 @@ y [Numython](http://numython.blogspot.mx), además de preparar algunos cursos en
 
 
 
-
-
 *P.J. De Los Santos*
 
 <!-- *Celaya, Guanajuato, México.* -->
 
+
+
+<!--  
+Imagen de portada obtenida de:
+
+https://pixabay.com/es/nano-tecnolog%C3%ADa-construcci%C3%B3n-1480553/
+
+Autor: PeteLinforth
+-->
