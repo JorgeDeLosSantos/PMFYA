@@ -431,15 +431,15 @@ elemento a elemento, que se utilizan para operar sobre arreglos matriciales.
 Por ejemplo, sean `A` y `B` dos matrices de 3x3 definidas como
 
 {$$}
-A = \begin{matrix}
+A = \begin{pmatrix}
 1 & 2 \\
 3 & 4 \\
-\end{matrix}
+\end{pmatrix}
 \,\,\,\,\,\,\,\,\,\,\,\,
-A = \begin{matrix}
+A = \begin{pmatrix}
 5 & 6 \\
 7 & 8 \\
-\end{matrix}
+\end{pmatrix}
 {/$$}
 
 Si realizamos una suma o resta con estas matrices no habrá mayor complicación, dado 
