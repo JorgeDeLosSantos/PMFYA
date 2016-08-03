@@ -86,6 +86,34 @@ con este.
 
 | **Tipo** | **Control gráfico** |
 | `checkbox` | ![](images/ch8/checkbox.png) |
+| `edit` | ![](images/ch8/edit.png) |
+| `listbox` | ![](images/ch8/listbox.png) |
+| `popupmenu` | ![](images/ch8/popupmenu.png) |
+| `pushbutton` | ![](images/ch8/pushbutton.png) |
+| `radiobutton` | ![](images/ch8/radiobutton.png) |
+| `slider` | ![](images/ch8/slider.png) |
+| `text` | ![](images/ch8/text.png) |
+| `togglebutton` | ![](images/ch8/togglebutton.png) |
+
+
+#### Check Box
+
+#### Edit Text
+
+#### List Box
+
+#### Pop-up Menu
+
+#### Push Button 
+
+#### Radio Button
+
+#### Slider
+
+#### Static Text
+
+
+#### Toggle Button
 
 
 ### 
