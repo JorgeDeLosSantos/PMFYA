@@ -22,7 +22,7 @@ cuando sucede un determinado evento, que puede ser la entrada de
 caracteres mediante el teclado, el clic de un botón del mouse, o
 situarse sobre un objeto.
 
-## Elemento figure
+## Elemento `figure`
 
 En MATLAB cada interfaz gráfica está creada sobre un objeto figure, en
 este elemento se añaden todos los controles gráficos que componen la
@@ -31,7 +31,7 @@ enseguida:
 
     hFig = figure;
 
-Donde `hFig` es el handle del elemento figure.
+Donde `hFig` es el handle o referencia del elemento figure.
 
 Es muy común que al momento de definir o crear un objeto figure, se
 especifiquen algunas de sus propiedades con la sintaxis siguiente:
@@ -61,12 +61,30 @@ tabla siguiente:
 | `Visible` | Establece si la GUI es visible. Valores: on y off. |
 
 
-## Controles gráficos (uicontrol)
+## Elementos gráficos 
 
-Los controles gráficos son creados mediante la función uicontrol, cuya
-estructura general se muestra:
+Los elementos gráficos son todos aquellos componentes que conforman una interfaz gráfica y que están 
+contenidos dentro de una ventana o *figure*. Estos elementos pueden ser campos de texto, botones, 
+listas desplegables, paneles, axes o cualquier otro tipo de elemento gráfico que permita una interacción 
+con el usuario.
 
-    hCont = uicontrol('Style', 'tipo de control',...
+
+### Controles generales (`uicontrol`)
+
+En esta sección vamos a ver cómo crear los controles básicos utilizando la función `uicontrol`, 
+misma que tiene una sintaxis como sigue:
+
+    hCont = uicontrol(Parent, 'Style', 'tipo de control',...
                       'Propiedad', 'Valor');
 
-La propiedad `style` define el tipo de control gráfico
+Donde `Parent` es un objeto gráfico de mayor jerarquía (como puede ser un panel o un frame/ventana) en
+el cual va a estar contenido el control gráfico. La propiedad `style` define el tipo de control gráfico 
+a desarrollar. Luego, se pueden pasar varios *argumentos pareados* que definan otras características del 
+control como pueden ser la posición, el color, el contenido o valor, o bien la asociación a una 
+función que maneje el evento *disparado* cuando el usuario o la lógica del programa interaccionen 
+con este.
+
+
+
+
+### 
