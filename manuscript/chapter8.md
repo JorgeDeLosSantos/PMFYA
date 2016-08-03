@@ -22,6 +22,31 @@ cuando sucede un determinado evento, que puede ser la entrada de
 caracteres mediante el teclado, el clic de un botón del mouse, o
 situarse sobre un objeto.
 
+## ¿Cómo crear una GUI en MATLAB?
+
+Una interfaz gráfica de usuario en MATLAB puede crearse de dos maneras, 
+a saber:
+
+* Utilizando el entorno de desarrollo integrado (GUIDE - *Graphical User Interface Development Environment*).
+* Código puro (programmatically GUI), es decir, utilizando sólo un script en el cual se colocarán 
+  las instrucciones necesarias para producir una interfaz gráfica.
+
+¿Cuál es la mejor manera?, imposible dar una respuesta, dependerá mucho de 
+con cuál el desarrollador se sienta más cómodo. Utilizando GUIDE puedes 
+desarrollar interfaces gráficas rapidamente, arrastrando controles y 
+posicionándolos manualmente, para enseguida programar la lógica principal. 
+Con código puro quizá necesitas un poco más de *destreza* para colocar y 
+organizar los elementos, pero vamos, nada complicado en extremo. 
+
+En este capítulo, para presentar y conocer los objetos gráficos y sus propiedades 
+utilizaremos código puro, dado que esto permite proporcionar toda la información 
+necesaria a través del código mostrado, sin requerir ningún otro tipo de archivo 
+adicional
+
+## Los objetos gráficos en MATLAB
+
+
+
 ## Elemento `figure`
 
 En MATLAB cada interfaz gráfica está creada sobre un objeto figure, en
@@ -151,7 +176,15 @@ Además, puede notar que a la propiedad `Callback` se la pasa como argumento una
 que cada vez que es "llamada" cambia el color de fondo de la ventana: a rojo cuando se activa el check box 
 y al color por default cuando se desactiva.
 
+![](images/ch8/checkbox_example.png)
+
+
 #### Edit Text
+
+Un *edit text* es un campo de texto editable en el cual se puede introducir información en 
+forma de texto, es el clásico *input* que todos conocemos, como la barra de búsqueda en 
+un buscador de internet o aquellos cuando rellenamos un formulario *online*.
+
 
 
 
