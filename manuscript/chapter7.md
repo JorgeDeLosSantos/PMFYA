@@ -137,12 +137,8 @@ dada en el modelo de color RGB a una imagen en escala de grises.
 
 ### Binarización de una imagen
 
-## Segmentación de imágenes
-
 ### Umbralización
 
 ### Detección de bordes
-
-## Restauración y mejoramiento de imágenes
 
 ### Removiendo ruido

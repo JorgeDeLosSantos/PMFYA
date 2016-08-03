@@ -126,13 +126,13 @@ específica que se muestra enseguida:
 
 ### Valores especiales
 
-En la siguiente tabla se resumen algunos valores especiales devueltos
+En la siguiente tabla se resumen algunos valores especiales *devueltos*
 por funciones predefinidas en MATLAB:
 
 
 |**Función** | **Descripción**|
 |`ans`| Guarda el ultimo valor no asignado a una variable|
-|`eps`| Tolerancia que MATLAB soporta en los cálculos|
+|`eps`| Tolerancia numérica que MATLAB soporta en los cálculos|
 |`intmax`| Máximo valor entero que puede utilizarse|
 |`intmin`| Mínimo valor entero que puede utilizarse|
 |`realmax`| Valor de coma flotante máximo que puede representarse|
@@ -175,7 +175,7 @@ Otra manera que resulta en lo mismo es la siguiente:
          1
 
 Las líneas anteriores crean una variable `a` de tipo lógico con un valor
-true (1 lógico).
+`true` (1 lógico).
 
 ### Tipo char
 
@@ -391,20 +391,101 @@ descritas.
 
 ### Operadores aritméticos, relacionales y lógicos
 
-En la siguiente tabla se resumen los operadores más importantes en
-MATLAB.
+Los operadores son símbolos especiales fundamentales en un lenguaje de programación, 
+se utilizan para *operar* sobre variables (operandos), se pueden clasificar en tres grupos:
 
+* Operadores aritméticos 
+* Operadores relacionales
+* Operadores lógicos
+
+#### Operadores aritméticos
+
+Los operadores aritméticos toman valores numéricos como entrada y devuelven un valor 
+resultante de aplicar la operación correspondiente sobre los operandos. Por ejemplo, 
+vea la siguiente expresión que corresponde a una suma de escalares:
+
+    >> 1+2
+    ans =
+         3
+
+En este caso `1` y `2` son los operandos o valores sobre los cuales se aplica el 
+operador `+`, y `3` es, evidentemente, el resultado de ejecutar la operación.
+
+En la siguiente tabla se listan los principales operadores aritméticos disponibles en 
+MATLAB.
 
 |**Operador**| **Descripción**|
 |+ | Operador suma|
 |- | Operador resta|
 |\* | Operador multiplicación (escalares)|
 |/ | Operador división|
+| ^ | Potenciación |
+| .^ | Potenciación elemento a elemento|
 |./ | División elemento a elemento (matrices)|
 |.\* | Multiplicación elemento a elemento (matrices)|                                      
-| & | Operador lógico and|
-|{$$}\mid{/$$} | Operador lógico or|
-|{$$}\sim{/$$} | Operador lógico not|                        
+
+Note que además de los operadores correspondientes a las operaciones aritméticas básicas 
+(suma, resta, multiplicación, división, potenciación), se tiene operadores que realizan operaciones 
+elemento a elemento, que se utilizan para operar sobre arreglos matriciales. 
+
+Por ejemplo, sean `A` y `B` dos matrices de 3x3 definidas como
+
+{$$}
+A = \begin{matrix}
+1 & 2 \\
+3 & 4 \\
+\end{matrix}
+\,\,\,\,\,\,\,\,\,\,\,\,
+A = \begin{matrix}
+5 & 6 \\
+7 & 8 \\
+\end{matrix}
+{/$$}
+
+Si realizamos una suma o resta con estas matrices no habrá mayor complicación, dado 
+que tanto la suma y resta matricial se realizan elemento a elemento:
+
+    >> A=[1,2;3,4];
+    >> B=[5,6;7,8];
+    >> A+B
+    ans =
+         6     8
+        10    12
+    >> A-B
+    ans =
+        -4    -4
+        -4    -4
+
+Luego, note las diferencias de utilizar la multiplicación elemento a elemento (`.*`) 
+y la ordinaria (`*`):
+
+    >> A*B
+    ans =
+        19    22
+        43    50
+    >> A.*B
+    ans =
+         5    12
+        21    32
+
+
+Sí, efectivamente los resultados son completamente diferentes: en el primer 
+caso se realiza una [multiplicación matricial](https://es.wikipedia.org/wiki/Multiplicaci%C3%B3n_de_matrices), 
+siguiendo las reglas dictadas por el álgebra de matrices, en el segundo caso lo 
+que se hace es una multiplicación elemento a elemento, es decir, cada elemento 
+en la posición {$$}(i,j){/$$} de {$$}\bf{A}{/$$} se multiplica con el elemento 
+ubicado en la misma posición de {$$}\bf{B}{/$$}.
+
+
+#### Operadores relacionales
+
+Los operadores relacionales se utilizan para comparar dos valores, devolviendo un 
+valor lógico. Normalmente se utilizan en conjunto con las estructuras de control 
+para la toma de decisiones sobre el procedimiento o flujo de un programa.
+
+La siguiente tabla resume los operadores relacionales: su notación y descripción. 
+
+|**Operador**| **Descripción**|
 |== | Igual a|
 |{$$}<{/$$}| Menor que|
 |{$$}>{/$$} | Mayor que|
@@ -412,12 +493,42 @@ MATLAB.
 |{$$}>={/$$} | Mayor o igual que|
 |{$$}\sim = {/$$} | Diferente de|
 
+Puede ver que la notación difiere de la que ordinariamente utilizamos cuando 
+escribimos en papel, por ejemplo el símbolo del "menor o igual que" ({$$}\le{/$$}) 
+se escribe como {$$}<={/$$}. Es importante notar que la comparación "igual que" se 
+realiza con un doble signo igual (`==`), puesto que el uso de un único signo corresponde 
+a la asignación, a continuación se muestra lo que ocurre cuando intentamos hacer 
+comparaciones utilizando sólo un signo `=`:
+
+    >> 1==1
+    ans =
+         1
+    >> 1=1
+     1=1
+     |
+    Error: The expression to the left of the equals sign is not a valid target for an assignment.
+
+En el primer caso (doble signo) la comparación se hace devolviendo un `true`, pero, en el segundo 
+nos manda un error de sintaxis, indicando que el `1` ubicado a la izquierda del signo igual 
+no es un caracter válido para realizar una asignación.
+
+
+#### Operadores lógicos 
+
+|**Operador**| **Descripción**|
+| & | Operador lógico and|
+|{$$}\mid{/$$} | Operador lógico or|
+|{$$}\sim{/$$} | Operador lógico not|                        
+
 
 ## Un mini tutorial de introducción
 
 Una vez conocidos los tipos de datos y los operadores, podemos comenzar
 con una breve introducción al uso de MATLAB como una poderosa
-calculadora muy fácil de utilizar.
+calculadora muy fácil de utilizar, además vamos a ver algunas 
+características interesantes. Si hay algo en esta sección que te parece 
+díficil de asimilar, no debes preocuparte, lo subsiguiente se abordará en 
+capítulos posteriores de manera más *detenida*.
 
 Como se ha descrito en secciones anteriores, el command window o ventana
 de comandos es la parte del entorno MATLAB que nos permite interactuar
@@ -546,6 +657,73 @@ Obtener la cantidad de elementos que componen lista con `length` o
     ans =
          5
 
+Incluso podemos representar gráficamente cada uno de los elementos de 
+un vector mediante la función `plot`:
+
+    >> x=[1,2,1,3,4,2,0,1];
+    >> plot(x);
+
+
+{width=70%}
+![Utilizando `plot`](images/ch1/img_1_2.png)
+
+De manera similar puede evaluar una función matemática en un intervalo 
+determinado y trazar su gráfica:
+
+    >> x=0:0.01:10;
+    >> y=sin(x);
+    >> plot(x,y)
+
+En lo anterior, se crea un vector `x` en el intervalo [0,10], con incrementos 
+de 0.01, es decir, el vector contiene los puntos:
+
+{$$} x = [0, 0.01, 0.02, 0.03,..., 9.99, 10]{/$$}
+
+Luego, al aplicar la función `sin` sobre ese vector, MATLAB evalúa la función 
+seno en cada uno de los puntos o valores contenidos en el arreglo `x` y 
+los guarda en `y`. El capítulo 2 (Vectores y matrices) trata con mayor 
+profundidad la notación de dos puntos utilizada y el manejo correcto 
+de estructuras matriciales.
+
+{width=70%}
+![Graficando la función seno](images/ch1/img_1_3.png)
+
+¿Bastante interesante, verdad?. Bueno, incluso es posible trazar gráficas de 
+superficies tridimensionales con unas cuantas líneas de código:
+
+
+    >> [X,Y]=meshgrid(0:0.1:10, 0:0.1:10);
+    >> Z = sin(X)+cos(Y);
+    >> surf(X,Y,Z)
+
+
+{width=70%}
+![Gráfica de una superficie {$$}f(x,y) = cos(x)+sen(y){/$$}](images/ch1/img_1_4.png)
+
+
+Lo mismo podemos leer una imagen y hacerle algunos cambios (restauración, segmentación, etc...) 
+utilizando el *Image Processing Toolbox* (que es una colección de códigos MATLAB que facilitan 
+esta tarea). Vea el siguiente ejemplo:
+
+    >> img = imread('lena_std.tif');
+    >> img = rgb2gray(img);
+    >> filtro = [1 1 1; 1 -8 1; 1 1 1];
+    >> img_mod = imfilter(img, filtro);
+    >> imshow(255-img_mod)
+
+{width=35%}
+![Imagen original](images/ch1/lena.png)
+
+{width=35%}
+![Imagen modificada](images/ch1/lena_mod.png)
+
+Todo esto muestra un poco de lo que puede hacer MATLAB, pero, lo cierto es 
+que es un entorno muy completo con una *infinidad* de opciones que facilitan 
+el desarrollo de algoritmos para aplicaciones en múltiples disciplinas científicas.
+En los capítulos posteriores de este texto se abordan algunas características 
+y herramientas proporcionadas por MATLAB para algunos campos específicos.
+
+
 ## Ficheros de comandos (scripts)
 
 Los ficheros de comandos, conocidos también como *scripts*, son archivos
@@ -582,6 +760,44 @@ recomendaciones que deben seguirse para nombrar un script son:
 * Evite utilizar nombres de funciones nativas de MATLAB o palabras
   reservadas del lenguaje que podrían ocasionar conflictos.
 
+Para saber cuáles son las palabras reservadas del lenguaje puede 
+teclear `iskeyword` en la ventana de comandos y MATLAB le devolverá 
+un cell array de strings:
+
+    >> iskeyword
+    ans = 
+        'break'
+        'case'
+        'catch'
+        'classdef'
+        'continue'
+        'else'
+        'elseif'
+        'end'
+        'for'
+        'function'
+        'global'
+        'if'
+        'otherwise'
+        'parfor'
+        'persistent'
+        'return'
+        'spmd'
+        'switch'
+        'try'
+        'while'
+
+
+Además, puede verificar si el nombre de un fichero existe utilizando 
+la función `exist`:
+
+    >> exist('size')
+    ans =
+         5
+
+Si devuelve un resultado diferente de cero, entonces ese nombre está 
+siendo utilizado en una de las funciones/scripts incluidas en el path de MATLAB.
+
 ### Ejecutando scripts
 
 La utilidad de los scripts radica en la posibilidad de almacenar comandos 
@@ -605,7 +821,7 @@ W> de estudio en secciones posteriores.
 
 ### Modificando el Path de MATLAB
 
-Primero, ¿qué es el path de MATLAB?, en resumen son directorios en los cuales 
+Primero, ¿qué es el path de MATLAB?, en resumen, son directorios o carpetas en los cuales 
 MATLAB *busca* las funciones, clases y/o ficheros en general que el usuario demanda 
 durante una sesión. 
 
@@ -760,11 +976,15 @@ dos decimales del número {$$}\pi{/$$}:
 Las funciones son porciones de código que por lo general aceptan
 argumentos o valores de entrada y devuelven un valor de salida. Una
 función es una herramienta muy útil en la programación, dado que permite
-la reutilización de código para procedimientos que así lo requieran, así
+la reutilización de código para procedimientos que lo requieran, así
 como una facilidad significativa para mantener el código, lo cual se
 traduce en una mayor productividad. MATLAB, de hecho, está compuesto por
-una multitud de funciones agrupadas en toolboxs, cada una de ellas
+una multitud de funciones agrupadas en *toolboxs*, cada una de ellas
 pensada para resolver una situación concreta.
+
+Una función debe definirse en un fichero único, es decir, por cada 
+función creada debemos utilizar un archivo `*.m`, mismo que tendrá el nombre 
+dado a la función.
 
 La estructura básica de una función contiene los siguientes elementos:
 
@@ -781,17 +1001,20 @@ las siguientes líneas de código:
     res = a+b;
     end
 
-La función anterior llamada suma, recibe como argumentos de entrada dos
+La función anterior llamada `suma`, recibe como argumentos de entrada dos
 valores numéricos a y b, y devuelve un resultado guardado en res que
-equivale a la suma aritmética de las variables de entrada. Si ejecutamos
-la función en la ventana de comandos obtenemos algo similar a esto:
+equivale a la suma aritmética de las variables de entrada. Note que el valor 
+de retorno debe asignarse a la variable indicada en la línea de definición.
+
+Si ejecutamos la función en la ventana de comandos obtenemos 
+algo similar a esto:
 
     >> s=suma(3,2)
     s =
          5
 
 Si no hace una asignación el resultado devuelto se guarda en la variable
-`ans`.
+`ans`. 
 
 ### Verificar argumentos de entrada y salida
 
