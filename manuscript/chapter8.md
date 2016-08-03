@@ -82,9 +82,13 @@ el cual va a estar contenido el control gráfico. La propiedad `style` define el
 a desarrollar. Luego, se pueden pasar varios *argumentos pareados* que definan otras características del 
 control como pueden ser la posición, el color, el contenido o valor, o bien la asociación a una 
 función que maneje el evento *disparado* cuando el usuario o la lógica del programa interaccionen 
-con este.
+con este. En `hCont` se guardará la referencia al objeto creado, mediante la cual 
+posteriormente podemos acceder o modificar sus propiedades con las funciones `get` y `set`.
 
-| **Tipo** | **Control gráfico** |
+En la siguiente tabla se muestran los posibles tipos de control que pueden ser pasados en 
+la propiedad `style`.
+
+| **Tipo (`style`)** | **Control gráfico** |
 | `checkbox` | ![](images/ch8/checkbox.png) |
 | `edit` | ![](images/ch8/edit.png) |
 | `listbox` | ![](images/ch8/listbox.png) |
@@ -95,8 +99,27 @@ con este.
 | `text` | ![](images/ch8/text.png) |
 | `togglebutton` | ![](images/ch8/togglebutton.png) |
 
+La siguiente tabla resume algunas de las *propiedades pareadas* que pueden pasarse como argumentos 
+a la función `uicontrol`:
+
+
+| `BackgroundColor` | Establece el color del control. El valor puede establecerse mediante un vector de tres elementos en formato RGB |
+| `Callback` | Función que se ejecuta cuando el usuario interactúa con el control gráfico. El valor pasado puede ser la referencia a una función, por ej: `@mifuncion`|
+| `FontName` | Fuente a utilizar. Debe ser un string con el nombre de la fuente, la cual debería estar instalada.|
+| `FontSize` | Tamaño de fuente. Valor numérico en las unidades dadas por `FontUnits` |
+| `FontUnits` | Unidad utilizada para interpretar el valor numérico de `FontSize` |
+| `FontWeight` | Aspecto de la fuente, puede ser `normal` o `bold` (negritas), por default es `normal` |
+| `ForegroundColor` | Color de la fuente utilizada en control gráfico |
+| `Position` | Especifica el tamaño del control y la posición relativa a la esquina inferior del objeto padre. El valor se establece mediante un vector de cuatro elementos cuya estructura es la siguiente: `[Distancia de la izquierda, Distancia de la parte inferior, Ancho, Alto];` |
+| `String` | Cadena de texto que se muestra en el control. El valor pasado como argumento puede ser cualquier string.
+| `Units` | Unidad de medida que se utilizará para interpretar el vector de la propiedad `position`. Los valores disponibles son: centimeters, characters, inches, normalized, point y pixels. Siendo este último el valor por defecto. |
+| `Visible` | Establece si el control es visible. Valores: `on` y `off`. |
+
+
 
 #### Check Box
+
+
 
 #### Edit Text
 
