@@ -45,6 +45,11 @@ adicional
 
 ## Los objetos gráficos en MATLAB
 
+Graphics objects are the visual components used by MATLAB® to display data graphically. For example, a graph can contain lines, text, and axes, all displayed in a figure window.
+
+Los objetos gráficos son los componentes visuales usados por MATLAB.
+
+
 ![Jerarquía de los objetos gráficos en MATLAB](images/ch8/checkbox_example.png)
 
 ## Elemento `figure`
@@ -86,7 +91,7 @@ tabla siguiente:
 | `Visible` | Establece si la GUI es visible. Valores: on y off. |
 
 
-## Elementos gráficos 
+## Controles de usuario
 
 Los elementos gráficos son todos aquellos componentes que conforman una interfaz gráfica y que están 
 contenidos dentro de una ventana o *figure*. Estos elementos pueden ser campos de texto, botones, 

@@ -68,7 +68,7 @@ de MATLAB, sería genial que tuviera conocimientos básicos de programación y d
 algoritmos, lo cual facilitaría enormemente la asimilación de conceptos.
 
 
-**Del autor...**
+<!-- **Del autor...**
 
 Ingeniero Mecánico egresado del Tecnológico Nacional de México y actualmente estudiante de 
 posgrado, programa en MATLAB, Python, Java y VBA desde hace poco más de cinco años, sobre 
@@ -76,14 +76,15 @@ todo aplicaciones de análisis numérico. Además, un *escritor aficionado* que 
 objetivo aprender a enseñar. Entre otras cosas escribe para blogs como 
 [MATLAB TYP](http://matlab-typ.blogspot.mx), [MATLAB Avanzado](http://matlab-avanzado.blogspot.mx), 
 y [Numython](http://numython.blogspot.mx), además de preparar algunos cursos en vídeo para 
-[LARYSA TECH](http://youtube.com/user/lab2dls).
-
+[LARYSA TECH](http://youtube.com/user/lab2dls). -->
 
 
 *P.J. De Los Santos*
 
-<!-- *Celaya, Guanajuato, México.* -->
+*Celaya, Guanajuato, México.*
 
+
+MATLAB® are trademarks of the MathWorks, Inc. The MathWorks does not warrant the accuracy of the text or exercises in this book. This book’s use or discussion of MATLAB &reg and Simulink ® software or related products does not constitute endorsement or sponsorship by the MathWorks of a particular pedagogical approach or particular use of the MATLAB ® and Simulink ® software.
 
 
 <!--  
