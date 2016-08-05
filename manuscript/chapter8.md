@@ -45,12 +45,42 @@ adicional
 
 ## Los objetos gráficos en MATLAB
 
-Graphics objects are the visual components used by MATLAB® to display data graphically. For example, a graph can contain lines, text, and axes, all displayed in a figure window.
+Los objetos gráficos son los componentes visuales usados por MATLAB para mostrar 
+información o datos de manera gráfica, a la vez que pueden permitir que el 
+usuario interactúe mediante diversos controles.
 
-Los objetos gráficos son los componentes visuales usados por MATLAB.
+Cada objeto tiene un identificador o referencia única llamada *handle*, mediante el cual 
+se pueden manipular las propiedades del objeto gráfico. 
 
+Los objetos gráficos están organizados de manera jerárquica tal como se muestra 
+en el siguiente diagrama:
 
 ![Jerarquía de los objetos gráficos en MATLAB](images/ch8/checkbox_example.png)
+
+De manera general, la jerarquía sirve para determinar los objetos 
+que pueden contener a otro. Un objeto de mayor jerarquía puede contener a otro 
+de menor rango. Por ejemplo, un axes puede estar contenido dentro de una ventana 
+o *figure*, viceversa imposible.
+
+En el diagrama anterior puede notar que el objeto de mayor jerarquía es el *Root*, 
+el cual refiere a la base de todo el sistema gráfico de MATLAB. El objeto *Root* 
+no tiene un objeto padre, pero si puede tener múltiples *figures* o ventanas como 
+hijos.
+
+I> ### Objetos padres e hijos
+I> 
+I> En este capítulo y en cualquier referencia acerca de interfaces gráficas 
+I> encontrará que se hace referencia a objetos *padres* (`parent`) y objetos 
+I> *hijos* (`children`). Por la naturaleza de conceptos es posible que tenga 
+I> una idea acertada de lo que refieren. Un objeto es *padre* de otro (objeto *hijo*)
+I> sí este último está contenido dentro del primero. Entender esta  relación es importante, 
+I> dado que permita organizar y estructurar de manera efectiva los controles 
+I> gráficos utilizando *contenedores* (usualmente paneles). Además, debe tomarse 
+I> en cuenta para determinar el *ciclo de vida* de un objeto gráfico, así, es 
+I> pertinente saber que puede borrar un *hijo* sin afectar al *padre*, pero si borra 
+I> un *padre* estará quitando, también, todos los objetos que contenga.
+
+
 
 ## Elemento `figure`
 
