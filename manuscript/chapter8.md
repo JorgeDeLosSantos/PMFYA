@@ -45,7 +45,7 @@ adicional
 
 ## Los objetos gráficos en MATLAB
 
-
+![Jerarquía de los objetos gráficos en MATLAB](images/ch8/checkbox_example.png)
 
 ## Elemento `figure`
 
