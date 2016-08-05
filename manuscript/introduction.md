@@ -2,7 +2,7 @@
 
 **Del contenido**
 
-**Programación en MATLAB, fundamentos y aplicaciones** consta, por ahora, de 10
+**Programación en MATLAB&reg;[^matlabtm], fundamentos y aplicaciones** consta, por ahora, de 10
 capítulos en los cuales se abordan los temas básicos de la programación
 en MATLAB y algunas de sus aplicaciones. Los capítulos son:
 
@@ -74,10 +74,6 @@ La imagen de portada fue obtenida de
 el autor es Pete Linforth y está publicada bajo licencia 
 [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed.es).
 
-**Nota**
-
-*MATLAB&reg; es una marca registrada de MathWorks, Inc.*
-
 <!-- **Del autor...**
 
 Ingeniero Mecánico egresado del Tecnológico Nacional de México y actualmente estudiante de 
@@ -88,13 +84,17 @@ objetivo aprender a enseñar. Entre otras cosas escribe para blogs como
 y [Numython](http://numython.blogspot.mx), además de preparar algunos cursos en vídeo para 
 [LARYSA TECH](http://youtube.com/user/lab2dls). -->
   
-
 ---
-
 
 *P.J. De Los Santos*
 
 *Celaya, Guanajuato, México.*
+
+
+[^matlabtm]: *MATLAB&reg; es una marca registrada de MathWorks, Inc.*
+
+
+
 
 <!--  
 Imagen de portada obtenida de:
