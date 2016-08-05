@@ -87,14 +87,14 @@ objetivo aprender a enseñar. Entre otras cosas escribe para blogs como
 [MATLAB TYP](http://matlab-typ.blogspot.mx), [MATLAB Avanzado](http://matlab-avanzado.blogspot.mx), 
 y [Numython](http://numython.blogspot.mx), además de preparar algunos cursos en vídeo para 
 [LARYSA TECH](http://youtube.com/user/lab2dls). -->
+  
+
+---
 
 
 *P.J. De Los Santos*
 
 *Celaya, Guanajuato, México.*
-
-
-
 
 <!--  
 Imagen de portada obtenida de:
