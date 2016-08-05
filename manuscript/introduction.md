@@ -67,6 +67,16 @@ El propósito principal es que el lector conozca y aprenda la sintaxis y las pos
 de MATLAB, sería genial que tuviera conocimientos básicos de programación y desarrollo de 
 algoritmos, lo cual facilitaría enormemente la asimilación de conceptos.
 
+**Portada**
+
+La imagen de portada fue obtenida de 
+[Pixabay](https://pixabay.com/es/nano-tecnolog%C3%ADa-construcci%C3%B3n-1480553/), 
+el autor es Pete Linforth y está publicada bajo licencia 
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed.es).
+
+**Nota**
+
+*MATLAB&reg; es una marca registrada de MathWorks, Inc.*
 
 <!-- **Del autor...**
 
@@ -84,7 +94,6 @@ y [Numython](http://numython.blogspot.mx), además de preparar algunos cursos en
 *Celaya, Guanajuato, México.*
 
 
-MATLAB® are trademarks of the MathWorks, Inc. The MathWorks does not warrant the accuracy of the text or exercises in this book. This book’s use or discussion of MATLAB&reg; and Simulink ® software or related products does not constitute endorsement or sponsorship by the MathWorks of a particular pedagogical approach or particular use of the MATLAB ® and Simulink ® software.
 
 
 <!--  
