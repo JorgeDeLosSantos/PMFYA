@@ -84,7 +84,7 @@ y [Numython](http://numython.blogspot.mx), además de preparar algunos cursos en
 *Celaya, Guanajuato, México.*
 
 
-MATLAB® are trademarks of the MathWorks, Inc. The MathWorks does not warrant the accuracy of the text or exercises in this book. This book’s use or discussion of MATLAB &reg and Simulink ® software or related products does not constitute endorsement or sponsorship by the MathWorks of a particular pedagogical approach or particular use of the MATLAB ® and Simulink ® software.
+MATLAB® are trademarks of the MathWorks, Inc. The MathWorks does not warrant the accuracy of the text or exercises in this book. This book’s use or discussion of MATLAB&reg; and Simulink ® software or related products does not constitute endorsement or sponsorship by the MathWorks of a particular pedagogical approach or particular use of the MATLAB ® and Simulink ® software.
 
 
 <!--  
