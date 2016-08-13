@@ -548,7 +548,8 @@ de ecuaciones diferenciales son:
 
 {$$} \frac{dy}{dt}=-3y$$ $$\frac{d^2x}{dt^2}+2\frac{dx}{dt}+3x=0 {/$$}
 
-## Métodos numéricos
+
+<!-- ## Métodos numéricos
 
 ### Método de bisección
 
@@ -556,4 +557,4 @@ de ecuaciones diferenciales son:
 
 ### Método del punto fijo
 
-### Método de Newton-Raphson
+### Método de Newton-Raphson -->
