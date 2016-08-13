@@ -55,7 +55,7 @@ se pueden manipular las propiedades del objeto gráfico.
 Los objetos gráficos están organizados de manera jerárquica tal como se muestra 
 en el siguiente diagrama:
 
-![Jerarquía de los objetos gráficos en MATLAB](images/ch8/checkbox_example.png)
+![Jerarquía de los objetos gráficos en MATLAB](images/ch8/objetos_graficos.png)
 
 De manera general, la jerarquía sirve para determinar los objetos 
 que pueden contener a otro. Un objeto de mayor jerarquía puede contener a otro 
@@ -81,10 +81,13 @@ I> pertinente saber que puede borrar un *hijo* sin afectar al *padre*, pero si b
 I> un *padre* estará quitando, también, todos los objetos que contenga.
 
 
+## Propiedades de objetos: funciones `set` y `get`.
 
-## Elemento `figure`
+  
 
-En MATLAB cada interfaz gráfica está creada sobre un objeto figure, en
+## Objeto `figure`
+
+En MATLAB cada interfaz gráfica está creada sobre un objeto `figure`, en
 este elemento se añaden todos los controles gráficos que componen la
 GUI. La forma más simple de definir un objeto figure se ejemplifica
 enseguida:
@@ -96,7 +99,7 @@ Donde `hFig` es el handle o referencia del elemento figure.
 Es muy común que al momento de definir o crear un objeto figure, se
 especifiquen algunas de sus propiedades con la sintaxis siguiente:
 
-    hFig = figure('Propiedad ', 'Valor ',...);
+    hFig = figure('Propiedad', 'Valor',...);
 
 A continuación se muestra un ejemplo característico:
 
@@ -105,7 +108,7 @@ A continuación se muestra un ejemplo característico:
                   'Name','Figure Ejemplo',...
                   'Position',[200 200 300 300]);
 
-Las propiedades más comunes de un elemento figure se muestran en la
+Las propiedades más comunes de un elemento `figure` se muestran en la
 tabla siguiente:
 
 
@@ -121,15 +124,12 @@ tabla siguiente:
 | `Visible` | Establece si la GUI es visible. Valores: on y off. |
 
 
-## Controles de usuario
+### Controles de usuario (`uicontrol`)
 
 Los elementos gráficos son todos aquellos componentes que conforman una interfaz gráfica y que están 
-contenidos dentro de una ventana o *figure*. Estos elementos pueden ser campos de texto, botones, 
-listas desplegables, paneles, axes o cualquier otro tipo de elemento gráfico que permita una interacción 
+contenidos dentro de una ventana o `figure`. Estos elementos pueden ser campos de texto, botones, 
+listas desplegables o cualquier otro tipo de elemento gráfico que permita una interacción 
 con el usuario.
-
-
-### Controles generales (`uicontrol`)
 
 En esta sección vamos a ver cómo crear los controles básicos utilizando la función `uicontrol`, 
 misma que tiene una sintaxis como sigue:
@@ -139,10 +139,10 @@ misma que tiene una sintaxis como sigue:
 
 Donde `Parent` es un objeto gráfico de mayor jerarquía (como puede ser un panel o un frame/ventana) en
 el cual va a estar contenido el control gráfico. La propiedad `style` define el tipo de control gráfico 
-a desarrollar. Luego, se pueden pasar varios *argumentos pareados* que definan otras características del 
-control como pueden ser la posición, el color, el contenido o valor, o bien la asociación a una 
-función que maneje el evento *disparado* cuando el usuario o la lógica del programa interaccionen 
-con este. En `hCont` se guardará la referencia al objeto creado, mediante la cual 
+a desarrollar. Luego, se pueden pasar varios *argumentos pareados* o de tipo `Nombre-Valor`que definan 
+otras características del control como pueden ser la posición, el color, el contenido o valor, o bien 
+la asociación a una función que maneje el evento *disparado* cuando el usuario o la lógica del 
+programa interaccionen con este. En `hCont` se guardará la referencia al objeto creado, mediante la cual 
 posteriormente podemos acceder o modificar sus propiedades con las funciones `get` y `set`.
 
 En la siguiente tabla se muestran los posibles tipos de control que pueden ser pasados en 
