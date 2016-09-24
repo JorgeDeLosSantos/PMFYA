@@ -246,7 +246,7 @@ función.
 ## Exportar e importar datos de un fichero de texto
 
 Existen múltiples formatos para ficheros que almacenan datos o texto
-plano, siendo los más comunes el *.txt y el *.dat. Estos tipos de
+plano, siendo los más comunes el `*.txt` y el `*.dat`. Estos tipos de
 ficheros son muy utilizados en casi cualquier ámbito para guardar datos
 de cualquier tipo, con la ventaja de ser *leíbles* para una persona y,
 por supuesto, para la computadora. Por tanto, con frecuencia se hace
@@ -255,7 +255,7 @@ este tipo, además es muy común utilizar MATLAB como un entorno de
 visualización de datos generados a través de la adquisición mediante
 tarjetas o bien mediante otro software.
 
-### Exportar datos con dlmwrite
+### Exportar datos con `dlmwrite`
 
 La función `dlmwrite` exporta el contenido de una matriz a un archivo de
 texto usando un delimitador o separador entre los elementos. La sintaxis
@@ -264,5 +264,6 @@ más común es:
     >> dlmwrite(n_arch, M, 'delimitador');
 
 Donde `n_arch` es el nombre del archivo en el cual se guardará la matriz
-M, utilizando como separador el carácter especificado en
-`’delimitador’`.
+M, utilizando como separador el carácter especificado en `'delimitador'`.
+
+
