@@ -357,10 +357,10 @@ El siguiente código muestra como buscar
 
 **Amor mío, mi amor.**
 
-*Amor mío, mi amor, amor hallado 
-de pronto en la ostra de la muerte. 
-Quiero comer contigo, estar, amar contigo, 
-quiero tocarte, verte. 
+*Amor mío, mi amor, amor hallado*  
+*de pronto en la ostra de la muerte.*  
+*Quiero comer contigo, estar, amar contigo,*  
+*quiero tocarte, verte.*  
 
 Me lo digo, lo dicen en mi cuerpo 
 los hilos de mi sangre acostumbrada, 
