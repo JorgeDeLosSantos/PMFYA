@@ -2467,17 +2467,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.175"
-     inkscape:cx="707.31059"
-     inkscape:cy="1433.4527"
+     inkscape:zoom="0.0875"
+     inkscape:cx="-713.95455"
+     inkscape:cy="946.20059"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      width="2550px"
      inkscape:window-width="1280"
-     inkscape:window-height="962"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="961"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -2501,7 +2501,7 @@
        id="rect2996"
        width="2587.5601"
        height="3336.5635"
-       x="-8.0812464"
+       x="-13.795532"
        y="-2260.938"
        ry="0" />
     <image
@@ -2522,7 +2522,7 @@
        ry="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:234.70288086px;line-height:100%;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#aaccff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:234.70288086px;line-height:100%;font-family:Verdana;-inkscape-font-specification:'Verdana Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#f9f9f9;fill-opacity:1;stroke:none;"
        x="559.2981"
        y="-1210.1606"
        id="text3014"
@@ -2531,15 +2531,15 @@
          sodipodi:role="line"
          x="559.2981"
          y="-1210.1606"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;text-anchor:start;fill:#80e5ff"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;text-anchor:start;fill:#f9f9f9;"
          id="tspan3697">Programación en MATLAB</tspan><tspan
          sodipodi:role="line"
          x="559.2981"
          y="-975.45776"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;text-anchor:start;fill:#80e5ff"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';text-align:start;text-anchor:start;fill:#f9f9f9;"
          id="tspan3766">fundamentos y aplicaciones</tspan></text>
     <g
-       transform="matrix(0.6971625,0,0,0.6971625,28.930935,274.20158)"
+       transform="matrix(0.58517206,0,0,0.58517206,51.599762,353.20049)"
        id="layer1-9"
        inkscape:label="Layer 1"
        style="fill:#000000">
@@ -2603,16 +2603,16 @@
            y="562.85712" /></flowRegion><flowPara
          id="flowPara3699" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:97.56260681px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#e5ff80;fill-opacity:1;stroke:none;"
-       x="2456.0859"
-       y="738.34229"
+       style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:110.87735748px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#f2f2f2;fill-opacity:1;stroke:none"
+       x="2406.6467"
+       y="759.8941"
        id="text3024"
        sodipodi:linespacing="125%"
-       transform="scale(0.78887865,1.2676221)"><tspan
+       transform="scale(0.85428239,1.1705731)"><tspan
          sodipodi:role="line"
          id="tspan3026"
-         x="2456.0859"
-         y="738.34229"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';fill:#e5ff80;">Pedro Jorge De Los Santos</tspan></text>
+         x="2406.6467"
+         y="759.8941"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Bold';fill:#f2f2f2">P. J. De Los Santos</tspan></text>
   </g>
 </svg>
