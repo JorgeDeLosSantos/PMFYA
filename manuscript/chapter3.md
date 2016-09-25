@@ -328,20 +328,63 @@ las expresiones regulares para búsqueda de patrones.
 
 #### La función `regexp`
 
+La función básica de MATLAB para buscar patrones mediante expresiones regulares 
+es `regexp`, cuya sintaxis es:
 
+    r = regexp(string, expr, option)
 
-    [selected_outputs] = regexp(string, expr, outselect)
+Donde `expr` es el patrón a buscar dentro de la cadena `string`, `option` es una 
+parámetro predefinido que indica el tipo de salida que se guardará en `r`. 
+Para la mayoría de los casos `option` puede ser `'match'` o `'start'`, en cuyo 
+caso se tendrían como salida un cell array de las coincidencias encontradas y 
+una lista de valores numéricos que indican la posición del primer caracter para 
+cada una de las coincidencias, de manera respectiva.
 
 #### Buscando números
 
 Para entender mejor las expresiones regulares vamos a comenzar con un caso muy 
-sencillo: buscar números dentro de un string. Para utilizar expresiones regulares 
-debemos hacer uso de la función `regexp`
+sencillo: buscar números dentro de un string.
+
+El siguiente código muestra como buscar 
 
     >> str = 'Avenida Siempreviva 742';
     >> nums = regexp(str,'\d*','match')
     nums = 
         '742'
+
+
+#### Buscando palabras
+
+Amor mío, mi amor.
+
+{linenos=off}
+    Amor mío, mi amor, amor hallado 
+    de pronto en la ostra de la muerte. 
+    Quiero comer contigo, estar, amar contigo, 
+    quiero tocarte, verte. 
+
+    Me lo digo, lo dicen en mi cuerpo 
+    los hilos de mi sangre acostumbrada, 
+    lo dice este dolor y mis zapatos 
+    y mi boca y mi almohada. 
+
+    Te quiero, amor, amor absurdamente, 
+    tontamente, perdido, iluminado, 
+    soñando rosas e inventando estrellas 
+    y diciéndote adiós yendo a tu lado. 
+
+    Te quiero desde el poste de la esquina, 
+    desde la alfombra de ese cuarto a solas, 
+    en las sábanas tibias de tu cuerpo 
+    donde se duerme un agua de amapolas. 
+
+    Cabellera del aire desvelado, 
+    río de noche, platanar oscuro, 
+    colmena ciega, amor desenterrado, 
+
+    voy a seguir tus pasos hacia arriba, 
+    de tus pies a tu muslo y tu costado.
+
 
 
 
