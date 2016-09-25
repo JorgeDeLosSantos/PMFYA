@@ -326,11 +326,22 @@ patrones, con un sencillez considerable.
 En las siguientes subsecciones veremos algunos ejemplos de cómo utilizar 
 las expresiones regulares para búsqueda de patrones.
 
+#### La función `regexp`
+
+
+
+    [selected_outputs] = regexp(string, expr, outselect)
+
 #### Buscando números
 
-Vamos a comenzar con un caso muy sencillo: buscar números dentro de un string. 
+Para entender mejor las expresiones regulares vamos a comenzar con un caso muy 
+sencillo: buscar números dentro de un string. Para utilizar expresiones regulares 
+debemos hacer uso de la función `regexp`
 
-Se
+    >> str = 'Avenida Siempreviva 742';
+    >> nums = regexp(str,'\d*','match')
+    nums = 
+        '742'
 
 
 
