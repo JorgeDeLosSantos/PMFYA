@@ -362,30 +362,28 @@ El siguiente código muestra como buscar
 *Quiero comer contigo, estar, amar contigo,*  
 *quiero tocarte, verte.*  
 
-Me lo digo, lo dicen en mi cuerpo 
-los hilos de mi sangre acostumbrada, 
-lo dice este dolor y mis zapatos 
-y mi boca y mi almohada. 
+*Me lo digo, lo dicen en mi cuerpo*  
+*los hilos de mi sangre acostumbrada,*  
+*lo dice este dolor y mis zapatos*  
+*y mi boca y mi almohada.*  
 
-Te quiero, amor, amor absurdamente, 
-tontamente, perdido, iluminado, 
-soñando rosas e inventando estrellas 
-y diciéndote adiós yendo a tu lado. 
+*Te quiero, amor, amor absurdamente,*  
+*tontamente, perdido, iluminado,*  
+*soñando rosas e inventando estrellas*  
+*y diciéndote adiós yendo a tu lado.*  
 
-Te quiero desde el poste de la esquina, 
-desde la alfombra de ese cuarto a solas, 
-en las sábanas tibias de tu cuerpo 
-donde se duerme un agua de amapolas. 
+*Te quiero desde el poste de la esquina,*  
+*desde la alfombra de ese cuarto a solas,*  
+*en las sábanas tibias de tu cuerpo*  
+*donde se duerme un agua de amapolas.*  
 
-Cabellera del aire desvelado, 
-río de noche, platanar oscuro, 
-colmena ciega, amor desenterrado, 
+*Cabellera del aire desvelado,*  
+*río de noche, platanar oscuro,*  
+*colmena ciega, amor desenterrado,*  
+*voy a seguir tus pasos hacia arriba,*  
+*de tus pies a tu muslo y tu costado.*  
 
-voy a seguir tus pasos hacia arriba, 
-de tus pies a tu muslo y tu costado.*
-
-
-Bla bla
+**-Jaime Sabines**
 
 
 
