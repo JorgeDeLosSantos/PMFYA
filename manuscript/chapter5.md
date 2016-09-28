@@ -63,13 +63,13 @@ las variables como campos. Para el mismo ejemplo anterior se tiene:
 
 ### Cambiar el directorio o carpeta actual
 
-La función cd cambia la carpeta actual (Current Folder), utilizando como
+La función `cd` cambia la carpeta actual (Current Folder), utilizando como
 argumento una cadena de caracteres con la dirección absoluta o relativa
 del nuevo directorio de trabajo. La sintaxis es:
 
     cd('Nueva Carpeta');
 
-Un ejemplo se muestra enseguida:
+Un ejemplo se muestra enseguida: 
 
     cd('C:\Users\User\Documents\MATLAB');
 
@@ -192,7 +192,7 @@ Para acceder a la información de cada archivo puede hacerlo mediante el
           isdir: 0
         datenum: 7.3587e+05
 
-Desde luego que esta forma de utilizar la función dir es mucho más útil
+Desde luego que esta forma de utilizar la función `dir` es mucho más útil
 que aquella que simplemente muestra en pantalla la información.
 
 Es posible además especificar como argumento la dirección de la cual se
