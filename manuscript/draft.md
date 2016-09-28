@@ -11,4 +11,3 @@ saber a través de los siguientes medios de contacto.
 
 O bien a través de la plataforma de LeanPub en el siguiente 
 [link](https://leanpub.com/programacionmatlab/email_author/new). 
-
