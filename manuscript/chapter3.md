@@ -401,11 +401,18 @@ números enteros como decimales, como el siguiente ejemplo:
     nums = 
         '1'    '2'    '3'    '0.5'    '2.5'    '3.0'
 
-
-
-
+En lo anterior los corchetes se utilizan para agrupar un conjunto de caracteres, 
+en este caso números y el punto decimal, además, el signo `+` sirve para indicar 
+que los caracteres dentro de los corchetes podrían presentarse al menos una vez.
 
 #### Buscando palabras
+
+Una búsqueda ordinaria de palabras consiste en buscar una coincidencia exacta, 
+una palabra o frase a la vez. No obstante, usando expresiones regulares podemos 
+buscar coincidencias con una o más palabras, de manera incluyente.
+
+Por ejemplo, vamos a tomar como referencia el poema *Amor mío, mi amor* del gran 
+Jaime Sabines, y veremos cuantas veces utilizó las palabras amor y amar.
 
 **Amor mío, mi amor.**
 
@@ -437,9 +444,31 @@ números enteros como decimales, como el siguiente ejemplo:
 
 **-Jaime Sabines**
 
+    >> str = fileread('amor_mio_mi_amor.txt');
+    >> p = regexp(str,'amor|amar','match')
+    p = 
+        'amor'    'amor'    'amar'    'amor'    'amor'    'amor'
 
+Vea que se utiliza el operador `|` para indicar que pueden ser tanto 
+`amor` como `amar` las coincidencias a incluir. Incluso para el caso anterior 
+puede observar que las palabras buscadas difieren en una letra, de modo 
+que podemos usar un patrón como sigue:
+
+    >> p=regexp(str,'am(a|o)r','match')
+    p = 
+        'amor'    'amor'    'amar'    'amor'    'amor'    'amor'
+
+y funciona exactamente de la misma manera. Podemos incluso mejorar 
+nuestro patrón de búsqueda haciendo que se incluyan las palabras 
+que inician con mayúscula:
+
+    >> p=regexp(str,'(A|a)m(a|o)r','match')
+    p = 
+        'Amor'    'amor'    'amor'    'amar'    'amor'    'amor'    'amor'
+
+
+---
 
 ## Problemas
-
 
 

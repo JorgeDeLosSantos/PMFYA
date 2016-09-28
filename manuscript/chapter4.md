@@ -1,7 +1,5 @@
 # Gráficas
 
-## Gráficas en dos dimensiones
-
 MATLAB dispone de una gran variedad de funciones y herramientas que
 permiten crear gráficas de casi cualquier tipo, tanto en dos dimensiones
 como superficies y curvas tridimensionales. Además, MATLAB proporciona
@@ -9,20 +7,18 @@ una facilidad extraordinaria para personalizar las gráficas mediante la
 inclusión de anotaciones, etiquetas, mapas de colores y muchos otros
 elementos que permiten una mayor legibilidad e interactividad con la
 información presentada en los gráficos. En este capítulo se tratarán las
-gráficas en dos dimensiones, en el espacio y además, una introducción a
-las animaciones.
+gráficas en dos dimensiones y en el espacio tridimensional.
 
-### Una introducción: la función plot
+## Una introducción: la función plot
 
-La función plot es una instrucción muy sencilla que permite trazar
+La función `plot` es una instrucción muy sencilla que permite trazar
 curvas bidimensionales utilizando vectores como argumentos. Por ejemplo
 si necesita graficar la función seno en el intervalo de {$$}-\pi{/$$} a {$$}\pi{/$$},
-necesita crear primeramente un vector con un determinado número de
-elementos para definir el dominio a graficar y enseguida aplicar a ese
-vector la función matemática que corresponda. Para crear un vector que
-defina el dominio puede hacerlo de diversas formas (revise la sección
-2.1). A continuación se especifican las líneas de código necesario para
-crear la gráfica antes mencionada y el resultado de salida:
+necesita definir primeramente un vector con un determinado número de
+elementos para construir el dominio a graficar y enseguida aplicar a ese
+vector la función matemática que corresponda. A continuación se especifican 
+las líneas de código necesario para crear la gráfica antes mencionada y el 
+resultado de salida:
 
     x=-pi:pi/180:pi;
     y=sin(x);
@@ -31,7 +27,7 @@ crear la gráfica antes mencionada y el resultado de salida:
 {width=70%}
 ![](images/ch4/img_4_1.png)
 
-#### Graficar más de una función
+### Graficar más de una función
 
 Si necesita incluir dos o más gráficas en una misma ventana puede
 utilizar el comando `hold on` para permitir que MATLAB simplemente agregue
@@ -77,9 +73,9 @@ tomarse simplemente como una observación muy útil de que en MATLAB
 pueden implementarse diversas soluciones a un mismo problema o
 requerimiento.
 
-### Configurar propiedades de las gráficas
+## Configurar propiedades de las gráficas
 
-#### Añadir etiquetas, leyendas y títulos
+### Añadir etiquetas, leyendas y títulos
 
 En la sección anterior se han visto los pasos para mínimos para trazar
 una gráfica, pero ésta todavía puede resultar poco útil dado que no
@@ -106,7 +102,7 @@ posible modificar el color, grosor y el estilo de línea de las gráficas
 de modo que se ajuste a los requerimientos o a las exigencias visuales
 de cada individuo.
 
-#### Modificando el color de línea
+### Modificando el color de línea
 
 Para modificar el color de una gráfica basta con añadir como tercer
 argumento de la función plot uno de los modificadores de color que se
@@ -136,7 +132,7 @@ color verde sería como sigue:
 
     plot(x,y,'color',[0 1 0]);
 
-#### Configurar ejes (función axis)
+### Configurar ejes (función axis)
 
 El comando / función axis permite hacer modificaciones a la apariencia y
 escala de los ejes en los cuales se trazan las gráficas. La sintaxis
@@ -183,9 +179,9 @@ siguiente.
 |`axis(’tight’)` |    Ajusta los ejes al rango de datos disponibles.|
 
 
-#### Añadir anotaciones
+### Añadir anotaciones
 
-### Gráficas en coordenadas polares
+## Gráficas en coordenadas polares
 
 En el sistema de coordenadas polares cada punto del plano está definido
 por un ángulo y una distancia medidos respecto al eje polar y al polo,
@@ -219,9 +215,7 @@ ejemplo, para la misma función anterior:
     y=r.*sin(theta);
     plot(x,y);
 
-## Gráficas en tres dimensiones
-
-### Gráficas de superficies: una primera aproximación
+## Gráficas de superficies: una primera aproximación
 
 La representación gráfica de una función de dos variables {$$}f(x,y){/$$} es
 una superficie trazada en un espacio tridimensional, resultante de la
@@ -261,7 +255,7 @@ bidimensionales (meshgrid), estas funciones se encuentran optimizadas
 mediante la técnica de vectorización y permiten una ejecución
 notablemente más veloz.
 
-### Gráficas de superficies
+## Gráficas de superficies
 
 En el apartado anterior se ha visto como trazar superficies utilizando
 ciclos for anidados para crear la matriz que define los valores de la
@@ -306,9 +300,9 @@ Claro que por cuestiones de comodidad sería preferible esta última,
 aunque quizá afecte un poco la legibilidad de un programa de mayores
 dimensiones, pero vamos, nada "catastrófico".
 
-### Mapas de colores, sombreado e iluminación
+## Mapas de colores, sombreado e iluminación
 
-#### Mapas de colores
+### Mapas de colores
 
 Un mapa de color es, en su definición más simplista, una matriz de m x 3
 elementos cuyos valores se encuentran en el intervalo de 0 a 1, y donde
@@ -372,7 +366,7 @@ El resultado es una interesante variación de tonalidades ¿azul? a rojo.
 Por supuesto que usted tiene todas las libertades para experimentar con
 diversas secuencias de colores y “adoptar” la que mejor le resulte.
 
-#### Sombreado
+### Sombreado
 
 Para efectos de esta sección, con sombreado se refiere a la forma en que
 MATLAB *pinta* o *rellena* los diversos componentes o parches (patch)
@@ -407,7 +401,7 @@ también es válida:
 
     >> shading flat
 
-#### Iluminación
+### Iluminación
 
 
 <!-- ## Animaciones
