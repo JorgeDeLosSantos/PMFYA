@@ -345,12 +345,64 @@ cada una de las coincidencias, de manera respectiva.
 Para entender mejor las expresiones regulares vamos a comenzar con un caso muy 
 sencillo: buscar números dentro de un string.
 
-El siguiente código muestra como buscar 
+El siguiente código muestra cómo buscar un número entero de cualquier cantidad 
+de cifras dentro de un string:
 
     >> str = 'Avenida Siempreviva 742';
     >> nums = regexp(str,'\d*','match')
     nums = 
         '742'
+
+El patrón o expresión `\d` le indica a MATLAB que queremos encontrar todos 
+los caracteres que correspondan a un número, luego, el asterisco (`*`) se 
+utiliza para especificar que pueden ser substrings de longitud cualesquiera, 
+es decir, pueden ser números de dos, tres, cuatro o muchas cifras.
+
+Note que, además, hemos pasado el argumento `'match'` a la función `regexp`, entonces 
+nos devuelve la coincidencia encontrada, si en cambio pasamos `'start'` 
+retornará el índice correspondiente al primer elemento de la coincidencia:
+
+    >> nums = regexp(str,'\d*','start')
+    nums =
+        21
+
+Lo anterior funciona bastante bien para números enteros, pero ¿qué pasa si 
+tenemos cantidades con parte decimal?
+
+    >> str = 'Tengo 1.5 y le sumo 0.45 con lo cual obtendré 1.95';
+    >> nums = regexp(str,'\d*','match')
+    nums = 
+        '1'    '5'    '0'    '45'    '1'    '95'
+
+Naturalmente esperaríamos obtener algo como `'1.5',  '0.45',  '1.95'`, pero 
+el patrón que hemos especificado no corresponde con esas subcadenas, dado 
+que el punto decimal no es propiamente un número. Entonces, debemos construir un 
+patrón basándonos en la estructura general de un número decimal, el cual tiene 
+una parte entera, el punto decimal y la parte fraccionaria, con lo cual podemos 
+intuir que un patrón `\d*\.\d*` funcionará sin problemas, testeando esto:
+
+    >> nums = regexp(str,'\d*\.\d*','match')
+    nums = 
+        '1.5'    '0.45'    '1.95'
+
+Excelente, ¿cierto?. Sí, es un patrón que funciona para encontrar coincidencias 
+de números decimales, pero que nos dejará a los enteros en el camino:
+
+    >> str = ' 1 + 2 = 3 y 0.5 + 2.5 = 3.0';
+    >> nums = regexp(str,'\d*\.\d*','match')
+    nums = 
+        '0.5'    '2.5'    '3.0'
+
+Para corregir esto podemos utilizar un patrón más generalizado, que incluya tanto 
+números enteros como decimales, como el siguiente ejemplo:
+
+    >> str = ' 1 + 2 = 3 y 0.5 + 2.5 = 3.0';
+    >> nums = regexp(str,'[\d\.]+','match')
+    nums = 
+        '1'    '2'    '3'    '0.5'    '2.5'    '3.0'
+
+
+
 
 
 #### Buscando palabras

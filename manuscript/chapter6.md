@@ -394,6 +394,8 @@ Sea f una función de dos variables definida por:
 Entonces, sus derivadas parciales están dadas por:
 
 {$$} \frac{\partial}{\partial x} f(x,y) = 2x {/$$}
+
+
 {$$} \frac{\partial}{\partial y} f(x,y) = 2y {/$$}
 
 Note que el calcular una derivada parcial consiste, en términos simples,

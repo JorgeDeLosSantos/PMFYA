@@ -78,8 +78,9 @@ el autor es Pete Linforth y está publicada bajo licencia
 
 Ingeniero Mecánico egresado del Tecnológico Nacional de México y actualmente estudiante de 
 posgrado, programador en MATLAB, Python, Java y VBA, sobre todo de aplicaciones orientadas al 
-análisis numérico y scripts relacionados con aspectos de ingeniería.
+análisis numérico y/o relacionadas con aspectos de ingeniería.
 
+--- 
 
 *P.J. De Los Santos*
 
