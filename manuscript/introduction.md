@@ -42,12 +42,20 @@ manejo de las variables creadas durante una sesión de MATLAB, y claro,
 la manipulación de archivos y directorios utilizando funciones nativas
 de MATLAB.
 
-Los **capítulos 6 y 7** muestran algunas aplicaciones de MATLAB en la
-solución de problemas comunes en matemáticas universitarias y
-procesamiento digital de imágenes, respectivamente.
+El **capítulo 6** aborda temas fundamentales de matemáticas, tales como 
+álgebra elemental, cálculo diferencial e integral, cálculo vectorial, álgebra lineal 
+y ecuaciones diferenciales, estos desde un enfoque de la computación 
+simbólica.
+
+El **capítulo 7** es una introducción al procesamiento digital de imágenes, 
+con ejemplos muy simples de lectura/escritura de imágenes básica, conversión entre 
+modelos de color, operaciones aritméticas, binarización, detección de bordes, 
+entre otras cuestiones elementales.
 
 El **capítulo 8** es una introducción al desarrollo de interfaces gráficas
-de usuario en MATLAB, y por tanto se abarcan las cuestiones elementales.
+de usuario en MATLAB, se abarcan los controles básicos y se programación 
+utilizando código puro, además de una introducción muy somera al entorno 
+de desarrollo integrado (GUIDE).
 
 El **capítulo 9** aborda un tópico que generalmente se omite en la mayoría de
 los libros de esta especie: la programación orientada a objetos (POO).
@@ -61,11 +69,20 @@ legibles y optimizadas.
 
 ### El por qué...
 
-¿O por qué no?. Este texto ha nacido con la finalidad de proporcionar un material 
+Estos apuntes (o algo parecido) han nacido con la finalidad de proporcionar una 
+herramienta didáctica a quienes inician en el mundo de la programación en MATLAB. 
+Ciertamente este texto no es un libro introductorio de programación y hay conceptos 
+elementales que se consideran asimilados por el lector. Sí es introductorio en 
+lo que respecta a sintaxis y las formas de implementar soluciones utilizando MATLAB.
+Además, la idea es formar unos apuntes colaborativos, en donde las ideas o comentarios 
+que el lector pudiera retroalimentar sirvan para mejorar la edición permanente 
+que actualmente tienen estos apuntes.
+
+<!-- ¿O por qué no?. Este texto ha nacido con la finalidad de proporcionar un material 
 didáctico para aquellos que se inician en la aventura de aprender este nuevo lenguaje.
 El propósito principal es que el lector conozca y aprenda la sintaxis y las posibilidades 
 de MATLAB, sería genial que tuviera conocimientos básicos de programación y desarrollo de 
-algoritmos, lo cual facilitaría enormemente la asimilación de conceptos.
+algoritmos, lo cual facilitaría enormemente la asimilación de conceptos. -->
 
 ### Portada
 
@@ -88,9 +105,6 @@ análisis numérico y/o relacionadas con aspectos de ingeniería.
 
 
 [^matlabtm]: *MATLAB&reg; es una marca registrada de MathWorks, Inc.*
-
-
-
 
 <!--  
 Imagen de portada obtenida de:
