@@ -9,7 +9,7 @@ elementos que permiten una mayor legibilidad e interactividad con la
 información presentada en los gráficos. En este capítulo se tratarán las
 gráficas en dos dimensiones y en el espacio tridimensional.
 
-## Una introducción: la función plot
+## Una introducción: la función `plot`
 
 La función `plot` es una instrucción muy sencilla que permite trazar
 curvas bidimensionales utilizando vectores como argumentos. Por ejemplo
@@ -61,12 +61,12 @@ anterioridad:
 {width=70%}
 ![](images/ch4/img_4_3.png)
 
-En lugar de utilizar hold on puede configurar la propiedad NextPlot del
+En lugar de utilizar `hold on` puede configurar la propiedad `NextPlot` del
 axes de tal manera que las gráficas sean agregadas sin borrar los
 objetos que pertenecen al axes. Lo anterior se logra con la siguiente
 línea de código:
 
-    set(gca,'NextPlot','add');
+    set(gca, 'NextPlot', 'add');
 
 Quizá lo anterior resulte un poco avanzado para comenzar, pero puede
 tomarse simplemente como una observación muy útil de que en MATLAB
@@ -138,7 +138,7 @@ El comando / función axis permite hacer modificaciones a la apariencia y
 escala de los ejes en los cuales se trazan las gráficas. La sintaxis
 varía dependiendo de la característica a modificar.
 
-*Estableciendo los límites de una gráfica*
+#### Estableciendo los límites de una gráfica
 
 Para establecer los límites en los cuales se mostrará una gráfica puede
 introducir como argumento de la función axis un vector de 4 (gráficas en
@@ -149,11 +149,11 @@ introducir como argumento de la función axis un vector de 4 (gráficas en
 
 Los elementos del vector deben ser de tipo double.
 
-*Ocultar o mostrar etiquetas, marcas, y ejes*
+#### Ocultar o mostrar etiquetas, marcas, y ejes
 
 Si requiere ocultar los ejes, etiquetas, leyendas y demás marcas en las
 gráficas, de tal manera que sólo sea visible la línea trazada, utilice
-la función axis con el argumento `’off’`. Las siguientes líneas de
+la función `axis` con el argumento `off`. Las siguientes líneas de
 código producen la imagen adjunta:
 
     x=linspace(-2*pi,2*pi,200);
@@ -164,7 +164,7 @@ código producen la imagen adjunta:
 {width=70%}
 ![](images/ch4/img_4_5.png)
 
-*Escalado de ejes*
+#### Escalado de ejes
 
 Además de permitir una configuración manual de los límites de ejes
 mediante la inserción de valores, es posible también establecer límites
@@ -173,13 +173,30 @@ predeterminada. Los más comunes se enlistan y describen en la tabla
 siguiente.
 
 
-| **SINTAXIS** | **DESCRIPCIÓN** |
-|`axis(’equal’)` |    Ajusta el escalado de los ejes de tal modo que sean iguales en cada dirección.|
-|`axis(’square’)`|   Configura y ajusta la visualización de los ejes a un cuadrado o cubo (3D)|
-|`axis(’tight’)` |    Ajusta los ejes al rango de datos disponibles.|
+| **Sintaxis** | **Descripción** |
+|`axis('equal')` |    Ajusta el escalado de los ejes de tal modo que sean iguales en cada dirección.|
+|`axis('square')`|   Configura y ajusta la visualización de los ejes a un cuadrado o cubo (3D)|
+|`axis('tight')` |    Ajusta los ejes al rango de datos disponibles.|
 
 
-### Añadir anotaciones
+### Añadir texto / anotaciones
+
+A veces es necesario agregar información extra dentro una gráfica en forma 
+de texto o anotación. Para ello se puede hacer uso de la función `text`, 
+vea el siguiente ejemplo:
+
+    t = linspace(0,2*pi);
+    w = 12;
+    y = exp(-t).*cos(w*t);
+    plot(t, y, 'linewidth', 2);
+    xlabel('Tiempo (s)');
+    ylabel('Amplitud (mm)');
+    texto = 'Esto es un texto/anotación';
+    text(2, 0.5, texto);
+
+{width=70%}
+![](images/ch4/texto_axes.png)
+
 
 ## Gráficas en coordenadas polares
 
@@ -195,13 +212,13 @@ cuya sintaxis es:
 
     polar(theta,rho);
 
-Ejemplo. Grafique la ecuación (espiral)
+Ejemplo. Grafique la ecuación {$$} r(\theta) = \theta {/$$} (espiral).
 
     theta=0:pi/180:6*pi;
     r=theta;
     polar(theta,r);
 
-{width=70%}
+{width=60%}
 ![](images/ch4/img_4_6.png)
 
 Pese a que MATLAB cuenta con la función polar para facilitar el trazado
@@ -214,6 +231,9 @@ ejemplo, para la misma función anterior:
     x=r.*cos(theta); % Conversión de coordenadas 
     y=r.*sin(theta);
     plot(x,y);
+
+Aunque claro, siempre será mejor utilizar `polar` dado que esta automáticamente 
+utiliza los `axes` de coordenadas polares para una mejor visualización.
 
 ## Gráficas de superficies: una primera aproximación
 
@@ -246,16 +266,16 @@ entrada una matriz bidimensional cuyos valores corresponden a cada punto
 evaluado. El código mostrado es funcional y muy entendible para un
 usuario que comienza en el mundo MATLAB, e incluso podría hacerse más
 “portable” o “reutilizable” si se definiese como una función, pero
-presenta ciertos inconvenientes: los ciclos for en MATLAB son
+presenta ciertos inconvenientes: los ciclos `for` en MATLAB son
 generalmente conocidos por su lentitud, y más aún, en este caso se
 tienen dos ciclos for anidados. Debido a ello, MATLAB proporciona
 funciones que realizan la “tarea” de evaluar una función de dos
 variables en un rango definido mediante la implementación de rejillas
-bidimensionales (meshgrid), estas funciones se encuentran optimizadas
+bidimensionales (`meshgrid`), estas funciones se encuentran optimizadas
 mediante la técnica de vectorización y permiten una ejecución
 notablemente más veloz.
 
-## Gráficas de superficies
+## Gráficas de superficies, utilizando `meshgrid`
 
 En el apartado anterior se ha visto como trazar superficies utilizando
 ciclos for anidados para crear la matriz que define los valores de la
