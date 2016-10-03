@@ -1,0 +1,168 @@
+\documentclass[12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\decimalpoint
+\let\cleardoublepage\clearpage
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{makeidx}
+\makeindex
+\usepackage{anysize}
+\usepackage{anyfontsize}
+\usepackage{pdfpages}
+\usepackage[x11names,table]{xcolor}
+\usepackage{tikz}
+\usepackage{tcolorbox,empheq}
+\tcbuselibrary{skins,breakable,listings,theorems}
+\usepackage[hidelinks]{hyperref}
+\usepackage[labelfont=bf]{caption}
+\captionsetup[table]{labelsep=space}
+\captionsetup[figure]{labelsep=space}
+\usepackage{listings}
+\usepackage{array,ragged2e}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\setlength{\parindent}{0cm}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=gray!10,angle=45,scale=3,xpos=0,ypos=0]{Borrador}
+
+\tcbset{colback=green!5!white, colframe=gray!10!black, coltitle=green!20!black, 
+fonttitle=\bfseries, colbacktitle=white, coltext=gray!30!black}
+\addto\captionsspanish{
+  \renewcommand{\figurename}{{\bf Figura}}% 
+}
+\addto\captionsspanish{
+  \renewcommand{\chaptername}{{\bf}}% 
+}
+
+\usepackage{epigraph}
+\usepackage{fontawesome}
+\usepackage[Bjornstrup]{fncychap}
+
+% \renewcommand{\familydefault}{\sfdefault}
+
+% Colores
+\definecolor{verdep}{RGB}{166,206,58}
+\definecolor{ccap}{RGB}{10,10,50}
+\definecolor{csec}{RGB}{50,50,100}
+\definecolor{csubsec}{RGB}{80,80,120}
+\definecolor{header_table_color}{RGB}{200,255,180}
+\definecolor{info_color}{RGB}{100,100,200}
+\definecolor{csol}{rgb}{0.2,0.8,0.1}
+\definecolor{backcode}{rgb}{0.98,0.98,0.99}
+\definecolor{crule}{rgb}{0.9,0.9,0.9}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\newtcolorbox{ejemplo}[2][]
+{
+  breakable,
+  colframe = gray!50,
+  colback  = gray!10,
+  coltitle = gray!20!black,
+  title    = \faEdit\hspace{5 mm} #2,
+}
+
+\newtcolorbox{informacion}[2][]
+{
+  breakable,
+  colframe = blue!5!white,
+  colback  = blue!5!white,
+  coltitle = blue!80!black,
+  title    =  \faInfo\hspace{5 mm} #2,
+}
+
+\newtcolorbox{recomendacion}[2][]
+{
+  breakable,
+  colframe = green!25,
+  colback  = green!10,
+  coltitle = green!20!black,
+  title    = #2,
+}
+
+ \newcommand{\ccol}{>{\centering\tt\arraybackslash}}
+
+% Nuevos comandos
+
+\usepackage{titlesec}%--
+% \newcommand{\hsp}{\hspace{5pt}}
+% \titleformat{\chapter}[hang]{\huge\bfseries\color{ccap}}
+% {\color{verdep}{\vrule height 2.5cm width 1mm}\hsp{\fontsize{100}{5}\selectfont\thechapter}\hsp%
+% {\vrule height 2.5cm width 1mm}\hsp{\fontsize{30}{5}\selectfont}}{5pt}{\huge\bfseries}
+
+\titleformat{\section}[hang]{\normalfont\color{csec}}%
+{\filright\large\enspace\thesection\enspace}%
+{8pt}{\Large\bfseries\filright}%
+
+\titleformat{\subsection}[hang]{\normalfont\color{csec}}%
+{\filright\large\enspace\thesubsection\enspace}%
+{8pt}{\large\bfseries\filright}%
+
+% Code
+
+% Code
+
+\lstnewenvironment{matlab}{\lstset{frame=single,
+  frameround=tttt,
+  backgroundcolor=\color{backcode},
+  rulecolor=\color{crule},
+  language=matlab,
+  aboveskip=5mm,
+  belowskip=5mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4,
+  extendedchars=true,
+  inputencoding=utf8,
+  literate=%
+  {°}{{\,\,$^\circ$\,\,}}1
+  {á}{{\'a}}1
+  {é}{{\'e}}1
+  {í}{{\'i}}1
+  {ó}{{\'o}}1
+  {ú}{{\'u}}1
+  {Á}{{\'A}}1
+  {É}{{\'E}}1
+  {Í}{{\'I}}1
+  {Ó}{{\'O}}1
+  {Ú}{{\'U}}1
+}}{}
+
+
+\author{LATECH}
+\title{Programación en MATLAB, fundamentos y aplicaciones}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\frontmatter
+\input{draft.tex}
+\input{introduction.tex}
+
+\mainmatter
+\input{chapter1.tex}
+\input{chapter2.tex}
+\input{chapter3.tex}
+\input{chapter4.tex}
+\input{chapter5.tex}
+\input{chapter6.tex}
+\input{chapter7.tex}
+\input{chapter8.tex}
+\input{chapter9.tex}
+\input{chapter10.tex}
+
+\end{document}

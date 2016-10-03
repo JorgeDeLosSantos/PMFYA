@@ -1,0 +1,555 @@
+\chapter{Arreglos de celdas, estructuras y cadenas de caracteres}\label{arreglos-de-celdas-estructuras-y-cadenas-de-caracteres}
+
+\section{Arreglos de celdas}\label{arreglos-de-celdas}
+
+Un \emph{cell array} o arreglo de celdas es un arreglo multidimensional
+que puede contener diversos tipos de datos e incluso otro cell array.
+Suelen utilizarse como agrupadores de datos heterogéneos.
+
+\subsection{Crear un arreglo de celdas}\label{crear-un-arreglo-de-celdas}
+
+La manera más \emph{común} de definir un cell array es utilizando llaves
+como delimitadores, comas y/o puntos y comas como separadores
+(funcionando de la misma forma que en matrices). Por ejemplo:
+
+\begin{matlab}
+>> A={'Ana',rand(3),true}
+A = 
+    'Ana'    [3x3 double]    [1]
+>> whos
+  Name      Size            Bytes  Class    Attributes
+  A         1x3               415  cell     
+\end{matlab}
+
+Puede notar que se han introducido elementos de diversos tipos y
+tamaños, aunque claro que funciona también para elementos del mismo
+tipo:
+
+\begin{matlab}
+>> A={1,2,3;0,2,1;2,3,1}
+A = 
+    [1]    [2]    [3]
+    [0]    [2]    [1]
+    [2]    [3]    [1]
+\end{matlab}
+
+Además, puede definir un arreglo de celdas vacío utilizando la función
+cell, cuya sintaxis es:
+
+\begin{matlab}
+>> C = cell(m,n);
+\end{matlab}
+
+Donde m y n especifican el tamaño del arreglo. Una vez creado el cell
+array vacío puede utilizarse la asignación \emph{uno a uno} para
+rellenar cada posición del mismo, por ejemplo:
+
+\begin{matlab}
+>> C=cell(2,3);
+>> C{1,1}='A';
+>> C{1,2}='X';
+>> C{1,3}=2;
+>> C{2,1}=true;
+>> C{2,2}=false;
+>> C{2,3}='T';
+>> C
+C = 
+    'A'    'X'    [2]
+    [1]    [0]    'T'
+\end{matlab}
+
+\subsection{Indexado de un cell array}\label{indexado-de-un-cell-array}
+
+La parte de indexación de un cell array es una cuestión que en ocasiones
+puede tornarse media \emph{dolorosa} para el usuario principiante, pero
+claro, la clave está en conocer que nos devuelve cada vez.
+
+\section{Estructuras}\label{estructuras}
+
+Las estructuras (\texttt{struct}) son un tipo de arreglo
+multidimensional en MATLAB, que permiten almacenar datos de diversos
+tipos, cada dato se almacena en un campo definido mediante un nombre.
+
+\subsection{Crear una estructura de datos}\label{crear-una-estructura-de-datos}
+
+Una estructura de datos se puede definir utilizando la sintaxis:
+
+\begin{matlab}
+>> NombreEstructura.NombreCampo = Valor
+\end{matlab}
+
+Donde \emph{NombreEstructura} es el nombre de la estructura,
+\emph{NombreCampo} el nombre del campo, y \emph{Valor} el valor asignado
+a ese campo de la estructura, el cual puede ser una variable o dato de
+cualquier tipo, incluyendo otros tipos de arreglos o matrices. Note que
+el nombre de la estructura y el del campo están separados por un punto.
+
+\begin{matlab}
+>> Alumnos.nombre='Juan Pérez';
+>> Alumnos.edad=20;
+>> Alumnos.notas=[10,8,9];
+>> Alumnos
+Alumnos = 
+    nombre: 'Juan Pérez'
+      edad: 20
+     notas: [10 8 9]
+>> whos Alumnos
+  Name         Size            Bytes  Class     Attributes
+
+  Alumnos      1x1               580  struct      
+\end{matlab}
+
+\subsection{Accediendo a campos de una estructura}\label{accediendo-a-campos-de-una-estructura}
+
+\section{Cadenas de caracteres}\label{cadenas-de-caracteres}
+
+Las cadenas de caracteres o strings (aquí usaremos indistintamente ambos
+términos) son un tipo de dato común en la mayoría de los lenguajes de
+programación de alto nivel, consisten en una serie de caracteres que
+representan una palabra, frase, texto o cualquier otra representación
+mediante símbolos propios de un sistema de escritura. \\
+
+Como ya sabemos en MATLAB no hace falta declarar el tipo de cada
+variable, pero es necesario utilizar cierta sintaxis para que el
+intérprete reconozca cada tipo de dato, así, para crear una cadena de
+caracteres es necesario delimitar su contenido entre comillas simples,
+por ejemplo:
+
+\begin{matlab}
+>> txt='Programación en MATLAB'
+txt =
+Programación en MATLAB
+>> whos
+  Name      Size            Bytes  Class    Attributes
+  txt       1x22               44  char    
+\end{matlab}
+
+\subsection{Concatenación}\label{concatenacion}
+
+La concatenación de cadenas de caracteres es la operación de unir dos o
+más cadenas en una nueva. Una forma de concatenar strings es utilizando
+la notación de corchetes, véase el ejemplo a continuación:
+
+\begin{matlab}
+>> cad1='Hola, ';
+>> cad2='bienvenido';
+>> cad3=' a este curso de MATLAB';
+>> cad_res=[cad1,cad2,cad3]
+cad_res =
+Hola, bienvenido a este curso de MATLAB
+\end{matlab}
+
+Además de lo anterior MATLAB también dispone de una función
+\emph{especializada} para esta tarea: strcat. La sintaxis es muy
+sencilla, a saber:
+
+\begin{matlab}
+>> concStr=strcat(s1, s2, s3, …, sN);
+\end{matlab}
+
+Siendo concStr la cadena resultante, y s1, s2, s3 y sN una lista de
+strings separadas por comas, y que son los que habrán de concatenarse.
+Por ejemplo:
+
+\begin{matlab}
+>> cad=strcat('Esto es una',' cadena concatenada',' con strcat')
+cad =
+Esto es una cadena concatenada con strcat
+\end{matlab}
+
+
+\begin{informacion}{De la concatenación}
+En muchos otros lenguajes de programación
+es común utilizar el operador de suma (+) para la
+concatenación de strings, por lo cual puede resultar
+\emph{tentador} intentarlo en MATLAB, pero esto produce
+un resultado diferente al esperado. Lo que MATLAB hace
+es sumar elemento a elemento el valor correspondiente en código ASCII de
+cada una de las letras que componen el arreglo de
+caracteres, por lo cual se deduce además que es
+imposible operar de esta forma con cadenas de longitudes
+diferentes. Luego, si se suman dos cadenas de igual 
+longitud, entonces MATLAB devolverá un vector de tipo double.
+\end{informacion}
+
+
+\subsection{Mayúsculas y minúsculas}\label{mayusculas-y-minusculas}
+
+Si necesita representar una cadena de caracteres solo mediante
+mayúsculas o minúsculas, MATLAB proporciona funciones para cada caso.
+Con upper se convierte una cadena pasada como argumento en su
+representación en mayúsculas:
+
+\begin{matlab}
+>> s=upper('hola mundo')
+s =
+HOLA MUNDO
+\end{matlab}
+
+Usando lower puede hacerlo para el caso de minúsculas:
+
+\begin{matlab}
+>> s=lower('MATLAB es divertido')
+s =
+matlab es divertido
+\end{matlab}
+
+\subsection{Buscar y remplazar strings}\label{buscar-y-remplazar-strings}
+
+\subsubsection{Buscar en una cadena de texto}\label{buscar-en-una-cadena-de-texto}
+
+Actualmente es común que millones de personas busquen a diario en el
+internet cualquier diversidad de temas o palabras claves de algún
+interés, obteniendo respuesta en milésimas de segundo. Claro que los
+algoritmos de búsqueda que implementan los buscadores de la web como el
+omnipresente Google son muy sofisticados y basan sus resultados en
+conceptos muy definidos de clasificación y relevancia. \\
+
+En esta sección veremos como MATLAB permite \emph{buscar} palabras,
+frases y caracteres dentro de una cadena de texto. Obviando las
+diferencias de complejidad y utilidad, esto es muy similar a lo
+mencionado en líneas anteriores. \\
+
+La función más común para buscar un determinado patrón de caracteres es
+strfind cuya sintaxis es:
+
+\begin{matlab}
+>> strfind(texto, busca);
+\end{matlab}
+
+Donde texto es la cadena de caracteres en donde se buscará el patrón
+definido en la variable busca. Y como es \emph{costumbre} en este texto,
+iremos a por un ejemplo:
+
+\begin{matlab}
+>> texto='Anita lava la tina';
+>> busca='lava';
+>> strfind(texto,busca)
+ans =
+     7
+\end{matlab}
+
+Y ahora, ¿por qué nos devuelve un 7?, MATLAB devuelve la posición en la
+cual inicia el patrón o cadena buscada, en este caso la palabra lava
+comienza en la posición 7 de texto. Un ejemplo más:
+
+\begin{matlab}
+>> texto='Este es otro ejemplo';
+>> busca='o';
+>> strfind(texto,busca)
+ans =
+     9    12    20
+\end{matlab}
+
+Puede notar que en este caso MATLAB devuelve más de un resultado, lo
+cual indica claramente que el carácter buscado se encuentra más de una
+vez dentro del texto, y al igual que lo anterior estos números indican
+la posición inicial del carácter o cadena buscada. \\
+
+Puede ser que la utilidad de la función \texttt{strfind} hasta este punto le
+parezca cuasi nula, démosle entonces una aplicación más \emph{tangible}:
+dada una cadena de texto y un patrón de búsqueda, eliminaremos cada
+coincidencia encontrada:
+
+\begin{matlab}
+>> texto='Eliminando la vocal i de esta frase';
+>> busca='i';
+>> k=strfind(texto,busca);
+>> texto(k)='' % Eliminamos coincidencias
+texto =
+Elmnando la vocal  de esta frase
+\end{matlab}
+
+Es posible que haya notado que incluso puede remplazar cada coincidencia
+por otra letra y no necesariamente por un string vacío. Lo anterior
+funciona solamente para patrones de búsqueda cuya longitud sea unitaria,
+para el resto de casos debe sustituir la última línea por:
+
+\begin{matlab}
+>> texto(k:k+length(busca))=''
+\end{matlab}
+
+\subsubsection{Remplazando en una cadena de texto}\label{remplazando-en-una-cadena-de-texto}
+
+Hemos visto como buscar y luego reemplazar cierto patrón buscado en una
+cadena de caracteres, mediante la indexación de cada coincidencia, pero
+MATLAB \emph{facilita} el trabajo y proporciona la función
+\texttt{strrep} que reemplaza las coincidencias encontradas, la sintaxis
+es:
+
+\begin{matlab}
+>> modStr=strrep(origStr,  anterior, nuevo)
+\end{matlab}
+
+Donde \texttt{origStr} es la cadena de caracteres original, anterior es el valor
+o parte de la cadena a remplazar, nuevo es el valor por el cual será
+remplazado, y modStr la cadena resultante al remplazar los valores
+especificados. Enseguida se muestra un ejemplo, utilizando el clásico
+trabalenguas de los tigres y trigos:
+
+\begin{matlab}
+>> s='tres tristes tigres tragaban trigo';
+>> srep=strrep(s,'tr','tl')
+srep =
+tles tlistes tigres tlagaban tligo
+\end{matlab}
+
+Tal como se observa, se ha remplazado toda aparición conjunta de las
+letras tr por tl, conllevando ello a una versión \emph{enrarecida} de
+tan magnífico ejercicio de expresión oral. \\
+
+La función \texttt{strrep}, como se ha visto, proporciona una
+herramienta para reemplazar ciertos valores en una cadena de caracteres,
+pero también está limitada a que los valores pasados como argumentos de
+entrada deben ser exactos, sin permitir flexibilidad alguna al momento
+de definir los patrones de búsqueda. Desde luego que lo anterior tiene
+una solución práctica y muy conocida en el mundo de la programación: las
+expresiones regulares, que se estarán tratando en una sección posterior.
+
+\subsection{Comparar cadenas de caracteres}\label{comparar-cadenas-de-caracteres}
+
+Comparar cadenas de caracteres resulta muy útil en casos que se necesite
+hacer una selección o toma de decisión dependiendo de una variable cuyo
+valor sea un string. Para tal fin se utiliza la función \texttt{strcmp}
+devuelve un valor lógico verdadero si las cadenas comparadas son iguales
+y falso en caso contrario, la sintaxis es:
+
+\begin{matlab}
+>> strcmp(str1, str2);
+\end{matlab}
+
+Donde str1 y str2 son las cadenas a comparar. Revise los siguientes
+ejemplos:
+
+\begin{matlab}
+>> strcmp('MATLAB','MATLAB')
+ans =
+     1
+>> strcmp('MATLAB','matlab')
+ans =
+     0
+\end{matlab}
+
+Del último ejemplo puede deducir que la función strcmp es case-sensitive
+y aun cuando las cadenas sean iguales y difieran únicamente por el uso
+de mayúsculas o minúsculas, MATLAB devolverá un valor \texttt{false}.
+Para ignorar o evitar que se tome en cuenta el uso de mayúsculas o
+minúsculas puede emplear previamente una conversión a cualquiera de los
+casos, por ejemplo:
+
+\begin{matlab}
+>> strcmp(lower('MATLAB'),lower('matlab'))
+ans =
+     1
+\end{matlab}
+
+Por alguna razón la solución anterior podría parecerle poco elegante,
+quizá lo mismo pensaron los desarrolladores de MathWorks y decidieron
+ofrecer una función muy similar a \texttt{strcmp}, con la diferencia de ser
+case-insensitive, hablamos de \texttt{strcmpi}:
+
+\begin{matlab}
+>> strcmpi('MATLAB','matlab')
+ans =
+     1
+\end{matlab}
+
+\subsection{Expresiones regulares}\label{expresiones-regulares}
+
+Las expresiones regulares son patrones utilizados para encontrar una
+determinada combinación de caracteres dentro de una cadena de texto.
+\footnote{https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular\_Expressions} \\
+
+La utilidad de las expresiones regulares se vuelve evidente cuando
+debemos utilizar patrones de búsqueda en lugar de expresiones concretas. \\
+
+Por ejemplo, vamos a suponer que tenemos un texto o string que contiene
+palabras varias, y del mismo queremos extraer todas las fechas con
+formato DD/MM/AAAA. Con una búsqueda ordinaria (\texttt{findstr} o
+\texttt{strfind}) tendríamos que definir cada string exacto que vamos a
+buscar o bien iterar para buscar todas las combinaciones posibles. Sí,
+suena bastante tardado, y quizá para un millar de líneas empezaríamos a
+buscar otras alternativas. No obstante, utilizando expresiones regulares
+podemos implementar una búsqueda mediante patrones, con un sencillez
+considerable. \\
+
+En las siguientes subsecciones veremos algunos ejemplos de cómo utilizar
+las expresiones regulares para búsqueda de patrones.
+
+\subsubsection{La función \texttt{regexp}}\label{la-funciuxf3n-regexp}
+
+La función básica de MATLAB para buscar patrones mediante expresiones
+regulares es \texttt{regexp}, cuya sintaxis es:
+
+\begin{matlab}
+r = regexp(string, expr, option)
+\end{matlab}
+
+Donde \texttt{expr} es el patrón a buscar dentro de la cadena
+\texttt{string}, \texttt{option} es una parámetro predefinido que indica
+el tipo de salida que se guardará en \texttt{r}. Para la mayoría de los
+casos \texttt{option} puede ser
+\verb|'match'| o \verb|'start'|, en cuyo caso se
+tendrían como salida un cell array de las coincidencias encontradas y
+una lista de valores numéricos que indican la posición del primer
+caracter para cada una de las coincidencias, de manera respectiva.
+
+\subsubsection{Buscando números}\label{buscando-numeros}
+
+Para entender mejor las expresiones regulares vamos a comenzar con un
+caso muy sencillo: buscar números dentro de un string. \\
+
+El siguiente código muestra cómo buscar un número entero de cualquier
+cantidad de cifras dentro de un string:
+
+\begin{matlab}
+>> str = 'Avenida Siempreviva 742';
+>> nums = regexp(str,'\d*','match')
+nums = 
+    '742'
+\end{matlab}
+
+El patrón o expresión \verb|\d| le indica a MATLAB que
+queremos encontrar todos los caracteres que correspondan a un número,
+luego, el asterisco (\texttt{*}) se utiliza para especificar que pueden
+ser substrings de longitud cualesquiera, es decir, pueden ser números de
+dos, tres, cuatro o muchas cifras. \\
+
+Note que, además, hemos pasado el argumento
+\verb|'match'| a la función
+\texttt{regexp}, entonces nos devuelve la coincidencia encontrada, si en
+cambio pasamos \verb|'start'|
+retornará el índice correspondiente al primer elemento de la
+coincidencia:
+
+\begin{matlab}
+>> nums = regexp(str,'\d*','start')
+nums =
+    21
+\end{matlab}
+
+Lo anterior funciona bastante bien para números enteros, pero ¿qué pasa
+si tenemos cantidades con parte decimal?
+
+\begin{matlab}
+>> str = 'Tengo 1.5 y le sumo 0.45 con lo cual obtendré 1.95';
+>> nums = regexp(str,'\d*','match')
+nums = 
+    '1'    '5'    '0'    '45'    '1'    '95'
+\end{matlab}
+
+Naturalmente esperaríamos obtener algo como
+\texttt{\textquotesingle{}1.5\textquotesingle{},\ \ \textquotesingle{}0.45\textquotesingle{},\ \ \textquotesingle{}1.95\textquotesingle{}},
+pero el patrón que hemos especificado no corresponde con esas
+subcadenas, dado que el punto decimal no es propiamente un número.
+Entonces, debemos construir un patrón basándonos en la estructura
+general de un número decimal, el cual tiene una parte entera, el punto
+decimal y la parte fraccionaria, con lo cual podemos intuir que un
+patrón \texttt{\textbackslash{}d*\textbackslash{}.\textbackslash{}d*}
+funcionará sin problemas, testeando esto:
+
+\begin{matlab}
+>> nums = regexp(str,'\d*\.\d*','match')
+nums = 
+    '1.5'    '0.45'    '1.95'
+\end{matlab}
+
+Excelente, ¿cierto?. Sí, es un patrón que funciona para encontrar
+coincidencias de números decimales, pero que nos dejará a los enteros en
+el camino:
+
+\begin{matlab}
+>> str = ' 1 + 2 = 3 y 0.5 + 2.5 = 3.0';
+>> nums = regexp(str,'\d*\.\d*','match')
+nums = 
+    '0.5'    '2.5'    '3.0'
+\end{matlab}
+
+Para corregir esto podemos utilizar un patrón más generalizado, que
+incluya tanto números enteros como decimales, como el siguiente ejemplo:
+
+\begin{matlab}
+>> str = ' 1 + 2 = 3 y 0.5 + 2.5 = 3.0';
+>> nums = regexp(str,'[\d\.]+','match')
+nums = 
+    '1'    '2'    '3'    '0.5'    '2.5'    '3.0'
+\end{matlab}
+
+En lo anterior los corchetes se utilizan para agrupar un conjunto de
+caracteres, en este caso números y el punto decimal, además, el signo
+\texttt{+} sirve para indicar que los caracteres dentro de los corchetes
+podrían presentarse al menos una vez.
+
+\subsubsection{Buscando palabras}\label{buscando-palabras}
+
+Una búsqueda ordinaria de palabras consiste en buscar una coincidencia
+exacta, una palabra o frase a la vez. No obstante, usando expresiones
+regulares podemos buscar coincidencias con una o más palabras, de manera
+incluyente. \\
+
+Por ejemplo, vamos a tomar como referencia el poema \emph{Amor mío, mi
+amor} del gran Jaime Sabines, y veremos cuantas veces utilizó las
+palabras amor y amar. \\
+
+\textbf{Amor mío, mi amor.} \\
+
+\emph{Amor mío, mi amor, amor hallado}\\
+\emph{de pronto en la ostra de la muerte.}\\
+\emph{Quiero comer contigo, estar, amar contigo,}\\
+\emph{quiero tocarte, verte.} \\
+
+\emph{Me lo digo, lo dicen en mi cuerpo}\\
+\emph{los hilos de mi sangre acostumbrada,}\\
+\emph{lo dice este dolor y mis zapatos}\\
+\emph{y mi boca y mi almohada.} \\ 
+
+\emph{Te quiero, amor, amor absurdamente,}\\
+\emph{tontamente, perdido, iluminado,}\\
+\emph{soñando rosas e inventando estrellas}\\
+\emph{y diciéndote adiós yendo a tu lado.} \\
+
+\emph{Te quiero desde el poste de la esquina,}\\
+\emph{desde la alfombra de ese cuarto a solas,}\\
+\emph{en las sábanas tibias de tu cuerpo}\\
+\emph{donde se duerme un agua de amapolas.} \\
+
+\emph{Cabellera del aire desvelado,}\\
+\emph{río de noche, platanar oscuro,}\\
+\emph{colmena ciega, amor desenterrado,}\\
+\emph{voy a seguir tus pasos hacia arriba,}\\
+\emph{de tus pies a tu muslo y tu costado.}\\
+
+{\bf\it -Jaime Sabines}
+
+\begin{matlab}
+>> str = fileread('amor_mio_mi_amor.txt');
+>> p = regexp(str,'amor|amar','match')
+p = 
+    'amor'    'amor'    'amar'    'amor'    'amor'    'amor'
+\end{matlab}
+
+Vea que se utiliza el operador \texttt{|} para indicar que
+pueden ser tanto \texttt{amor} como \texttt{amar} las coincidencias a
+incluir. Incluso para el caso anterior puede observar que las palabras
+buscadas difieren en una letra, de modo que podemos usar un patrón como
+sigue:
+
+\begin{matlab}
+>> p=regexp(str,'am(a|o)r','match')
+p = 
+    'amor'    'amor'    'amar'    'amor'    'amor'    'amor'
+\end{matlab}
+
+y funciona exactamente de la misma manera. Podemos incluso mejorar
+nuestro patrón de búsqueda haciendo que se incluyan las palabras que
+inician con mayúscula:
+
+\begin{matlab}
+>> p=regexp(str,'(A|a)m(a|o)r','match')
+p = 
+    'Amor'    'amor'    'amor'    'amar'    'amor'    'amor'    'amor'
+\end{matlab}
+
+% \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section*{Problemas}
