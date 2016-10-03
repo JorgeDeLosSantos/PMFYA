@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+% \usepackage[T1]{fontspec}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{makeidx}
@@ -15,7 +16,7 @@
 \usepackage{pdfpages}
 \usepackage[x11names,table]{xcolor}
 \usepackage{tikz}
-\usepackage{tcolorbox,empheq}
+\usepackage{tcolorbox}
 \tcbuselibrary{skins,breakable,listings,theorems}
 \usepackage[hidelinks]{hyperref}
 \usepackage[labelfont=bf]{caption}
@@ -64,7 +65,7 @@ fonttitle=\bfseries, colbacktitle=white, coltext=gray!30!black}
   colframe = gray!50,
   colback  = gray!10,
   coltitle = gray!20!black,
-  title    = \faEdit\hspace{5 mm} #2,
+  title    =  \faEdit \hspace{5 mm} #2,
 }
 
 \newtcolorbox{informacion}[2][]
@@ -73,7 +74,7 @@ fonttitle=\bfseries, colbacktitle=white, coltext=gray!30!black}
   colframe = blue!5!white,
   colback  = blue!5!white,
   coltitle = blue!80!black,
-  title    =  \faInfo\hspace{5 mm} #2,
+  title    = \faInfo \hspace{5 mm} #2,
 }
 
 \newtcolorbox{recomendacion}[2][]
