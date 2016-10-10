@@ -1,6 +1,6 @@
-\chapter{Fundamentos del lenguaje}\label{fundamentos-del-lenguaje}
+\chapter{Fundamentos del lenguaje}
 
-\section{¿Qué es MATLAB?}\label{que-es-matlab}
+\section{¿Qué es MATLAB?}
 
 MATLAB es un lenguaje de programación de alto nivel y entorno de
 desarrollo interactivo, utilizado para numerosas aplicaciones de
@@ -34,7 +34,7 @@ neuronales, etc. \\
   a objetos.
 \end{itemize}
 
-\section{Descripción del entorno de desarrollo}\label{descripcion-del-entorno-de-desarrollo}
+\section{Descripción del entorno de desarrollo}
 
 El entorno de MATLAB mostrado en la figura \ref{fig:screen_2012b}
 pertenece a la versión 2012b, si dispone de otra versión quizá
@@ -49,7 +49,7 @@ cuáles son: \\
 
 Ventana de comandos interactiva en la cual deberán introducirse las
 instrucciones de MATLAB, el prompt \verb|>>| le indica que está listo para 
-recibir instrucciones.
+recibir instrucciones. \\
 
 \begin{informacion}{¿Qué es el prompt?}
 En la jerga informática, se denomina prompt al símbolo o
@@ -73,16 +73,15 @@ sesión, indicando el nombre, valor y tipo de la misma. \\
 Permite buscar comandos introducidos con anterioridad en la ventana de
 comandos y ejecutarlos nuevamente o copiarlos. \\
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/ch1/img_1_1.png}
-  \caption{Pantalla de MATLAB R2012b}
-  \label{fig:screen_2012b}
-\end{figure}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{images/ch1/img_1_1.png}
+\captionof{figure}{Pantalla de MATLAB R2012b}
+\label{fig:screen_2012b}
+\end{center}
 
-\section{Comandos básicos y generalidades}\label{comandos-basicos-y-generalidades}
+\section{Comandos básicos y generalidades}
 
-\subsection{Consultar ayuda de MATLAB}\label{consultar-ayuda-de-matlab}
+\subsection{Consultar ayuda de MATLAB}
 
 Uno de los puntos fuertes de MATLAB es la extensa documentación que
 viene adjunta al software, la cual contiene múltiples ejemplos y
@@ -106,7 +105,7 @@ siguiente línea le permite consultar ayuda rápida acerca del comando
     doc clc
 \end{matlab}
 
-\subsection{Limpiar ventana de comandos y variables del workspace}\label{limpiar-ventana-de-comandos-y-variables-del-workspace}
+\subsection{Limpiar ventana de comandos y variables del workspace}
 
 Generalmente se considera una buena práctica de programación en MATLAB
 iniciar los programas con instrucciones de limpiar la consola (Command
@@ -117,7 +116,7 @@ acompañarse a la instrucción \texttt{clear} con el argumento adicional
 \texttt{all}, que permite borrar incluso variables globales, es decir
 conjuntamente: \texttt{clear all.}
 
-\subsection{Líneas de comentarios}\label{luxedneas-de-comentarios}
+\subsection{Líneas de comentarios}
 
 Los comentarios de una sola línea en MATLAB deben comenzar con el
 símbolo de porcentaje \%, todo aquello escrito después de este símbolo
@@ -128,8 +127,8 @@ asignándosele un color verde característico de forma automática.
 % Esto es un comentario en MATLAB
 \end{matlab}
 
-Para hacer bloques de comentarios MATLAB dispone de una sintaxis
-específica que se muestra enseguida:
+Para hacer bloques de comentarios (o comentarios multilínea) MATLAB dispone 
+de una sintaxis específica que se muestra enseguida:
 
 \begin{matlab}
 %{
@@ -169,7 +168,7 @@ referencia a un valor numérico inválido. \\
 \caption{Valores especiales}
 \end{table}
 
-\section{Tipos de datos y operadores}\label{tipos-de-datos-y-operadores}
+\section{Tipos de datos y operadores}
 
 El siguiente listado resume los tipos de datos más comunes en MATLAB:
 
@@ -187,10 +186,14 @@ El siguiente listado resume los tipos de datos más comunes en MATLAB:
 \item struct (estructuras)
 \end{itemize}
 
-\subsection{Tipo logical}\label{tipo-logical}
+\subsection{Tipo logical}
 
-Las variables de tipo lógico permiten, evidentemente, dos valores, que
-pueden ser true o false (1 y 0 lógicos). Una forma de declarar una
+El tipo de dato lógico o booleano es en computación aquel que puede 
+representar valores de lógica binaria, esto es 2 valores, valores 
+que normalmente representan falso o verdadero. \\
+
+En MATLAB las variables de tipo lógico permiten, evidentemente, dos valores, que
+pueden ser \texttt{true} o \texttt{false}. Una forma de declarar una
 variable de tipo lógico sería:
 
 \begin{matlab}
@@ -208,13 +211,16 @@ a =
 \end{matlab}
 
 Las líneas anteriores crean una variable \texttt{a} de tipo lógico con
-un valor \texttt{true} (1 lógico).
+un valor \texttt{true}. \\
 
-\subsection{Tipo char}\label{tipo-char}
+La utilidad de los variables lógicas se hace evidente cuando es necesario 
+tomar decisiones respecto al estatus o valor de una variable o subrutina.
+
+\subsection{Tipo char}
 
 Son cadenas de caracteres, que pueden contener valores alfanuméricos e
 incluso símbolos especiales. Para declararlas no hace falta especificar
-que son variables tipo char, dado que MATLAB es de tipado dinámico y
+que son variables tipo \texttt{char}, dado que MATLAB es de tipado dinámico y
 reconoce como tal aquellas cuyo valor asignado se encuentre delimitado
 por comillas simples, un ejemplo muy clásico es el siguiente:
 
@@ -224,7 +230,18 @@ txt =
 Hola Mundo
 \end{matlab}
 
-\subsection{Tipo numeric}\label{tipo-numeric}
+El manejo de cadenas de caracteres o strings es una cuestión fundamental 
+en la programación de computadoras. En MATLAB las cadenas de caracteres 
+tienen muchas utilidades, entre las cuales pueden citarse: sirven como 
+argumentos de entrada para funciones (como todo tipo de dato), identificadores 
+para campos de estructuras, anotaciones y etiquetas en las gráficas, 
+lectura y escritura de datos no uniformes, entre muchas otras. \\
+
+En el capítulo 3 se aborda el manejo de strings de una manera muy completa, 
+desde operaciones básicas como las comparaciones y concatenación, hasta el 
+uso de expresiones regulares.
+
+\subsection{Tipo numeric}
 
 Normalmente cuando en MATLAB tecleamos un valor numérico o bien lo
 asignamos a una determinada variable, esta será de tipo double, a menos
@@ -237,7 +254,7 @@ num =
     10
 \end{matlab}
 
-Y posteriormente tecleamos la instrucción \texttt{whos} para verificar
+Y posteriormente tecleamos la instrucción \texttt{whos} para verificar 
 el tipo o clase de dicha variable:
 
 \begin{matlab}
@@ -258,7 +275,7 @@ numInt =
   numInt      1x1                 1  int8               
 \end{matlab}
 
-\subsection{Tipo cell}\label{tipo-cell}
+\subsection{Tipo cell}
 
 Un cell array es un tipo de dato característico del lenguaje MATLAB que
 consiste en un arreglo multidimensional de celdas que pueden contener
@@ -318,7 +335,7 @@ ans =
     1.5708
 \end{matlab}
 
-\subsection{Identificar tipos de datos}\label{identificar-tipos-de-datos}
+\subsection{Identificar tipos de datos}
 
 Para identificar tipos de datos en MATLAB se cuentan con diversos
 comandos que nos facilitan esta tarea. El comando \texttt{whos} nos
@@ -354,14 +371,14 @@ ans =
 double
 \end{matlab}
 
-\subsection{Conversiones entre tipos de datos}\label{conversiones-entre-tipos-de-datos}
+\subsection{Conversiones entre tipos de datos}
 
 Las conversiones entre tipos de datos son muy utilizadas en la
 programación en cualquier lenguaje, puesto que permiten controlar la
 precisión de los cálculos, mejorar la presentación de los datos o bien
 evitar errores en la ejecución.
 
-\subsubsection{Entre tipos numéricos}\label{entre-tipos-numericos}
+\subsubsection{Entre tipos numéricos}
 
 Cuando se crea una variable de tipo numérico en MATLAB por defecto será
 de tipo \texttt{double}, por ejemplo, creamos una variable llamada \texttt{num}:
@@ -429,7 +446,7 @@ permitidos para cada tipo de dato, puede usar las funciones
 las correspondientes \texttt{intmin} e \texttt{intmax} para tipos
 enteros.
 
-\subsubsection{De string a tipo numérico} \label{de-string-a-tipo-numuxe9rico}
+\subsubsection{De string a tipo numérico}
 
 Para este tipo de conversiones MATLAB dispone de la funciones
 \texttt{str2double} y \texttt{str2num}, en algunos casos no notará la
@@ -456,23 +473,19 @@ b =
   b         1x1                 8  double     
 \end{matlab}
 
-\subsection{Operadores aritméticos, relacionales y lógicos}\label{operadores-aritmeticos-relacionales-y-logicos}
+\subsection{Operadores aritméticos, relacionales y lógicos}
 
 Los operadores son símbolos especiales fundamentales en un lenguaje de
 programación, se utilizan para \emph{operar} sobre variables
-(operandos), se pueden clasificar en tres grupos:
+(operandos) y, de manera general, pueden clasificarse en tres grupos:
 
-\begin{itemize}
-\tightlist
-\item
-  Operadores aritméticos
-\item
-  Operadores relacionales
-\item
-  Operadores lógicos
+\begin{itemize} 
+\item Operadores aritméticos
+\item Operadores relacionales
+\item Operadores lógicos
 \end{itemize}
 
-\subsubsection{Operadores aritméticos}\label{operadores-aritmeticos}
+\subsubsection{Operadores aritméticos}
 
 Los operadores aritméticos toman valores numéricos como entrada y
 devuelven un valor resultante de aplicar la operación correspondiente
@@ -495,9 +508,9 @@ disponibles en MATLAB.
 \begin{table}[h!]
 \centering
 % \rowcolors{1}{}{gray!20}
-\begin{tabular}{p{3cm} p{9cm}}
+\begin{tabular}{>{\tt}P{3cm} p{9cm}}
 \hline
-\Centering\bfseries Operador  & \Centering\bfseries Descripción \\
+\normalfont\bfseries Operador  & \Centering\bfseries Descripción \\
 \hline
 + & Operador  suma \\
 - & Operador resta \\
@@ -583,7 +596,7 @@ descripción.
 \begin{table}[h!]
 \centering
 % \rowcolors{1}{}{gray!20}
-\begin{tabular}{p{3cm} p{9cm}}
+\begin{tabular}{P{3cm} p{4cm}}
 \hline
 \Centering\bfseries Operador  & \Centering\bfseries Descripción \\
 \hline 
@@ -595,7 +608,7 @@ $>$= & Mayor o igual que \\
 $\sim =$ & Diferente de \\
 \hline
 \end{tabular}
-\caption{Conversiones entre tipos numéricos}
+\caption{Operadores relacionales}
 \end{table}
 
 Puede ver que la notación difiere de la que ordinariamente utilizamos
@@ -621,26 +634,25 @@ En el primer caso (doble signo) la comparación se hace devolviendo un
 indicando que el \texttt{1} ubicado a la izquierda del signo igual no es
 un caracter válido para realizar una asignación.
 
-\subsubsection{Operadores lógicos}\label{operadores-logicos}
+\subsubsection{Operadores lógicos}
+
 
 \begin{table}[h!]
 \centering
 % \rowcolors{1}{}{gray!20}
-\begin{tabular}{p{3cm} p{9cm}}
+\begin{tabular}{>{\tt}P{3cm} p{4cm}}
 \hline
-\Centering\bfseries Operador  & \Centering\bfseries Descripción \\
+\normalfont\bfseries Operador  & \Centering\bfseries Descripción \\
 \hline
-\multicolumn{2}{c}{\bfseries Operadores lógicos} \\
 \& & Operador lógico and \\
 $|$ & Operador lógico or \\
 $\sim$ & Operador lógico not \\
 \hline
 \end{tabular}
-\caption{Conversiones entre tipos numéricos}
+\caption{Operadores lógicos}
 \end{table}
 
-\section{Un mini tutorial de
-introducción}\label{un-mini-tutorial-de-introduccion}
+\section{Un mini tutorial de introducción}
 
 Una vez conocidos los tipos de datos y los operadores, podemos comenzar
 con una breve introducción al uso de MATLAB como una poderosa
@@ -806,12 +818,11 @@ vector mediante la función \texttt{plot}:
 >> plot(x);
 \end{matlab}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.6\textwidth]{images/ch1/img_1_2.png}
-  \caption{Gráfica de una función}
-  \label{fig:graph_fun}
-\end{figure}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{images/ch1/img_1_2.png}
+\captionof{figure}{Gráfica de un vector de puntos}
+\label{fig:graph_fun}
+\end{center}
 
 De manera similar puede evaluar una función matemática en un intervalo
 determinado y trazar su gráfica:
@@ -833,12 +844,11 @@ el arreglo \texttt{x} y los guarda en \texttt{y}. El capítulo 2
 (Vectores y matrices) trata con mayor profundidad la notación de dos
 puntos utilizada y el manejo correcto de estructuras matriciales.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.6\textwidth]{images/ch1/img_1_3.png}
-  \caption{Gráfica bla bla}
-  \label{fig:gla1}
-\end{figure}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{images/ch1/img_1_3.png}
+\captionof{figure}{Gráfica de la función $f(x)=\sin{x}$}
+\label{fig:gla1}
+\end{center}
 
 ¿Bastante interesante, verdad?. Bueno, incluso es posible trazar
 gráficas de superficies tridimensionales con unas cuantas líneas de
@@ -850,12 +860,11 @@ código:
 >> surf(X,Y,Z)
 \end{matlab}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.6\textwidth]{images/ch1/img_1_4.png}
-  \caption{Gráfica de una función $f(x,y)$}
-  \label{fig:xxxx}
-\end{figure}
+\begin{center}
+\includegraphics[width=0.6\textwidth]{images/ch1/img_1_4.png}
+\captionof{figure}{Gráfica de una función $f(x,y)$}
+\label{fig:xxxx}
+\end{center}
 
 Lo mismo podemos leer una imagen y hacerle algunos cambios
 (restauración, segmentación, etc,...) utilizando el \emph{Image
@@ -870,19 +879,17 @@ facilitan esta tarea). Vea el siguiente ejemplo:
 >> imshow(255-img_mod)
 \end{matlab}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.5\textwidth]{images/ch1/lena.png}
-  \caption{Lena}
-  \label{fig:lena}
-\end{figure}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{images/ch1/lena.png}
+\captionof{figure}{Imagen de Lena original}
+\label{fig:lena}
+\end{center}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.5\textwidth]{images/ch1/lena_mod.png}
-  \caption{Lena modificada}
-  \label{fig:lena_mod}
-\end{figure}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{images/ch1/lena_mod.png}
+\captionof{figure}{Imagen de Lena modificada}
+\label{fig:lena_mod}
+\end{center}
 
 Todo esto muestra un poco de lo que puede hacer MATLAB, pero, lo cierto
 es que es un entorno muy completo con una \emph{infinidad} de opciones
@@ -891,7 +898,7 @@ disciplinas científicas. En los capítulos posteriores de este texto se
 abordan algunas características y herramientas proporcionadas por MATLAB
 para algunos campos específicos.
 
-\section{Ficheros de comandos (scripts)}\label{ficheros-de-comandos-scripts}
+\section{Ficheros de comandos (scripts)}
 
 Los ficheros de comandos, conocidos también como \emph{scripts}, son
 archivos de texto sin formato (ASCII) con la extensión característica de
@@ -1007,16 +1014,20 @@ busca las sentencias introducidas.\\
 Por ejemplo, vamos a suponer que en nuestro directorio actual tenemos un
 fichero llamado \texttt{principal.m} y que tenemos también una carpeta
 \texttt{utils} en la cual tenemos algunos códigos necesarios
-(`\texttt{codigo1.m} y \texttt{codigo2.m}) para que nuestro código
+(\texttt{codigo1.m} y \texttt{codigo2.m}) para que nuestro código
 principal funcione:
 
-\begin{verbatim}
-|
-└─── principal.m
-└─── utils
-        └─── codigo1.m
-        └─── codigo2.m
-\end{verbatim}
+\begin{center}
+\includegraphics[width=0.3\textwidth]{images/ch1/path_example.pdf}
+\end{center}
+
+% \begin{verbatim}
+% |
+% └─── principal.m
+% └─── utils
+%         └─── codigo1.m
+%         └─── codigo2.m
+% \end{verbatim}
 
 Una solución evidente (pero muy \emph{tosca}) es colocar los ficheros
 \texttt{codigo1.m} y \texttt{codigo2.m} en el mismo directorio, pero
@@ -1121,9 +1132,9 @@ siguiente tabla:
 \begin{table}[h!]
 \centering
 % \rowcolors{1}{}{gray!20}
-\begin{tabular}{p{4cm} p{7cm}} 
+\begin{tabular}{P{4cm} p{7cm}} 
 \hline
-Identificador & Formato de salida \\
+\bfseries Identificador & \Centering\bfseries Formato de salida \\
 \hline
 \texttt{\%d} & Tipo entero \\
 \texttt{\%f} & Tipo coma flotante \\
@@ -1448,9 +1459,9 @@ end
   SEE ALSO roots,solve,fzero
 \end{matlab}
 
-\section{Bifurcaciones y bucles}\label{bifurcaciones-y-bucles}
+\section{Bifurcaciones y bucles}
 
-\subsection{Sentencia if-elseif-else}\label{sentencia-if-elseif-else}
+\subsection{Sentencia if-elseif-else}
 
 La sentencia \texttt{if} se utiliza como bifurcación simple por sí sola,
 es decir, en aquellas situaciones en las cuales se requiera evaluar
@@ -1652,7 +1663,7 @@ Ahora, veamos un ejemplo más práctico. La aproximación de una raíz
 cuadrada por el método babilónico implica realizar n iteraciones
 mediante la siguiente expresión:
 
-$$ r_n(x) = \frac{1}{2}(\frac{x}{r_{n-1}}+r_{n-1}) $$
+$$ r_n(x) = \frac{1}{2} \left( \frac{x}{r_{n-1}}+r_{n-1} \right) $$
 
 Donde x es el número del cual se calcula la raíz cuadrada. A
 continuación se muestra el código implementado en MATLAB utilizando un
@@ -1690,7 +1701,7 @@ end
 \end{matlab}
 \end{informacion}
 
-\section{Fecha y hora}\label{fecha-y-hora}
+\section{Fecha y hora}
 
 Primeramente es importante mencionar que MATLAB maneja tres formatos de
 fechas y hora, a saber:
@@ -1733,9 +1744,41 @@ Además de las anteriores MATLAB dispone de las funciones datevec y
 clock, la primera convierte una determinada fecha pasada como argumento
 en formato string o numérico a un vector de seis elementos como se
 describió anteriormente, y clock devuelve la fecha y hora actual tal
-como la hace now pero como un vector de seis elementos.
+como la hace \texttt{now} pero como un vector de seis elementos. \\
 
-\begin{ejemplo}{Ejemplo 1.1 Clasificando flujos}
+\begin{ejemplo}{Ejemplo 1.1 Calculando área y perímetro de un círculo}
+El área y perímetro (circunferencia) de un círculo vienen dados por las 
+siguientes ecuaciones:
+
+$$ A = \pi r^2 $$
+$$ P = 2 \pi r $$
+
+Escriba un programa que reciba como dato de entrada el radio del 
+círculo y que imprima en consola el área y perímetro. \\
+
+\textbf{Solución} \\
+
+\begin{matlab}
+r = input('Radio: ');
+A = pi*r.^2;
+P = 2*pi.*r;
+fprintf('\nÁrea: %0.4f \nPerímetro: %0.4f \n\n',A,P);
+\end{matlab}
+
+Si ejecutamos el programa obtendremos algo como lo siguiente:
+
+\begin{verbatim}
+Radio: 5
+
+Área: 78.5398 
+Perímetro: 31.4159 
+\end{verbatim}
+
+\end{ejemplo} 
+
+  \\  
+
+\begin{ejemplo}{Ejemplo 1.2 Clasificando flujos}
 
 El número de Reynolds es un parámetro adimensional utilizado en
 mecánica de fluidos para caracterizar el movimiento de un fluido,
@@ -1817,7 +1860,7 @@ Claro está que en un código que necesitemos para nuestros deberes académicos 
 sonar un poco absurdo, pero en el mundo real estás cosas nunca, nunca están de más.
 \end{ejemplo}
 
-\section{Problemas}\label{problemas}
+\section*{Problemas}
 
 \textbf{1.1} ¿Qué tipo de dato devuelve cada una de las siguientes
 instrucciones? (Puede verificar utilizando la función \texttt{class}).
@@ -1875,7 +1918,8 @@ divisible por 2'', ``n es divisible por 3'', ``n es divisible por 2 y
 Use un bucle for para recorrer los valores, la función \texttt{rem} para
 verificar la divisibilidad y \texttt{num2str} para convertir cada número
 en un string y mostrarlo en pantalla. Para verificar cada caso puede
-utilizar una bifurcación múltiple \texttt{if-elseif-else}. \footnote{Danilo
+utilizar una bifurcación múltiple \texttt{if-elseif-else}. 
+\footnote{Danilo
   Šćepanović. 6.094 Introduction to MATLAB, January IAP 2010.
   (Massachusetts Institute of Technology: MIT OpenCourseWare),
   http://ocw.mit.edu (Accessed).} \\
