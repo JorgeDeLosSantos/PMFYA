@@ -29,7 +29,7 @@ plot(x,y);
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/ch4/img_4_1.png}
+    \includegraphics[width=0.65\textwidth]{images/ch4/img_4_1.png}
     \caption{Graficando una función}
     \label{fig:img_4_1}
 \end{figure}
@@ -55,8 +55,8 @@ plot(x,y3);
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/ch4/img_4_2.png}
-    \caption{Varias gráficas utilizando hold}
+    \includegraphics[width=0.65\textwidth]{images/ch4/img_4_2.png}
+    \caption{Varias gráficas utilizando \texttt{hold on}}
     \label{fig:img_4_2}
 \end{figure}
 
@@ -77,8 +77,8 @@ plot(x,[y1;y2;y3]);
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/ch4/img_4_3.png}
-    \caption{Varias gráficas}
+    \includegraphics[width=0.65\textwidth]{images/ch4/img_4_3.png}
+    \caption{Varias gráficas usando concatenación vectorial}
     \label{fig:img_4_3}
 \end{figure}
 
@@ -120,7 +120,7 @@ legend('f(x)=sin(x)');
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/ch4/img_4_4.png}
+    \includegraphics[width=0.65\textwidth]{images/ch4/img_4_4.png}
     \caption{Gráfica con etiquetas y leyenda}
     \label{fig:img_4_4}
 \end{figure}
@@ -143,7 +143,7 @@ indican en la siguiente tabla:
 % \rowcolors{1}{}{gray!20}
 \begin{tabular}{p{3cm} >{\tt}P{3cm}}
 \hline
-\Centering\bfseries Color  & \Centering\bfseries Modificador \\
+\Centering\bfseries Color  & \normalfont\bfseries Modificador \\
 \hline 
 Rojo  &  r \\
 verde &  g \\
@@ -211,7 +211,7 @@ axis off
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/ch4/img_4_5.png}
+    \includegraphics[width=0.5\textwidth]{images/ch4/img_4_5.png}
     \caption{Quitando los axis}
     \label{fig:img_4_5}
 \end{figure}
@@ -226,17 +226,16 @@ siguiente.
 
 \begin{table}[h!]
 \centering
-% \rowcolors{1}{}{gray!20}
-\begin{tabular}{>{\tt}P{3cm} p{3cm}}
+\begin{tabular}{ >{\tt}p{3cm} p{5cm} }
 \hline
-\Centering\bfseries Sintaxis  & \Centering\bfseries Descripción \\
+\normalfont\Centering\bfseries Sintaxis  & \Centering\bfseries Descripción \\
 \hline 
 axis('equal')  & Ajusta el escalado de los ejes de tal modo que sean iguales en cada dirección. \\
 axis('square') &  Configura y ajusta la visualización de los ejes a un cuadrado o cubo (3D)  \\
 axis('tight') &  Ajusta los ejes al rango de datos disponibles. \\
 \hline
 \end{tabular}
-\caption{Conversiones entre tipos numéricos}
+\caption{Opciones para el escalado de ejes utilizando \texttt{axis}}
 \end{table}
 
 
@@ -264,6 +263,10 @@ text(2, 0.5, texto);
     \label{fig:texto_axes}
 \end{figure}
 
+Básicamente la función \texttt{text} necesita tres argumentos de entrada: las 
+coordenadas \texttt{x} e \texttt{y} de la posición del texto, y el string 
+que contiene el texto que se mostrará en el axes.
+
 \section{Gráficas en coordenadas polares}
 
 En el sistema de coordenadas polares cada punto del plano está definido
@@ -290,7 +293,7 @@ polar(theta,r);
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/ch4/img_4_6.png}
+    \includegraphics[width=0.6\textwidth]{images/ch4/img_4_6.png}
     \caption{Gráfica de la ecuación $r(\theta) = \theta$}
     \label{fig:img_4_6}
 \end{figure}
@@ -311,6 +314,164 @@ plot(x,y);
 Aunque claro, siempre será mejor utilizar \texttt{polar} dado que esta
 automáticamente utiliza los \texttt{axes} de coordenadas polares para
 una mejor visualización.
+
+
+\section{Gráficas de barras}
+
+Las gráficas de barras son una forma de representar gráficamente un conjunto de datos o 
+valores y está conformado por barras rectangulares de longitudes proporcionales a los 
+valores representados. \\
+
+Para nuestro ejemplo utilizaremos la información proporcionada por la siguiente tabla:
+
+\begin{table}[h!]
+\centering
+% \rowcolors{1}{}{gray!20}
+\begin{tabular}{p{3cm} p{3cm}}
+\hline
+\Centering\bfseries Asignatura  & \normalfont\bfseries Calificación \\
+\hline 
+Álgebra & 9 \\
+Geometría & 9.5 \\
+Cálculo & 10 \\
+Estática & 8.5 \\
+Química & 8 \\
+\hline
+\end{tabular}
+\caption{Datos para gráfica de barra simple}
+\end{table}
+
+MATLAB proporciona la función bar para trazar gráficas de barras, que en su sintaxis más 
+simple sólo necesita como argumento un vector con los datos a graficar, véase el ejemplo 
+a continuación:
+
+\begin{matlab}
+calificaciones=[9,9.5,10,8.5,8];
+bar(calificaciones);
+\end{matlab}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\textwidth]{images/ch4/barra_simple.png}
+\caption{Gráficas de barra simple}
+\label{fig:barra_simple}
+\end{figure}
+
+Lo anterior resulta muy sencillo, pero aún carece de información acerca de los datos que 
+se están mostrando. Para añadir una etiqueta a cada dato o barra que se grafica modificaremos 
+la propiedad XTickLabel del axes al cuál pertenece el diagrama de barras, en nuestro ejemplo 
+esas etiquetas serían el nombre de cada asignatura. Definimos las etiquetas utilizando un 
+cell array, veáse el ejemplo:
+
+\begin{matlab}
+asignaturas={'Álgebra','Geometría','Cálculo','Estática','Química'};
+calificaciones=[9,9.5,10,8.5,8];
+h=bar(calificaciones);
+set(gca,'XTickLabel',asignaturas);
+\end{matlab}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\textwidth]{images/ch4/barra_simple_02.png}
+\caption{Gráfica de barra simple, con etiquetas}
+\label{fig:barra_simple_02}
+\end{figure}
+
+\subsection{Modificar el ancho y color de las barras}
+
+Para modificar el ancho de las barras basta con pasar como segundo argumento de la función bar un 
+valor escalar entre 0 y 1, la sintaxis sería:
+
+\begin{verbatim}
+bar(X,k);
+\end{verbatim}
+
+Donde X es el vector que contiene los valores y k un escalar en el intervalo 0 a 1. \\
+
+Por defecto MATLAB utiliza el color azul para las gráficas de barras, pero existe la posibilidad 
+de cambiar el color a conveniencia del usuario. Para ello puede especificarse el color como un 
+segundo argumento de la función bar, mediante un especificador de color ('r','g','b','k',...), 
+con la sintaxis:
+
+\begin{verbatim}
+bar(X,'color');
+\end{verbatim}
+
+Donde X es el vector de valor y 'color' el especificador de color mediante caracteres.\\
+
+Si requiere modificar el grosor y color a la vez, puede usar la siguiente sintaxis:
+
+\begin{verbatim}
+bar(X,k,'color');
+\end{verbatim}
+
+El siguiente ejemplo muestra una gráfica de barras con el ancho y color modificados:
+
+\begin{matlab}
+asignaturas={'Álgebra','Geometría','Cálculo','Estática','Química'};
+calificaciones=[9,9.5,10,8.5,8];
+bar(calificaciones,0.4,'r');
+set(gca,'XTickLabel',asignaturas);
+title('Calificaciones');
+\end{matlab}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\textwidth]{images/ch4/barra_simple_color.png}
+\caption{Gráfica de barra simple, con color y ancho modificado}
+\label{fig:barra_simple_color}
+\end{figure}
+
+\subsection{Gráficas de barras múltiples}
+
+En ocasiones se necesita representar más de un valor asociado a una misma característica, 
+para ello es posible graficar diagramas de barras utilizando matrices en lugar de un vector, 
+en donde cada fila proporciona los valores de una misma característica y cada columna pertenece 
+a una categoría distinta entre los valores. Para nuestro ejemplo utilizaremos la tabla 
+mostrada enseguida.
+
+\begin{table}[h!]
+\centering
+% \rowcolors{1}{}{gray!20}
+\begin{tabular}{p{3cm} P{3cm} P{3cm} P{3cm}}
+\hline
+\Centering\bfseries \multirow{2}{*}{Alumno} & \normalfont\bfseries \multicolumn{2}{c}{Calificaciones} \\
+\cline{2-4}
+ & Matemáticas & Física & Química \\
+\hline
+Ana & 10 & 7 & 9 \\
+Jorge & 8 & 8 & 10 \\
+Javier & 9 & 9 & 8 \\
+\hline
+\end{tabular}
+\caption{Datos para gráfica de barra simple}
+\end{table}
+
+En la tabla anterior cada alumno tiene tres calificaciones asociadas en diferentes asignaturas. 
+El siguiente ejemplo muestra cómo trazar la gráfica de barras correspondiente:
+
+\begin{matlab}
+nombres={'Ana','Jorge','Javier'};
+Ana=[10,7,9];
+Jorge=[8,8,10];
+Javier=[9,9,8];
+bar([Ana;Jorge;Javier]);
+set(gca,'XtickLabel',nombres);
+\end{matlab}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\textwidth]{images/ch4/barra_multiple.png}
+\caption{Gráfica de barras múltiples}
+\label{fig:barra_multiple}
+\end{figure}
+
+\section{Gráficas de pastel/tarta}
+
+
+\section{Polígonos}
+
+
 
 \section{Gráficas de superficies: una primera aproximación}
 
@@ -339,7 +500,7 @@ surf(Z);
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/ch4/img_4_7.png}
+    \includegraphics[width=0.6\textwidth]{images/ch4/img_4_7.png}
     \caption{Gráfica de una superficie}
     \label{fig:img_4_7}
 \end{figure}
@@ -387,7 +548,7 @@ surf(X,Y,Z);
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/ch4/img_4_8.png}
+    \includegraphics[width=0.6\textwidth]{images/ch4/img_4_8.png}
     \caption{Gráfica de la superficie $f(x)=cos(x) sin(y)$}
     \label{fig:img_4_8}
 \end{figure}
@@ -415,7 +576,7 @@ Claro que por cuestiones de comodidad sería preferible esta última,
 aunque quizá afecte un poco la legibilidad de un programa de mayores
 dimensiones, pero vamos, nada ``catastrófico''.
 
-\section{Mapas de colores, sombreado e iluminación}
+\section{Mapas de colores y sombreado}
 
 \subsection{Mapas de colores}
 
@@ -435,7 +596,7 @@ de colores predefinidos que se muestran a continuación:
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{images/ch4/img_4_9.png}
+\includegraphics[width=0.25\textwidth]{images/ch4/img_4_9.png}
 \caption{}
 \end{figure}
 
@@ -464,7 +625,7 @@ colormap(hot);
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.95\textwidth]{images/ch4/img_4_10.png}
+    \includegraphics[width=0.6\textwidth]{images/ch4/img_4_10.png}
     \caption{Utilizando el mapa de color \texttt{hot}}
     \label{fig:label}
 \end{figure}
@@ -545,4 +706,14 @@ también es válida:
 >> shading flat
 \end{matlab}
 
-\subsection{Iluminación}
+\section{Planos}
+
+\section{Esferas}
+
+\section{Cilindros}
+
+\section{Curvas de nivel}
+
+\section{Subplots: múltiples axes}
+
+\section{Gráficos interactivos}
