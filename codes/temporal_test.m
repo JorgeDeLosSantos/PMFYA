@@ -1,10 +1,2 @@
 clear all;clc;
-t = linspace(0,2*pi);
-w = 12;
-y = exp(-t).*cos(w*t);
-plot(t, y, 'linewidth', 2);
-xlabel('Tiempo (s)');
-ylabel('Amplitud (mm)');
-texto = 'Esto es un texto/anotación';
-text(2, 0.5, texto);
-saveas(gca,'texto_axes.png');
+A(1:10,1:10)=0

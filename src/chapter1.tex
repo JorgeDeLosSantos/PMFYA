@@ -1746,6 +1746,7 @@ en formato string o numérico a un vector de seis elementos como se
 describió anteriormente, y clock devuelve la fecha y hora actual tal
 como la hace \texttt{now} pero como un vector de seis elementos. \\
 
+
 \begin{ejemplo}{Ejemplo 1.1 Calculando área y perímetro de un círculo}
 El área y perímetro (circunferencia) de un círculo vienen dados por las 
 siguientes ecuaciones:
@@ -1782,7 +1783,7 @@ Perímetro: 31.4159
 
 El número de Reynolds es un parámetro adimensional utilizado en
 mecánica de fluidos para caracterizar el movimiento de un fluido,
-usualmente se define como:
+usualmente para un flujo interno en tuberías circulares se define como:
 
 $$ Re=\frac{vD}{\nu} $$
 
@@ -1797,7 +1798,7 @@ experimental, enseguida se muestran los intervalos de valores y el
 tipo de flujo en cada caso:
 
 \begin{itemize}
-\item Re $<$ 2100  \textit{Flujo turbulento}
+\item Re $<$ 2100  \textit{Flujo laminar}
 \item 2100 $\leq$ Re $\leq$ 3000   \textit{Flujo transitorio}
 \item Re $>$ 3000   \textit{Flujo turbulento}
 \end{itemize}
@@ -1821,7 +1822,7 @@ viscosidad = input('Viscosidad: ');
 Re = (velocidad*diametro)/(viscosidad);
 
 if Re<2100
-   disp('Flujo turbulento');
+   disp('Flujo laminar');
 elseif Re >= 2100 && Re <= 3000
    disp('Flujo transitorio');
 else
@@ -1831,33 +1832,14 @@ end
 
 ¿Parece lo anterior una buena solución?.\\
 
-Es una solución aceptable, claro está, pero podríamos mejorarla un poquito:
-
-\begin{matlab}
-velocidad = input('Velocidad: ');
-diametro = input('Diámetro: ');
-viscosidad = input('Viscosidad: ');
-
-Re = (velocidad*diametro)/(viscosidad);
-
-if Re >= 2100 && Re <= 3000
-   disp('Flujo transitorio');
-else
-   disp('Flujo turbulento');
-end
-\end{matlab}
-
-Un poco mejor, ¿verdad?, menos comparaciones y se obtienen evidentemente los mismos 
-resultados.\\
-
-Todo lo anterior está muy bien, pero, y si alguien tiene la brillante idea de colocar 
+Está muy bien, pero, y si alguien tiene la brillante idea de colocar 
 cantidades negativas; el programa nunca se "quejará", pero desde luego estaremos 
 entrando en una situación un tanto extraña, seguramente el programa nos mandará que 
 estamos en el caso de un flujo turbulento, aún cuando los datos ingresados sean incorrectos.
 Luego, lo que se quiere mostrar es que necesitamos trabajar más aún sobre ese código, 
 asegurarnos que los datos ingresados sean los adecuados para realizar el cálculo. 
 Claro está que en un código que necesitemos para nuestros deberes académicos pueda 
-sonar un poco absurdo, pero en el mundo real estás cosas nunca, nunca están de más.
+sonar un poco absurdo, pero en el mundo real estas cosas nunca, nunca están de más.
 \end{ejemplo}
 
 \section*{Problemas}
@@ -1927,4 +1909,5 @@ utilizar una bifurcación múltiple \texttt{if-elseif-else}.
 \textbf{1.9} Escriba una función que le permita determinar si un número
 entero pasado como argumento es primo, en caso de serlo devolverá un
 valor lógico true y un valor false en caso contrario. (La función
-\texttt{isprime} de MATLAB realiza la misma operación).
+\texttt{isprime} de MATLAB realiza la misma operación, pero claro, evite utilizarla 
+en este caso).
