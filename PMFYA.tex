@@ -1,4 +1,4 @@
-\documentclass[12pt,letterpaper]{book}
+\documentclass[11pt,letterpaper]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-tabla]{babel}
 \decimalpoint
@@ -13,6 +13,7 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{makeidx}
+\usepackage{enumitem}
 \makeindex
 \usepackage{anysize}
 \usepackage{anyfontsize}
@@ -91,6 +92,7 @@ fonttitle=\bfseries, colbacktitle=white, coltext=gray!30!black}
 }
 
  \newcommand{\ccol}{>{\centering\tt\arraybackslash}}
+ \newcommand{\code}[1]{{\tt #1}}
 
 % Nuevos comandos
 
@@ -152,7 +154,7 @@ fonttitle=\bfseries, colbacktitle=white, coltext=gray!30!black}
 
 \begin{document}
 
-% \includepdf{src/img/title_page.pdf}
+\includepdf{src/img/title_page.pdf}
 \maketitle
 \tableofcontents
 

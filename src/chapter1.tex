@@ -87,7 +87,7 @@ Uno de los puntos fuertes de MATLAB es la extensa documentación que
 viene adjunta al software, la cual contiene múltiples ejemplos y
 recomendaciones para la mayoría de las funciones. Puede acceder a la
 ayuda ubicando el ícono característico de ayuda, o bien tecleando la
-instrucción doc en la línea de comandos.\\
+instrucción \code{doc} en la línea de comandos.\\
 
 Si requiere una referencia rápida acerca de un comando o función puede
 utilizar el comando \texttt{help} seguido por el nombre la función a
@@ -170,13 +170,14 @@ referencia a un valor numérico inválido. \\
 
 \section{Tipos de datos y operadores}
 
-El siguiente listado resume los tipos de datos más comunes en MATLAB:
+MATLAB dispone de varios tipos de datos, desde los habituales tipos numéricos o cadenas de texto, hasta estructuras 
+de datos más complejas. El siguiente listado resume los tipos de datos más comunes en MATLAB.
 
-\begin{itemize}
+\begin{itemize}[nolistsep]
 \item logical  (tipo booleano o lógico)
 \item char (cadenas de caracteres)
 \item numeric (datos tipo numérico)
-\begin{itemize}
+\begin{itemize}[nolistsep]
    \item int8, int16, int32, int64 (tipos entero)
    \item uint8, uint16, uint32, uint64  (enteros sin signo)
    \item single (flotantes de precisión simple)
@@ -185,6 +186,8 @@ El siguiente listado resume los tipos de datos más comunes en MATLAB:
 \item cell (arreglos de celdas)
 \item struct (estructuras)
 \end{itemize}
+
+En las subsecciones siguientes se describen cada uno de estos tipos de datos.
 
 \subsection{Tipo logical}
 
